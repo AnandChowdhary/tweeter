@@ -1,12 +1,8 @@
 import { Agent, run, webSearchTool } from "@openai/agents";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
-
-const state = JSON.parse(readFileSync("./state.json", "utf-8")) as {
-  previousBlogPostThread?: string;
-  lastWeeklyRunAt: string;
-};
+import { saveState, state } from "../functions/state";
 
 const prompts = {
   tweetGenerator: readFileSync("./prompts/tweet-generator.md", "utf-8"),
@@ -39,18 +35,23 @@ const voiceGenerator = new Agent({
   const blogPosts = blogPostsUnsorted
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .filter(({ slug }) => !slug.startsWith("year-of-")); // Exclude yearly themes
-  const previousIndex = state.previousBlogPostThread
-    ? blogPosts.findIndex((post) => post.path === state.previousBlogPostThread)
-    : -1;
+  const previousIndex =
+    state.previousBlogPostThread !== undefined &&
+    state.previousBlogPostThread !== "none"
+      ? blogPosts.findIndex(
+          (post) => post.path === state.previousBlogPostThread
+        )
+      : -1;
   const nextIndex = previousIndex + 1;
   const nextBlogPost = blogPosts[nextIndex];
   if (!nextBlogPost) {
     console.log(
       "No more blog posts, changing state to go back to the beginning"
     );
-    state.previousBlogPostThread = undefined;
-    state.lastWeeklyRunAt = new Date().toISOString();
-    writeFileSync("./state.json", JSON.stringify(state, null, 2));
+    saveState({
+      previousBlogPostThread: "none",
+      lastBiWeeklyRunAt: new Date().toISOString(),
+    });
     return;
   }
 
@@ -84,7 +85,8 @@ const voiceGenerator = new Agent({
   });
   console.log("Scheduled tweet", draft.id);
 
-  state.previousBlogPostThread = nextBlogPost.path;
-  state.lastWeeklyRunAt = new Date().toISOString();
-  writeFileSync("./state.json", JSON.stringify(state, null, 2));
+  saveState({
+    previousBlogPostThread: nextBlogPost.path,
+    lastBiWeeklyRunAt: new Date().toISOString(),
+  });
 })();

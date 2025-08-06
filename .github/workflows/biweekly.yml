@@ -1,8 +1,8 @@
-name: Weekly tweet
+name: Biweekly
 
 on:
   schedule:
-    - cron: "0 9 * * 1"
+    - cron: "0 9 * * 1/3"
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         run: npm install -g tsx
 
       - name: Run tweet generation
-        run: npx tsx agents/tweet-from-post.ts
+        run: npx tsx tasks/biweekly.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
@@ -38,5 +38,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add state.json
-          git commit -m ":loud_sound: Update state after weekly run" || echo "No changes to commit"
+          git commit -m ":loud_sound: Update state after biweekly run" || echo "No changes to commit"
           git push
