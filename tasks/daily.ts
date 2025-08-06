@@ -83,7 +83,7 @@ interface RSSFeed {
 
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following tweets based on the news\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links or emojis.`
+      `Please rewrite the following tweets based on the news\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links or emojis. Don't include any question at the end. It's for a technical audience.`
     );
 
     if (!voiceResult.finalOutput)
