@@ -159,13 +159,25 @@ The thread should feel like a conversation between peers who:
 
 ## Output Format
 
-Generate 8-12 tweets that:
+Generate exactly 4-5 tweets that form a coherent thread:
 
-- Each stand alone as interesting observations
+- **Tweet 1**: Concise opening observation (aim for 200-250 characters)
+- **Tweets 2-4**: Longer, more detailed explanations (can use up to 500 characters with paragraph breaks)
+- **Tweet 5** (if needed): Conclusion or open question and link to original post
+
+Each tweet should:
+
+- Stand alone as an interesting observation
 - Build a coherent argument when read sequentially
 - Respect the reader's intelligence and time
 - Add genuine value beyond the original post
 - Invite thoughtful engagement rather than reactions
+
+**Length Guidelines:**
+
+- First tweet: Keep it punchy and under 250 characters
+- Middle tweets: Use the full 500 characters with paragraph breaks when needed for technical depth
+- Final tweet: Wrap up with insight or open question and link to original post
 
 Format each tweet as:
 
