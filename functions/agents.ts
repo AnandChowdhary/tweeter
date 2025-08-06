@@ -1,14 +1,30 @@
 import { Agent, webSearchTool } from "@openai/agents";
 import { readFileSync } from "node:fs";
+import OpenAI from "openai";
+import { zodTextFormat } from "openai/helpers/zod";
+import { z } from "zod";
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const prompts = {
-  tweetGenerator: readFileSync("./prompts/tweet-generator.md", "utf-8"),
+  blogTweetGenerator: readFileSync("./prompts/tweet-generator.md", "utf-8"),
+  newsTweetGenerator: readFileSync(
+    "./prompts/news-tweet-generator.md",
+    "utf-8"
+  ),
+  ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
 };
 
-export const threadGenerator = new Agent({
+export const blogThreadGenerator = new Agent({
   name: "Blog Post to Twitter Thread Generator",
-  instructions: prompts.tweetGenerator,
+  instructions: prompts.blogTweetGenerator,
+  tools: [webSearchTool()],
+});
+
+export const newsThreadGenerator = new Agent({
+  name: "News to Twitter Thread Generator",
+  instructions: prompts.newsTweetGenerator,
   tools: [webSearchTool()],
 });
 
@@ -17,3 +33,24 @@ export const voiceGenerator = new Agent({
   instructions: prompts.voice,
   model: "gpt-4o",
 });
+
+const TweetTopicSchema = z.object({ title: z.string(), excerpt: z.string() });
+
+const IdeasResponseSchema = z.object({
+  tweet_topics: z.array(TweetTopicSchema),
+});
+
+export const generateIdeas = async (
+  content: string
+): Promise<z.infer<typeof IdeasResponseSchema>> => {
+  const response = await openai.responses.parse({
+    model: "gpt-4o-2024-08-06",
+    input: [
+      { role: "system", content: prompts.ideasGenerator },
+      { role: "user", content: content },
+    ],
+    text: { format: zodTextFormat(IdeasResponseSchema, "ideas") },
+  });
+  if (!response.output_parsed) throw new Error("No response parsed");
+  return response.output_parsed;
+};

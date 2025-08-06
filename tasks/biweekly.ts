@@ -1,5 +1,5 @@
 import { run } from "@openai/agents";
-import { threadGenerator, voiceGenerator } from "../functions/agents";
+import { blogThreadGenerator, voiceGenerator } from "../functions/agents";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
@@ -48,9 +48,9 @@ import { saveState, state } from "../functions/state";
     `Link: ${blogPostUrl}\nDate: ${nextBlogPost.date}\nTitle: ${nextBlogPost.title}\n\n` +
     (await fetch(rawBlogPostUrl).then((res) => res.text()));
 
-  const initialResult = await run(threadGenerator, blogPost);
+  const initialResult = await run(blogThreadGenerator, blogPost);
   if (!initialResult.finalOutput)
-    throw new Error("No output from threadGenerator");
+    throw new Error("No output from blogThreadGenerator");
 
   const voiceResult = await run(
     voiceGenerator,
