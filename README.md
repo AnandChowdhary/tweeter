@@ -68,11 +68,11 @@ Set up cron jobs for automated execution:
 0 10 */14 * * cd /path/to/tweeter && npx tsx tasks/biweekly.ts
 ```
 
-## 🔄 Content Generation Process
+## 🔄 Content generation process
 
 ### 1. Content discovery
 
-- **Daily**: Fetches latest news from smol.ai RSS feed
+- **Daily**: Fetches latest AI news from smol.ai RSS feed
 - **Biweekly**: Retrieves blog posts from personal blog API
 
 ### 2. Duplicate detection
@@ -116,6 +116,7 @@ Set up cron jobs for automated execution:
 - Rewrites content in consistent authorial voice
 - Maintains intellectual honesty and nuance
 - Ensures technical audience appropriateness
+- Based on [this ChatGPT deep research](https://chatgpt.com/share/689344ce-3684-8013-9d7d-cb71b2c4acbe)
 
 ### Ideas generator
 
