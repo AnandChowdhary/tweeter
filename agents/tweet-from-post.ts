@@ -38,7 +38,7 @@ const voiceGenerator = new Agent({
   }[];
   const blogPosts = blogPostsUnsorted
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .filter(({ slug }) => slug.startsWith("year-of-")); // Exclude yearly themes
+    .filter(({ slug }) => !slug.startsWith("year-of-")); // Exclude yearly themes
   const previousIndex = state.previousBlogPostThread
     ? blogPosts.findIndex((post) => post.path === state.previousBlogPostThread)
     : -1;
