@@ -1,25 +1,8 @@
-import { Agent, run, webSearchTool } from "@openai/agents";
-import { readFileSync } from "node:fs";
+import { run } from "@openai/agents";
+import { threadGenerator, voiceGenerator } from "../functions/agents";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
-
-const prompts = {
-  tweetGenerator: readFileSync("./prompts/tweet-generator.md", "utf-8"),
-  voice: readFileSync("./prompts/voice.md", "utf-8"),
-};
-
-const threadGenerator = new Agent({
-  name: "Blog Post to Twitter Thread Generator",
-  instructions: prompts.tweetGenerator,
-  tools: [webSearchTool()],
-});
-
-const voiceGenerator = new Agent({
-  name: "Rewrite in voice",
-  instructions: prompts.voice,
-  model: "gpt-4o",
-});
 
 (async () => {
   const blogPostsUnsorted = (await fetch(

@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 export const state = JSON.parse(readFileSync("./state.json", "utf-8")) as {
   previousBlogPostThread?: string;
+  previousSmolAiNewsThread?: string;
   lastBiWeeklyRunAt: string;
 };
 
