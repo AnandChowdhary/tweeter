@@ -15,7 +15,7 @@ export function parseTweetsFromContent(content: string): string {
   let result = tweets[0];
   for (let i = 1; i < tweets.length; i++) {
     // Odd index (2nd, 4th, ...) gets 2 newlines, even index gets 4
-    const separator = i % 2 === 1 ? "\n\n" : "\n\n\n\n";
+    const separator = i % 2 === 0 ? "\n\n" : "\n\n\n\n";
     result += separator + tweets[i];
   }
   return result;

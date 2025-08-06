@@ -35,9 +35,9 @@ const voiceGenerator = new Agent({
     date: "2013-08-30T00:00:00.000Z";
     emoji: "🌐❌⌨️";
   }[];
-  const blogPosts = blogPostsUnsorted.sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-  );
+  const blogPosts = blogPostsUnsorted
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .filter(({ slug }) => slug.startsWith("year-of-")); // Exclude yearly themes
   const previousIndex = state.previousBlogPostThread
     ? blogPosts.findIndex((post) => post.path === state.previousBlogPostThread)
     : -1;
@@ -78,7 +78,7 @@ const voiceGenerator = new Agent({
 
   const draft = await createDraft({
     content: tweets,
-    options: { scheduleDate: "next-free-slot" },
+    options: { scheduleDate: "next-free-slot", threadify: true },
   });
   console.log("Scheduled tweet", draft.id);
 

@@ -65,11 +65,9 @@ export async function createDraft({
     body: JSON.stringify(payload),
   });
 
-  if (!response.ok) {
+  if (!response.ok)
     throw new Error(
       `Typefully API error: ${response.status} ${response.statusText}`
     );
-  }
-
   return response.json();
 }
