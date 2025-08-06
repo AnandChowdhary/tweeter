@@ -5,6 +5,7 @@ import { createDraft } from "../functions/schedule-tweets";
 
 const state = JSON.parse(readFileSync("./state.json", "utf-8")) as {
   previousBlogPostThread?: string;
+  lastWeeklyRunAt: string;
 };
 
 const prompts = {
@@ -48,6 +49,7 @@ const voiceGenerator = new Agent({
       "No more blog posts, changing state to go back to the beginning"
     );
     state.previousBlogPostThread = undefined;
+    state.lastWeeklyRunAt = new Date().toISOString();
     writeFileSync("./state.json", JSON.stringify(state, null, 2));
     return;
   }
@@ -83,5 +85,6 @@ const voiceGenerator = new Agent({
   console.log("Scheduled tweet", draft.id);
 
   state.previousBlogPostThread = nextBlogPost.path;
+  state.lastWeeklyRunAt = new Date().toISOString();
   writeFileSync("./state.json", JSON.stringify(state, null, 2));
 })();
