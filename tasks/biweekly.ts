@@ -14,10 +14,14 @@ import { saveState, state } from "../functions/state";
     title: "The Death of WWW";
     date: "2013-08-30T00:00:00.000Z";
     emoji: "🌐❌⌨️";
+    attributes?: Record<string, unknown>;
   }[];
   const blogPosts = blogPostsUnsorted
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .filter(({ slug }) => !slug.startsWith("year-of-")); // Exclude yearly themes
+    .filter(
+      ({ slug, attributes }) =>
+        !slug.startsWith("year-of-") && !attributes?.draft
+    ); // Exclude yearly themes and draft posts
   const previousIndex =
     state.previousBlogPostThread !== undefined &&
     state.previousBlogPostThread !== "none"

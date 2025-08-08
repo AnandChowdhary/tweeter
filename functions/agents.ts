@@ -20,18 +20,20 @@ export const blogThreadGenerator = new Agent({
   name: "Blog Post to Twitter Thread Generator",
   instructions: prompts.blogTweetGenerator,
   tools: [webSearchTool()],
+  model: "gpt-5",
 });
 
 export const newsThreadGenerator = new Agent({
   name: "News to Twitter Thread Generator",
   instructions: prompts.newsTweetGenerator,
   tools: [webSearchTool()],
+  model: "gpt-5",
 });
 
 export const voiceGenerator = new Agent({
   name: "Rewrite in voice",
   instructions: prompts.voice,
-  model: "gpt-4o",
+  model: "gpt-5",
 });
 
 const TweetTopicSchema = z.object({ title: z.string(), excerpt: z.string() });
@@ -44,7 +46,7 @@ export const generateIdeas = async (
   content: string
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
   const response = await openai.responses.parse({
-    model: "gpt-4o-2024-08-06",
+    model: "gpt-5",
     input: [
       { role: "system", content: prompts.ideasGenerator },
       { role: "user", content: content },
