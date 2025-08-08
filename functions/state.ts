@@ -4,9 +4,11 @@ export const state = JSON.parse(
   readFileSync("./state.json", "utf-8") || "{}"
 ) as {
   previousBlogPostThread?: string;
+  previousChangelogThread?: string;
   previousSmolAiNewsThread?: string;
   lastBiWeeklyRunAt: string;
   lastDailyRunAt: string;
+  lastWeeklyRunAt: string;
 };
 
 export function saveState(newState: Partial<typeof state>) {

@@ -56,6 +56,12 @@ Run the biweekly blog post task:
 npx tsx tasks/biweekly.ts
 ```
 
+Run the weekly changelog post task:
+
+```bash
+npx tsx tasks/weekly.ts
+```
+
 ### Automated scheduling
 
 Set up cron jobs for automated execution:
@@ -74,6 +80,7 @@ Set up cron jobs for automated execution:
 
 - **Daily**: Fetches latest AI news from smol.ai RSS feed
 - **Biweekly**: Retrieves blog posts from personal blog API
+- **Weekly** - Find FirstQuadrant's latest changelog post
 
 ### 2. Duplicate detection
 
@@ -132,8 +139,10 @@ The application maintains state in `state.json`:
 {
   "previousSmolAiNewsThread": "last-processed-news-url",
   "previousBlogPostThread": "last-processed-blog-post-path",
+  "previousChangelogPostThread": "last-processed-changelog-post-path",
   "lastDailyRunAt": "timestamp",
-  "lastBiWeeklyRunAt": "timestamp"
+  "lastBiWeeklyRunAt": "timestamp",
+  "lastWeeklyRunAt": "timestamp"
 }
 ```
 

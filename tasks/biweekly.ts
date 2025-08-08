@@ -51,10 +51,12 @@ import { saveState, state } from "../functions/state";
   const blogPost =
     `Link: ${blogPostUrl}\nDate: ${nextBlogPost.date}\nTitle: ${nextBlogPost.title}\n\n` +
     (await fetch(rawBlogPostUrl).then((res) => res.text()));
+  console.log("Fetched blog post", blogPost);
 
   const initialResult = await run(blogThreadGenerator, blogPost);
   if (!initialResult.finalOutput)
     throw new Error("No output from blogThreadGenerator");
+  console.log("Initial result", initialResult.finalOutput.length);
 
   const voiceResult = await run(
     voiceGenerator,
@@ -63,8 +65,10 @@ import { saveState, state } from "../functions/state";
 
   if (!voiceResult.finalOutput)
     throw new Error("No output from voiceGenerator");
+  console.log("Voice result", voiceResult.finalOutput.length);
 
   const tweets = parseTweetsFromContent(voiceResult.finalOutput);
+  console.log("Tweets", tweets);
 
   const draft = await createDraft({
     content: tweets,

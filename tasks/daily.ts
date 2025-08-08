@@ -71,7 +71,9 @@ interface RSSFeed {
   }
 
   const content = latestItem["content:encoded"].split("AI Reddit Recap")[0];
+  console.log("Content", content.length);
   const ideas = await generateIdeas(content);
+  console.log("Ideas", ideas.tweet_topics.map((t) => t.title).join(", "));
 
   for (const idea of ideas.tweet_topics) {
     const initialResult = await run(
@@ -80,6 +82,7 @@ interface RSSFeed {
     );
     if (!initialResult.finalOutput)
       throw new Error("No output from blogThreadGenerator");
+    console.log("Initial result", initialResult.finalOutput.length);
 
     const voiceResult = await run(
       voiceGenerator,
@@ -88,8 +91,10 @@ interface RSSFeed {
 
     if (!voiceResult.finalOutput)
       throw new Error("No output from voiceGenerator");
+    console.log("Voice result", voiceResult.finalOutput.length);
 
     const tweets = parseTweetsFromContent(voiceResult.finalOutput);
+    console.log("Tweets", tweets);
 
     const draft = await createDraft({
       content: tweets,

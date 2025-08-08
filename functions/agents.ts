@@ -7,7 +7,14 @@ import { z } from "zod";
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const prompts = {
-  blogTweetGenerator: readFileSync("./prompts/tweet-generator.md", "utf-8"),
+  personalBlogTweetGenerator: readFileSync(
+    "./prompts/personal-blog-tweet-generator.md",
+    "utf-8"
+  ),
+  companyChangelogTweetGenerator: readFileSync(
+    "./prompts/company-changelog-tweet-generator.md",
+    "utf-8"
+  ),
   newsTweetGenerator: readFileSync(
     "./prompts/news-tweet-generator.md",
     "utf-8"
@@ -18,7 +25,14 @@ const prompts = {
 
 export const blogThreadGenerator = new Agent({
   name: "Blog Post to Twitter Thread Generator",
-  instructions: prompts.blogTweetGenerator,
+  instructions: prompts.personalBlogTweetGenerator,
+  tools: [webSearchTool()],
+  model: "gpt-5",
+});
+
+export const companyChangelogThreadGenerator = new Agent({
+  name: "Company Changelog to Twitter Thread Generator",
+  instructions: prompts.companyChangelogTweetGenerator,
   tools: [webSearchTool()],
   model: "gpt-5",
 });

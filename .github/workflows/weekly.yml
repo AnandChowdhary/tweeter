@@ -1,0 +1,42 @@
+name: Weekly
+
+on:
+  schedule:
+    - cron: "0 9 * * 4"
+  workflow_dispatch:
+
+jobs:
+  tweet-generation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install tsx globally
+        run: npm install -g tsx
+
+      - name: Run tweet generation
+        run: npx tsx tasks/weekly.ts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add state.json
+          git commit -m ":loud_sound: Update state after weekly run" || echo "No changes to commit"
+          git push
