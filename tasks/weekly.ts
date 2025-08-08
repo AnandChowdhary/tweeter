@@ -21,8 +21,13 @@ import { saveState, state } from "../functions/state";
         return hrefMatch ? hrefMatch[1] : null;
       })
       .filter(Boolean) || [];
-  console.log("Changelog links", changelogLinks);
+  console.log("Changelog links", changelogLinks.length);
   const firstChangelogLink = changelogLinks[0];
+  if (!firstChangelogLink) {
+    console.log("No changelog links found, skipping");
+    return;
+  }
+
   if (state.previousChangelogThread === firstChangelogLink) {
     console.log("No new changelog posts, skipping");
     return;
@@ -59,7 +64,7 @@ import { saveState, state } from "../functions/state";
   console.log("Scheduled tweet", draft.id);
 
   saveState({
-    previousChangelogThread: rawBlogPostUrl,
+    previousChangelogThread: firstChangelogLink,
     lastWeeklyRunAt: new Date().toISOString(),
   });
 })();
