@@ -205,8 +205,8 @@ The thread should feel like a conversation between peers who:
 Generate exactly 4-5 tweets that form a coherent thread:
 
 - **Tweet 1**: Concise opening observation (aim for 200-250 characters)
-- **Tweets 2-4**: Longer, detailed analysis (can use up to 500 characters with paragraph breaks)
-- **Tweet 5** (if needed): Open questions and thoughtful conclusion
+- **Tweets 2-4**: Longer, detailed analysis
+- **Tweet 5** (if needed): Optional open questions and thoughtful conclusion
 
 Each tweet should:
 
@@ -216,12 +216,13 @@ Each tweet should:
 - Add genuine insight beyond the press release or announcement
 - Invite thoughtful engagement over viral reactions
 - Prioritize synthesis, interpretation, and analytical depth drawn from diverse, researched opinions
+- Not include any links or citations, just as if it's written directly
 
 **Length Guidelines:**
 
 - First tweet: Keep it punchy and under 250 characters
-- Middle tweets: Use the full 500 characters with paragraph breaks for technical depth
-- Final tweet: Wrap with genuine questions and thoughtful conclusion
+- Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically
+- Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion
 
 Format each tweet as:
 
