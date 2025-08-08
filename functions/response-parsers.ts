@@ -25,9 +25,10 @@ export function cleanContent(content: string): string {
     .replace(/”/g, '"') // Replace smart quotes with regular quotes
     .replace(/‘/g, "'") // Replace smart apostrophes with regular apostrophes
     .replace(/’/g, "'") // Replace smart apostrophes with regular apostrophes
-    .replace(/—/g, " - ") // Remove em-dashes
-    .replace(/–/g, "-") // Remove en-dashes
+    .replace(/—/g, " - ") // Replace em-dashes
+    .replace(/–/g, "-") // Replace en-dashes
     .replace(/…/g, "...") // Replace ellipsis with three dots
+    .replace(/;/g, ",") // Replace semicolons with commas
     .replace(/[\u201C\u201D]/g, '"') // Replace any remaining smart quotes
     .replace(/[\u2018\u2019]/g, "'") // Replace any remaining smart apostrophes
     .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, " "); // Convert all types of spaces to normal space
