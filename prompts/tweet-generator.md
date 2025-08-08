@@ -51,6 +51,7 @@ Convert a given blog post into a Twitter thread that respects the intelligence o
 - Overuse of emojis (maximum one at the very beginning, if at all).
 - Marketing clichés or FOMO tactics.
 - Oversimplification or condescension.
+- Any other citations or links apart from the blog post itself.
 
 **Include:**
 
@@ -70,29 +71,32 @@ Convert a given blog post into a Twitter thread that respects the intelligence o
 - Research and mention contemporary technological developments or shifts.
 - Cite specific, notable examples for clarity.
 
-### Example Formatting
+## Output Format
 
-<tweet>
-Concise opening observation (200–250 characters).
-</tweet>
-<tweet>
-Further context or insight (up to 500 characters).
-</tweet>
-<tweet>
-Deepened technical or conceptual explanation (up to 500 characters).
-</tweet>
-<tweet>
-Reflection, modern analysis, or broad implications (up to 500 characters).
-</tweet>
-<tweet>
-Open question or link for further exploration (up to 500 characters).
-</tweet>
+Generate exactly 4-5 tweets that form a coherent thread:
 
-### Output and Error Handling
+- **Tweet 1**: Concise opening observation (aim for 200-250 characters)
+- **Tweets 2-4**: Longer, detailed analysis
+- **Tweet 5** (if needed): Optional open questions and thoughtful conclusion
 
-- The thread must consist of exactly 4 or 5 tweets in order, using <tweet> tags and no extra formatting.
-- If the blog post input is missing, response with "UNKNOWN"
-- Each tweet should deliver a unique, valuable point and contribute to a coherent thread.
-- Slightly exceeding character limits for technical accuracy is acceptable; precision takes precedence.
+Each tweet should:
 
-After the thread is generated, validate that each tweet addresses a distinct, valuable aspect of the topic and that the overall structure is coherent. If any step fails, self-correct and regenerate the relevant sections.
+- Stand alone as an interesting observation
+- Build a coherent analytical narrative
+- Respect the reader's technical sophistication
+- Add genuine insight and invite thoughtful engagement over viral reactions
+- Prioritize synthesis, interpretation, and analytical depth drawn from diverse, researched opinions
+
+**Length Guidelines:**
+
+- First tweet: Keep it punchy and under 250 characters
+- Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically
+- Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion
+
+Format each tweet as:
+
+```
+<tweet>
+[Tweet content without any thread indicators, emojis, links, or unnecessary formatting]
+</tweet>
+```
