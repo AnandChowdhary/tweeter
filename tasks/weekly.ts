@@ -5,15 +5,33 @@ import {
 } from "../functions/agents";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
-import { saveState } from "../functions/state";
+import { saveState, state } from "../functions/state";
 
 (async () => {
-  const rawBlogPostUrl =
-    "https://docs.firstquadrant.ai/changelog/2025-08-03-memory-preview.md";
-  const blogPostUrl = rawBlogPostUrl.replace(".md", "");
-  console.log("Generating thread for", blogPostUrl);
+  const changelogPage = await fetch("https://firstquadrant.ai/changelog").then(
+    (res) => res.text()
+  );
+
+  // Find all the links starting with https://docs.firstquadrant.ai/changelog/
+  const changelogLinks =
+    changelogPage
+      .match(/href="https:\/\/docs\.firstquadrant\.ai\/changelog\/[^"]+"/g)
+      ?.map((href) => {
+        const hrefMatch = href.match(/href="([^"]+)"/);
+        return hrefMatch ? hrefMatch[1] : null;
+      })
+      .filter(Boolean) || [];
+  console.log("Changelog links", changelogLinks);
+  const firstChangelogLink = changelogLinks[0];
+  if (state.previousChangelogThread === firstChangelogLink) {
+    console.log("No new changelog posts, skipping");
+    return;
+  }
+
+  const rawBlogPostUrl = firstChangelogLink + ".md";
+  console.log("Generating thread for", firstChangelogLink);
   const blogPost =
-    `Link: ${blogPostUrl}\n\n` +
+    `Link: ${firstChangelogLink}\n\n` +
     (await fetch(rawBlogPostUrl).then((res) => res.text()));
   console.log("Fetched blog post", blogPost.length);
 
@@ -36,7 +54,7 @@ import { saveState } from "../functions/state";
 
   const draft = await createDraft({
     content: tweets,
-    options: { scheduleDate: "next-free-slot", threadify: true },
+    options: { scheduleDate: "next-free-slot" },
   });
   console.log("Scheduled tweet", draft.id);
 

@@ -98,7 +98,7 @@ interface RSSFeed {
 
     const draft = await createDraft({
       content: tweets,
-      options: { scheduleDate: "next-free-slot", threadify: true },
+      options: { scheduleDate: "next-free-slot" },
     });
     console.log("Scheduled tweet", draft.id);
   }
