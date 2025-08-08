@@ -1,6 +1,5 @@
 import { run } from "@openai/agents";
 import { XMLParser } from "fast-xml-parser";
-import { writeFile } from "node:fs/promises";
 import {
   generateIdeas,
   newsThreadGenerator,
@@ -82,27 +81,15 @@ interface RSSFeed {
     if (!initialResult.finalOutput)
       throw new Error("No output from blogThreadGenerator");
 
-    await writeFile(
-      `${idea.title.replaceAll(" ", "-")}.txt`,
-      initialResult.finalOutput
-    );
-
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following tweets based on the news\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links or emojis but you can be funny at times.\n\nFirst tweet: Keep it punchy and under 250 characters. Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically. Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion.`
+      `Please rewrite the following tweets based on the news for an audience of technical founders with a bit of humor if needed\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links or emojis.\n\nFirst tweet: Keep it punchy and under 250 characters. Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically. Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion.`
     );
 
     if (!voiceResult.finalOutput)
       throw new Error("No output from voiceGenerator");
 
-    await writeFile(
-      `${idea.title.replaceAll(" ", "-")}-voice.txt`,
-      voiceResult.finalOutput
-    );
-
     const tweets = parseTweetsFromContent(voiceResult.finalOutput);
-    await writeFile(`${idea.title.replaceAll(" ", "-")}-tweets.txt`, tweets);
-    return;
 
     const draft = await createDraft({
       content: tweets,
