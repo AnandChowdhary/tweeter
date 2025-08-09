@@ -19,6 +19,10 @@ const prompts = {
     "./prompts/news-tweet-generator.md",
     "utf-8"
   ),
+  linkTweetGenerator: readFileSync(
+    "./prompts/link-tweet-generator.md",
+    "utf-8"
+  ),
   ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
 };
@@ -40,6 +44,13 @@ export const companyChangelogThreadGenerator = new Agent({
 export const newsThreadGenerator = new Agent({
   name: "News to Twitter Thread Generator",
   instructions: prompts.newsTweetGenerator,
+  tools: [webSearchTool()],
+  model: "gpt-5",
+});
+
+export const linkThreadGenerator = new Agent({
+  name: "Link to Twitter Thread Generator",
+  instructions: prompts.linkTweetGenerator,
   tools: [webSearchTool()],
   model: "gpt-5",
 });
