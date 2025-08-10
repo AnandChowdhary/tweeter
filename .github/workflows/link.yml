@@ -7,6 +7,10 @@ on:
         description: "Link to the article"
         required: true
         type: string
+      comment:
+        description: "Optional comment or context for tweet generation"
+        required: false
+        type: string
 
 jobs:
   tweet-generation:
@@ -31,7 +35,7 @@ jobs:
         run: npm install -g tsx
 
       - name: Run tweet generation
-        run: npx tsx tasks/link.ts ${{ inputs.link }}
+        run: npx tsx tasks/link.ts "${{ inputs.link }}" "${{ inputs.comment }}"
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}

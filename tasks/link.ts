@@ -6,6 +6,7 @@ import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 
 const link = process.argv[2];
+const comment = process.argv[3];
 
 (async () => {
   if (!link) {
@@ -16,10 +17,14 @@ const link = process.argv[2];
   const content = await fetch(link).then((res) => res.text());
   console.log("Content", content.length);
 
-  const initialResult = await run(
-    linkThreadGenerator,
-    `Link: ${link}\n\n${content}`
-  );
+  // Prepare the input for the link thread generator
+  let input = `Link: ${link}\n\n${content}`;
+  if (comment) {
+    input = `Link: ${link}\n\n<original article content>${content}</original article content>\n\n---\n\nComment from user that you take into account when shaping your opinion and generating the thread: ${comment}`;
+    console.log("Using comment:", comment);
+  }
+
+  const initialResult = await run(linkThreadGenerator, input);
   if (!initialResult.finalOutput)
     throw new Error("No output from blogThreadGenerator");
   console.log("Initial result", initialResult.finalOutput.length);
