@@ -102,6 +102,8 @@ Supplementary search strategy (only if needed to fill gaps):
    - Identify what we need to see for proper evaluation
    - Synthesize your overall technical assessment
    - Invite specific technical discussion from the community
+   - Always include the link to the original article at the end
+   - If you know the Twitter/X username of the author, you can @-mention them (but don't guess it or @-mention anyone else)
 
 ### Style Guidelines
 
@@ -114,7 +116,6 @@ Supplementary search strategy (only if needed to fill gaps):
 
 **What to Avoid:**
 
-- Links or URLs (except for the original article)
 - Emojis or emoticons
 - Marketing language from the article
 - Oversimplification for general audience
@@ -280,7 +281,7 @@ Each tweet should:
 
 ```
 <tweet>
-[Tweet content without any indicators, emojis, links, or formatting, but you can include the link to the original article in the last tweet]
+[Tweet content]
 </tweet>
 ```
 
