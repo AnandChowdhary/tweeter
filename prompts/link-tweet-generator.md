@@ -31,6 +31,7 @@ When analyzing the provided article, you must:
    - Verify technical claims that seem questionable or incomplete
 4. **Apply critical technical lens**: Evaluate methodologies, question benchmarks, identify potential issues.
 5. **Synthesize broader context**: Connect to current research trends, understand motivations, identify patterns.
+6. **Find Twitter/X username**: If you don't already know the X/Twitter username of the author, you can use search to find it, but only include it if you are confident in the right username, don't @-mention someone else.
 
 Supplementary search strategy (only if needed to fill gaps):
 
