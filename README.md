@@ -62,6 +62,12 @@ Run the weekly changelog post task:
 npx tsx tasks/weekly.ts
 ```
 
+Generate a tweet thread from a specific link:
+
+```bash
+npx tsx tasks/link.ts "https://example.com/article-url"
+```
+
 ### Automated scheduling
 
 Set up cron jobs for automated execution:
@@ -118,6 +124,14 @@ Set up cron jobs for automated execution:
 - Focuses on technical insights and implications
 - Provides thoughtful analysis
 
+### Link thread generator
+
+- Generates tweet threads from any article URL
+- Performs deep technical analysis of the content
+- Conducts supplementary research when needed
+- Creates intellectually engaging threads for technical audiences
+- Maintains critical perspective and technical depth
+
 ### Voice generator
 
 - Rewrites content in consistent authorial voice
@@ -130,6 +144,29 @@ Set up cron jobs for automated execution:
 - Extracts tweet topics from content
 - Generates multiple thread ideas
 - Ensures content variety
+
+## Link-based tweet generation
+
+The system can automatically generate tweet threads from any article link you provide. This feature is perfect for quickly sharing interesting articles you come across.
+
+#### Apple Shortcuts integration
+
+For seamless article sharing, you can set up a custom shortcut in the Apple Shortcuts app:
+
+1. **Create a new shortcut** in the Shortcuts app
+2. **Add a "Get Contents of URL" action** with the GitHub Actions workflow URL
+3. **Add a "Get Text from Input" action** to extract the article URL
+4. **Add a "URL" action** to construct the final workflow URL with the article link
+5. **Add a "Get Contents of URL" action** to trigger the workflow
+6. **Save the shortcut** and add it to your iPhone's share sheet
+
+Now whenever you find an interesting article:
+
+- Tap the share button
+- Select your custom shortcut
+- The system will automatically generate and schedule a tweet thread
+
+The shortcut essentially automates the process of sending article URLs to your GitHub Actions workflow, making it effortless to share interesting content with your followers. You need the actions:write permission in your fine-grain access token to trigger workflows.
 
 ## 💾 State management
 
