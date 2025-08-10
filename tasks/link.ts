@@ -2,6 +2,7 @@
 
 import { run } from "@openai/agents";
 import { readFileSync } from "fs";
+import { NodeHtmlMarkdown } from "node-html-markdown";
 import { linkThreadGenerator, voiceGenerator } from "../functions/agents";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
@@ -23,7 +24,14 @@ const link = process.argv[2];
   }
 
   console.log("Fetching content", link);
-  const content = await fetch(link).then((res) => res.text());
+  const contentOriginal = await fetch(link).then((res) => res.text());
+
+  let content = contentOriginal;
+  try {
+    content = NodeHtmlMarkdown.translate(contentOriginal);
+  } catch (error) {
+    console.warn("Could not convert content to markdown:", error);
+  }
   console.log("Content", content.length);
 
   // Prepare the input for the link thread generator

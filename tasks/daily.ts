@@ -1,5 +1,6 @@
 import { run } from "@openai/agents";
 import { XMLParser } from "fast-xml-parser";
+import { NodeHtmlMarkdown } from "node-html-markdown";
 import {
   generateIdeas,
   newsThreadGenerator,
@@ -70,7 +71,12 @@ interface RSSFeed {
     return;
   }
 
-  const content = latestItem["content:encoded"].split("AI Reddit Recap")[0];
+  let content = latestItem["content:encoded"].split("AI Reddit Recap")[0];
+  try {
+    content = NodeHtmlMarkdown.translate(content);
+  } catch (error) {
+    console.warn("Could not convert content to markdown:", error);
+  }
   console.log("Content", content.length);
   const ideas = await generateIdeas(content);
   console.log("Ideas", ideas.tweet_topics.map((t) => t.title).join(", "));
