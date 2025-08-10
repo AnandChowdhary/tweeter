@@ -23,8 +23,9 @@ When analyzing the provided article, you must:
 
 1. **Deeply analyze the article**: Extract technical claims, architectural details, benchmarks, and methodological approaches.
 2. **Identify gaps and questions**: What's not being said? What technical details are missing? What assumptions are being made?
-3. **Perform supplementary research if needed**:
+3. **Perform supplementary research**:
    - Search for technical documentation or papers referenced but not detailed
+   - Search for any other related articles, news, or sources to form your opinion
    - Find competing approaches or SOTA comparisons not mentioned
    - Look for community reactions and expert commentary on the specific development
    - Verify technical claims that seem questionable or incomplete
