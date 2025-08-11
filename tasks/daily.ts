@@ -64,6 +64,13 @@ interface RSSFeed {
     return;
   }
 
+  if (
+    latestItem.title.trim().toLowerCase().includes("not much happened today")
+  ) {
+    console.log("Skipping 'not much happened today' item");
+    return;
+  }
+
   const isLatestAlreadyTweeted =
     state.previousSmolAiNewsThread === latestItem.guid["#text"] + "test";
   if (isLatestAlreadyTweeted) {
