@@ -11,6 +11,8 @@ export const state = JSON.parse(
   lastWeeklyRunAt: string;
   lastTriWeeklyRunAt: string;
   previousNotesPostThread?: string;
+  previousOpenSourceProjectThread?: string;
+  lastAlternateWeeklyRunAt: string;
 };
 
 export function saveState(newState: Partial<typeof state>) {

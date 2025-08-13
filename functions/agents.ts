@@ -27,6 +27,10 @@ const prompts = {
     "./prompts/notes-tweet-generator.md",
     "utf-8"
   ),
+  openSourceProjectTweetGenerator: readFileSync(
+    "./prompts/open-source-project-tweet-generator.md",
+    "utf-8"
+  ),
   ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
 };
@@ -62,6 +66,13 @@ export const linkThreadGenerator = new Agent({
 export const notesThreadGenerator = new Agent({
   name: "Notes to Twitter Thread Generator",
   instructions: prompts.notesTweetGenerator,
+  tools: [webSearchTool()],
+  model: "gpt-5",
+});
+
+export const openSourceProjectTweetGenerator = new Agent({
+  name: "Open Source Project to Twitter Thread Generator",
+  instructions: prompts.openSourceProjectTweetGenerator,
   tools: [webSearchTool()],
   model: "gpt-5",
 });

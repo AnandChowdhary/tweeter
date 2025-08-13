@@ -56,24 +56,6 @@ Run the biweekly blog post task:
 npx tsx tasks/biweekly.ts
 ```
 
-Run the triweekly notes post task:
-
-```bash
-npx tsx tasks/triweekly.ts
-```
-
-Run the weekly changelog post task:
-
-```bash
-npx tsx tasks/weekly.ts
-```
-
-Generate a tweet thread from a specific link:
-
-```bash
-npx tsx tasks/link.ts "https://example.com/article-url"
-```
-
 ### Automated scheduling
 
 Set up cron jobs for automated execution:
@@ -94,6 +76,7 @@ Set up cron jobs for automated execution:
 - **Biweekly**: Retrieves blog posts from personal blog API
 - **Triweekly** Retrieves notes from personal API
 - **Weekly** - Find FirstQuadrant's latest changelog post
+- **Alternate weekly** - Retrieves an old open source project
 
 ### 2. Duplicate detection
 
@@ -185,9 +168,7 @@ The application maintains state in `state.json`:
   "previousBlogPostThread": "last-processed-blog-post-path",
   "previousChangelogPostThread": "last-processed-changelog-post-path",
   "lastDailyRunAt": "timestamp",
-  "lastBiWeeklyRunAt": "timestamp",
-  "lastTriWeeklyRunAt": "timestamp",
-  "lastWeeklyRunAt": "timestamp"
+  "lastBiWeeklyRunAt": "timestamp"
 }
 ```
 
