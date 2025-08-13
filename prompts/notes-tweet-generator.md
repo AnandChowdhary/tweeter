@@ -15,7 +15,7 @@ Begin with a concise checklist (3-7 bullets) of what you will do; keep items con
 
 ## Task
 
-Convert a brief note (ranging from a few words to a couple of sentences) from your archive into a Twitter thread that respects the intelligence of the reader while remaining accessible. Include reflection on how the idea has aged since it was originally captured.
+Convert a brief note (ranging from a few words to a couple of sentences) from your archive into a Twitter thread that respects the intelligence of the reader while remaining accessible. Include reflection on how the idea has aged since it was originally captured. If there is any note added recently, include that.
 
 ### Processing Phase (Before Thread Creation)
 
