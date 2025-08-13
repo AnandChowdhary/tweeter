@@ -47,7 +47,9 @@ import { saveState, state } from "../functions/state";
   console.log("Generating thread for", nextopenSourceProject.full_name);
   const openSourceProject =
     `Link: ${openSourceProjectUrl}\nCreated date: ${nextopenSourceProject.created_at}\nDescription: ${nextopenSourceProject.description}\nName: ${nextopenSourceProject.name}\n\n` +
-    (await fetch(openSourceProjectUrl).then((res) => res.text()));
+    (await fetch(
+      `https://raw.githubusercontent.com/${nextopenSourceProject.full_name}/HEAD/README.md`
+    ).then((res) => res.text()));
   console.log("Fetched open source project", openSourceProject);
 
   const initialResult = await run(
