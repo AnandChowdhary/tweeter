@@ -9,6 +9,8 @@ export const state = JSON.parse(
   lastBiWeeklyRunAt: string;
   lastDailyRunAt: string;
   lastWeeklyRunAt: string;
+  lastTriWeeklyRunAt: string;
+  previousNotesPostThread?: string;
 };
 
 export function saveState(newState: Partial<typeof state>) {
