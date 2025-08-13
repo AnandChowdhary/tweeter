@@ -56,7 +56,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the notes post.\n\n<notes-post>\n${notesPost}\n</notes-post>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with "👇" so people can click to read the rest of the thread.`
+    `Please rewrite the following tweets based on the notes post.\n\n<notes-post>\n${notesPost}\n</notes-post>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with "👇" so people can click to read the rest of the thread. The last tweet should end with "Here's the original note from [year]: [link to markdown file]"`
   );
 
   if (!voiceResult.finalOutput)

@@ -133,7 +133,7 @@ Length Guidelines:
 
 - First tweet: Keep it punchy and under 250 characters
 - Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically
-- Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion
+- Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion, ending with the link to the original note
 
 Format each tweet as:
 
