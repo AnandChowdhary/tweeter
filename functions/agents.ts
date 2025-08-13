@@ -31,6 +31,10 @@ const prompts = {
     "./prompts/open-source-project-tweet-generator.md",
     "utf-8"
   ),
+  starredRepoTweetGenerator: readFileSync(
+    "./prompts/starred-repo-tweet-generator.md",
+    "utf-8"
+  ),
   ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
 };
@@ -73,6 +77,13 @@ export const notesThreadGenerator = new Agent({
 export const openSourceProjectTweetGenerator = new Agent({
   name: "Open Source Project to Twitter Thread Generator",
   instructions: prompts.openSourceProjectTweetGenerator,
+  tools: [webSearchTool()],
+  model: "gpt-5",
+});
+
+export const starredRepoTweetGenerator = new Agent({
+  name: "Starred Repository to Twitter Thread Generator",
+  instructions: prompts.starredRepoTweetGenerator,
   tools: [webSearchTool()],
   model: "gpt-5",
 });

@@ -13,6 +13,8 @@ export const state = JSON.parse(
   previousNotesPostThread?: string;
   previousOpenSourceProjectThread?: string;
   lastAlternateWeeklyRunAt: string;
+  previousStarredRepos?: string[];
+  lastStarredReposRunAt?: string;
 };
 
 export function saveState(newState: Partial<typeof state>) {
