@@ -1,4 +1,4 @@
-name: triweekly
+name: Triweekly
 
 on:
   schedule:
