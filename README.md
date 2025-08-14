@@ -1,6 +1,6 @@
 # 🐦 Tweeter
 
-An automated Twitter content generation and scheduling system that creates engaging threads from blog posts and news articles built on top of GitHub Actions.
+An automated Twitter content generation and scheduling system that creates suggested tweet threads from blog posts and news articles. The system generates content drafts that you manually review, edit, and approve before posting to Twitter.
 
 ## ⚙️ Setup
 
@@ -68,6 +68,58 @@ Set up cron jobs for automated execution:
 0 10 */14 * * cd /path/to/tweeter && npx tsx tasks/biweekly.ts
 ```
 
+## 🔄 GitHub Actions Workflows
+
+This repository includes several GitHub Actions workflows that automate content generation:
+
+### Scheduled Workflows
+
+- **Daily** (`daily.yml`): Runs every day at 10 AM UTC to generate news threads and process starred repositories
+- **Weekly** (`weekly.yml`): Runs every Thursday at 9 AM UTC to generate changelog threads
+- **Biweekly** (`biweekly.yml`): Runs every 2 weeks to generate blog post threads
+- **Triweekly** (`triweekly.yml`): Runs every 3 weeks to generate note-based threads
+- **Alternate Weekly** (`alternate-weekly.yml`): Runs on alternate weeks to generate open source project threads
+
+### Manual Workflows
+
+- **Link** (`link.yml`): Manually trigger to generate threads from any article URL
+  - Input: Article link (required), optional comment for context
+  - Perfect for sharing interesting articles you discover
+- **Note** (`note.yml`): Manually trigger to generate threads from personal notes
+  - Input: Note content (required)
+  - Great for turning quick thoughts into tweet threads
+
+### Workflow Features
+
+All workflows:
+
+- Run on Ubuntu latest with Node.js LTS
+- Install dependencies automatically
+- Use your configured API keys from GitHub Secrets
+- Commit state changes back to the repository
+- Can be triggered manually via `workflow_dispatch` or automatically via cron schedules
+
+### Setting up GitHub Secrets
+
+To use the workflows, add these secrets to your repository:
+
+1. Go to your repository Settings → Secrets and variables → Actions
+2. Add the following secrets:
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `TYPEFULLY_API_KEY`: Your Typefully API key
+
+### Manual Workflow Triggers
+
+You can manually trigger workflows from the GitHub Actions tab:
+
+1. Go to Actions tab in your repository
+2. Select the workflow you want to run
+3. Click "Run workflow"
+4. Fill in required inputs (for Link and Note workflows)
+5. Click "Run workflow"
+
+This is especially useful for the Link workflow when you want to quickly generate threads from articles you find interesting.
+
 ## 🔄 Content generation process
 
 ### 1. Content discovery
@@ -81,7 +133,7 @@ Set up cron jobs for automated execution:
 ### 2. Duplicate detection
 
 - Checks against previously processed content
-- Skips if content has already been tweeted
+- Skips if content has already been suggested
 
 ### 3. Idea generation
 
@@ -94,11 +146,12 @@ Set up cron jobs for automated execution:
 - Applies voice transformation for consistency
 - Parses tweets into proper format
 
-### 5. Scheduling
+### 5. Draft creation & review
 
-- Creates drafts in Typefully
-- Schedules for next available time slot
+- Creates drafts in Typefully for your review
+- Requires manual editing and approval before posting
 - Enables thread formatting
+- You maintain full control over what gets published
 
 ## 🤖 Agents
 
@@ -137,7 +190,7 @@ Set up cron jobs for automated execution:
 
 ## Link-based tweet generation
 
-The system can automatically generate tweet threads from any article link you provide. This feature is perfect for quickly sharing interesting articles you come across.
+The system can automatically generate suggested tweet threads from any article link you provide. This feature is perfect for quickly creating content drafts for interesting articles you come across.
 
 #### Apple Shortcuts integration
 
@@ -154,9 +207,10 @@ Now whenever you find an interesting article:
 
 - Tap the share button
 - Select your custom shortcut
-- The system will automatically generate and schedule a tweet thread
+- The system will automatically generate **suggested tweet threads** for your review
+- You can edit and approve the content before scheduling
 
-The shortcut essentially automates the process of sending article URLs to your GitHub Actions workflow, making it effortless to share interesting content with your followers. You need the actions:write permission in your fine-grain access token to trigger workflows.
+The shortcut essentially automates the process of sending article URLs to your GitHub Actions workflow, making it effortless to create content drafts for interesting articles. You need the actions:write permission in your fine-grain access token to trigger workflows.
 
 ## 💾 State management
 

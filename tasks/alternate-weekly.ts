@@ -62,7 +62,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the open source project.\n\n<open-source-project>\n${openSourceProject}\n</open-source-project>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with "👇" so people can click to read the rest of the thread. The last tweet should end with "Here's the project: [link to project]"`
+    `Please rewrite the following tweets based on the open source project.\n\n<open-source-project>\n${openSourceProject}\n</open-source-project>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. The last tweet should end with "Here's the project: [link to project]"`
   );
 
   if (!voiceResult.finalOutput)

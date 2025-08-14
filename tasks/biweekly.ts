@@ -60,7 +60,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the blog post.\n\n<blog-post>\n${blogPost}\n</blog-post>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with "👇" so people can click to read the rest of the thread.`
+    `Please rewrite the following tweets based on the blog post.\n\n<blog-post>\n${blogPost}\n</blog-post>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread.`
   );
 
   if (!voiceResult.finalOutput)

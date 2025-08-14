@@ -47,7 +47,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `As the cofounder of AI sales platform FirstQuadrant, I write a weekly changelog for everything we shipped. Please rewrite the following tweets based on the changelog for this week.\n\n<changelog>\n${blogPost}\n</changelog>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet can end with an emoji so people can click to read the rest of the thread, maybe something like "This week, we shipped... 👇" but you can be creative but technical (for a technical/engineering audience who is also interested in sales and business/startups).`
+    `As the cofounder of AI sales platform FirstQuadrant, I write a weekly changelog for everything we shipped. Please rewrite the following tweets based on the changelog for this week.\n\n<changelog>\n${blogPost}\n</changelog>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet can end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread, maybe something like "This week, we shipped... 👇" but you can be creative but technical (for a technical/engineering audience who is also interested in sales and business/startups). The first time you mention the company, @ mention them as @FirstQuadrant.`
   );
 
   if (!voiceResult.finalOutput)

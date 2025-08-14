@@ -1,0 +1,52 @@
+name: Note
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "Note content to tweet about"
+        required: true
+        type: string
+
+jobs:
+  tweet-generation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install tsx globally
+        run: npm install -g tsx
+
+      - name: Create note file
+        run: |
+          printf '%s\n' "${{ inputs.note }}" > note.txt
+
+      - name: Run tweet generation
+        run: npx tsx tasks/note.ts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+
+      - name: Cleanup
+        run: rm -f note.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add state.json
+          git commit -m ":loud_sound: Update state after note tweet generation" || echo "No changes to commit"
+          git push
