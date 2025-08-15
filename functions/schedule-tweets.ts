@@ -1,3 +1,5 @@
+import { sendPushoverMessage } from "./pushover";
+
 interface CreateDraftOptions {
   content: string;
   threadify?: boolean;
@@ -29,6 +31,16 @@ export async function createDraft({
   const apiKey = process.env.TYPEFULLY_API_KEY;
   if (!apiKey) {
     throw new Error("TYPEFULLY_API_KEY environment variable is not set");
+  }
+
+  const pushoverApiKey = process.env.PUSHOVER_API_KEY;
+  if (!pushoverApiKey) {
+    throw new Error("PUSHOVER_API_KEY environment variable is not set");
+  }
+
+  const pushoverUserKey = process.env.PUSHOVER_USER_KEY;
+  if (!pushoverUserKey) {
+    throw new Error("PUSHOVER_USER_KEY environment variable is not set");
   }
 
   const baseUrl = "https://api.typefully.com/v1";
@@ -69,5 +81,22 @@ export async function createDraft({
     throw new Error(
       `Typefully API error: ${response.status} ${response.statusText}`
     );
-  return response.json();
+  const result = await response.json();
+
+  try {
+    await sendPushoverMessage({
+      token: pushoverApiKey,
+      user: pushoverUserKey,
+      message: `Please edit and approve the scheduled tweet: ${payload.content.slice(
+        0,
+        100
+      )}...`,
+      url: "https://typefully.com",
+      url_title: "Edit and approve tweet",
+    });
+  } catch (error) {
+    // Skip erros in notifications
+  }
+
+  return result;
 }
