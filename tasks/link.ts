@@ -1,26 +1,19 @@
 #!/usr/bin/env node
 
 import { run } from "@openai/agents";
-import { readFileSync } from "fs";
+
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import { linkThreadGenerator, voiceGenerator } from "../functions/agents";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 
 const link = process.argv[2];
+const comment = process.env.COMMENT || "";
 
 (async () => {
   if (!link) {
     console.error("Please provide a link as an argument");
     process.exit(1);
-  }
-
-  let comment = "";
-  try {
-    comment = readFileSync("comment.txt", "utf8").trim();
-  } catch (error) {
-    console.warn("Could not read comment file:", error);
-    comment = "";
   }
 
   console.log("Fetching content", link);
