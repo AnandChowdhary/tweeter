@@ -29,8 +29,7 @@ jobs:
 
       - name: Run tweet generation
         run: |
-          npx tsx tasks/daily.ts &
-          npx tsx tasks/starred-repos.ts
+          npx tsx tasks/daily.ts && npx tsx tasks/starred-repos.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
