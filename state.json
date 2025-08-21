@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-08-11-ioi-gold/",
-  "lastDailyRunAt": "2025-08-13T10:14:37.456Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-08-19-databricks/",
+  "lastDailyRunAt": "2025-08-21T10:16:37.636Z",
   "previousBlogPostThread": "blog/2013/internet-org.md",
   "lastBiWeeklyRunAt": "2025-08-18T09:06:46.565Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-08-10-contact-summary",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/aptitude",
   "lastAlternateWeeklyRunAt": "2025-08-15T09:04:49.443Z",
   "previousStarredRepos": [
+    "1036291673",
     "1036412176",
     "614695583",
     "1035987541",
@@ -38,8 +39,7 @@
     "240953017",
     "170507023",
     "239960780",
-    "283984592",
-    "248482840"
+    "283984592"
   ],
-  "lastStarredReposRunAt": "2025-08-21T10:03:16.452Z"
+  "lastStarredReposRunAt": "2025-08-21T10:22:07.510Z"
 }
