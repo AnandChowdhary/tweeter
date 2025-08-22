@@ -2,7 +2,7 @@ name: Triweekly
 
 on:
   schedule:
-    - cron: "0 11 * * 2,4,6"
+    - cron: "0 11 * * 2,4,6" # Every 3 days on Tuesday, Thursday, and Saturday at 11:00 AM
   workflow_dispatch:
 
 jobs:

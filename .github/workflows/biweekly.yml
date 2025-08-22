@@ -2,7 +2,7 @@ name: Biweekly
 
 on:
   schedule:
-    - cron: "0 10 * * 1/3"
+    - cron: "0 10 * * 1" # Every Monday at 10:00 AM
   workflow_dispatch:
 
 jobs:

@@ -2,7 +2,7 @@ name: Alternate weekly
 
 on:
   schedule:
-    - cron: "0 12 */14 * *"
+    - cron: "0 12 */14 * *" # Every 2 weeks on Sunday at 12:00 PM
   workflow_dispatch:
 
 jobs:

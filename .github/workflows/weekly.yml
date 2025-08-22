@@ -2,7 +2,7 @@ name: Weekly
 
 on:
   schedule:
-    - cron: "0 9 * * 4"
+    - cron: "0 9 * * 4" # Every week on Thursday at 9:00 AM
   workflow_dispatch:
 
 jobs:
