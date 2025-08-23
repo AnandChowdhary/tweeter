@@ -62,6 +62,7 @@ Convert a weekly product changelog into a Twitter thread that announces the upda
 - Adding features or benefits not explicitly mentioned.
 - Speculating about how something works internally.
 - Creating fictional user scenarios or use cases.
+- Any other citations or links apart from the main link.
 
 **Include Only:**
 

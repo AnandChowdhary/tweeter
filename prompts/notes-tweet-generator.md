@@ -88,6 +88,7 @@ Avoid:
 - Hindsight bias - acknowledge what couldn't have been known
 - Losing the core insight in excessive elaboration
 - Making the retrospective feel like mere nostalgia
+- Any other citations or links apart from the main link
 
 Include:
 

@@ -87,6 +87,7 @@ Avoid:
 - Presenting speculation as fact
 - Losing the core insight in excessive elaboration
 - Making claims without evidence or reasoning
+- Any other citations or links apart from the main lin
 
 Include:
 

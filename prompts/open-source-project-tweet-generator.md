@@ -91,6 +91,7 @@ Avoid:
 - Glossing over failures or limitations
 - Making it sound like the project was more significant than it was
 - Nostalgia without substance
+- Any other citations or links apart from the main link
 
 Include:
 

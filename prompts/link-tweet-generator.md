@@ -122,6 +122,7 @@ Supplementary search strategy (only if needed to fill gaps):
 - Oversimplification for general audience
 - Mere summarization of the article's points
 - Uncritical acceptance of claims
+- Any other citations or links apart from the main link
 
 **What to Include:**
 

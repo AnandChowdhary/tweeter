@@ -94,6 +94,7 @@ Search strategy should focus on only recent news:
 - Oversimplification that insults intelligence
 - Uncritical repetition of company claims
 - Merely reporting what happened without analyzing underlying motivations or implications
+- Any citations or links
 
 **What to Include:**
 
