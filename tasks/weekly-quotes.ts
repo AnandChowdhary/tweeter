@@ -57,9 +57,14 @@ import { saveState } from "../functions/state";
   console.log("Tweets", tweets);
 
   let start = new Date();
-  start.setHours(0, 0, 0, 0);
   for (const tweet of tweets) {
     start.setDate(start.getDate() + 1);
+    start.setHours(
+      1,
+      Math.floor(Math.random() * 60),
+      Math.floor(Math.random() * 60),
+      0
+    );
     const scheduleDate = start.toISOString();
 
     const draft = await createDraft({
