@@ -153,6 +153,17 @@ This is especially useful for the Link workflow when you want to quickly generat
 - Enables thread formatting
 - You maintain full control over what gets published
 
+## 📝 Life logs integration
+
+The system integrates with my **Life Logs repository** where I store transcriptions from all my conversations using a Limitless pendant. This feature allows you to:
+
+- Extract valuable insights and lessons from founder conversations
+- Generate tweet ideas based on real founder experiences and challenges
+- Transform casual conversations into meaningful content for your audience
+- Maintain a searchable archive of founder wisdom and insights
+
+The Life Logs feature automatically processes these transcripts to identify tweet-worthy content, helping you share authentic founder lessons and reflections with your Twitter audience.
+
 ## 🤖 Agents
 
 ### Blog thread generator

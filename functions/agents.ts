@@ -41,6 +41,7 @@ const prompts = {
   ),
   ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
+  lifeLogIdeasGenerator: readFileSync("./prompts/life-log-ideas.md", "utf-8"),
 };
 
 export const blogThreadGenerator = new Agent({
@@ -121,6 +122,21 @@ export const generateIdeas = async (
       { role: "user", content: content },
     ],
     text: { format: zodTextFormat(IdeasResponseSchema, "ideas") },
+  });
+  if (!response.output_parsed) throw new Error("No response parsed");
+  return response.output_parsed;
+};
+
+export const generateLifeLogIdeas = async (
+  content: string
+): Promise<z.infer<typeof IdeasResponseSchema>> => {
+  const response = await openai.responses.parse({
+    model: "gpt-5",
+    input: [
+      { role: "system", content: prompts.lifeLogIdeasGenerator },
+      { role: "user", content: content },
+    ],
+    text: { format: zodTextFormat(IdeasResponseSchema, "life-log-ideas") },
   });
   if (!response.output_parsed) throw new Error("No response parsed");
   return response.output_parsed;

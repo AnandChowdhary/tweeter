@@ -13,6 +13,21 @@ export function parseTweetsFromContent(content: string): string {
   }
   return tweets.join("\n\n\n\n");
 }
+/**
+ * Parses tweet content from XML-like tags and returns them as a string array
+ * @param content - The raw content containing tweet tags
+ * @returns Array of tweet strings
+ */
+export function parseTweetsFromContentAsArray(content: string): string[] {
+  const tweetRegex = /<tweet>\s*([\s\S]*?)\s*<\/tweet>/g;
+  const tweets: string[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = tweetRegex.exec(content)) !== null) {
+    const tweetContent = match[1].trim();
+    if (tweetContent) tweets.push(cleanContent(tweetContent));
+  }
+  return tweets;
+}
 
 /**
  * Converts an array of tweets to lowercase

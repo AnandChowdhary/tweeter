@@ -15,6 +15,7 @@ export const state = JSON.parse(
   lastAlternateWeeklyRunAt: string;
   previousStarredRepos?: string[];
   lastStarredReposRunAt?: string;
+  lastWeeklyQuotesRunAt?: string;
 };
 
 export function saveState(newState: Partial<typeof state>) {
