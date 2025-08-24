@@ -148,4 +148,9 @@ ${readmeContent.substring(0, 5000)}`;
   });
 
   console.log(`Processed ${newStarredRepos.length} new starred repositories`);
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

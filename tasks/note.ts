@@ -66,4 +66,9 @@ const noteArgument = process.argv[2];
     options: { scheduleDate: "next-free-slot" },
   });
   console.log("Scheduled tweet", draft.id);
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

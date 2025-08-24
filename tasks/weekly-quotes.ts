@@ -9,12 +9,13 @@ import { saveState } from "../functions/state";
   let content = "";
   let today = new Date();
   for (let i = 0; i < 10; i++) {
-    today.setDate(today.getDate() - i);
+    const targetDate = new Date(today);
+    targetDate.setDate(today.getDate() - i);
 
     try {
       const response = await fetch(
         `https://api.github.com/repos/AnandChowdhary/life-logs/contents/data/${
-          today.toISOString().split("T")[0]
+          targetDate.toISOString().split("T")[0]
         }.md`,
         { headers: { Authorization: `Bearer ${process.env.GH_PAT}` } }
       );
@@ -24,7 +25,7 @@ import { saveState } from "../functions/state";
       content += `\n\n${plainText}`;
     } catch (error) {
       console.error(
-        `Error fetching life log for ${today.toISOString()}: ${error}, continuing...`
+        `Error fetching life log for ${targetDate.toISOString()}: ${error}, continuing...`
       );
     }
   }
@@ -69,4 +70,9 @@ import { saveState } from "../functions/state";
   }
 
   saveState({ lastWeeklyQuotesRunAt: new Date().toISOString() });
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

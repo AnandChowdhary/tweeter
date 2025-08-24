@@ -80,4 +80,9 @@ import { saveState, state } from "../functions/state";
     previousBlogPostThread: nextBlogPost.path,
     lastBiWeeklyRunAt: new Date().toISOString(),
   });
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

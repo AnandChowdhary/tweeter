@@ -76,4 +76,9 @@ import { saveState, state } from "../functions/state";
     previousNotesPostThread: nextnotesPost.path,
     lastTriWeeklyRunAt: new Date().toISOString(),
   });
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

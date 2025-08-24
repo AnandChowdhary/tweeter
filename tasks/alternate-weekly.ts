@@ -82,4 +82,9 @@ import { saveState, state } from "../functions/state";
     previousOpenSourceProjectThread: nextopenSourceProject.full_name,
     lastAlternateWeeklyRunAt: new Date().toISOString(),
   });
-})();
+})()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
