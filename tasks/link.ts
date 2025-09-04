@@ -1,60 +1,61 @@
 #!/usr/bin/env node
 
 import { run } from "@openai/agents";
-import { browserTopIdeasGenerator, voiceGenerator } from "../functions/agents";
-import { parseTweetsFromContentAsArray } from "../functions/response-parsers";
-import { createDraft } from "../functions/schedule-tweets";
-import { saveState } from "../functions/state";
 
+import { NodeHtmlMarkdown } from "node-html-markdown";
+import { linkThreadGenerator, voiceGenerator } from "../functions/agents";
+import { parseTweetsFromContent } from "../functions/response-parsers";
+import { createDraft } from "../functions/schedule-tweets";
+
+const link = process.argv[2];
 const comment = process.env.COMMENT || "";
 
 (async () => {
-  if (!comment) {
-    console.error("Please provide a comment as an argument");
+  if (!link) {
+    console.error("Please provide a link as an argument");
     process.exit(1);
   }
 
-  const initialResult = await run(browserTopIdeasGenerator, comment);
+  console.log("Fetching content", link);
+  const contentOriginal = await fetch(link).then((res) => res.text());
+
+  let content = contentOriginal;
+  try {
+    content = NodeHtmlMarkdown.translate(contentOriginal);
+  } catch (error) {
+    console.warn("Could not convert content to markdown:", error);
+  }
+  console.log("Content", content.length);
+
+  // Prepare the input for the link thread generator
+  let input = `Link: ${link}\n\n${content}`;
+  if (comment) {
+    input = `Link: ${link}\n\n<original article content>${content}</original article content>\n\n---\n\nComment from user that you take into account when shaping your opinion and generating the thread: ${comment}`;
+    console.log("Using comment:", comment);
+  }
+
+  const initialResult = await run(linkThreadGenerator, input);
   if (!initialResult.finalOutput)
     throw new Error("No output from blogThreadGenerator");
   console.log("Initial result", initialResult.finalOutput.length);
 
   const voiceResult = await run(
     voiceGenerator,
-    `These are some ideas for quotes to post on Twitter. The idea is to do thought leadership on Twitter like Naval Ravikant or Paul Graham and sometimes randomly post a life lesson, learning, or a powerful quote that is original to me as a short tweet with no other context. Please respond with <tweet>...</tweet> tags for the tweets, one for each tweet. It should be a few sentences.\n\nHere are the previous tweets for inspiration:\n - De‑risk before you leap. Side projects plus a stable salary buy the resource founders need most: mental space. If you raise, raise enough to pay yourself a baseline. You'll make better calls when rent isn't in the prompt.\n - Hire fewer, higher‑leverage builders. Four "cheap" devs rarely equal one elite engineer. As AI handles the average work, the premium is judgment, communication, and taste. A tiny team of killers + agents beats a platoon of passengers.\n - AI UX isn't a chat box. The lazy way to "add AI" is a text field, but the best way is invisible: models doing the work under the hood so users don't have to.\n\nPlease generate tweets from these new ideas:\n\n${initialResult.finalOutput}`
+    `Please rewrite the following tweets based on the article\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links apart from the original article link or any emojis.\n\nFirst tweet: Keep it punchy and under 250 characters. Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically. Final tweet: Wrap with genuine questions (if any, optional, no more than 3, but usually you don't need questions unless you have something specific to add to the conversation) but always have a thoughtful conclusion.`
   );
 
-  if (!voiceResult.finalOutput) {
-    console.error(
-      `No output from voiceGenerator for ${initialResult.finalOutput.length}`
-    );
-    return;
-  }
+  if (!voiceResult.finalOutput)
+    throw new Error("No output from voiceGenerator");
+  console.log("Voice result", voiceResult.finalOutput.length);
 
-  console.log("Voice result length:", voiceResult.finalOutput.length);
-
-  const tweets = parseTweetsFromContentAsArray(voiceResult.finalOutput);
+  const tweets = parseTweetsFromContent(voiceResult.finalOutput);
   console.log("Tweets", tweets);
 
-  let start = new Date();
-  for (const tweet of tweets) {
-    start.setDate(start.getDate() + 1);
-    start.setHours(
-      6,
-      Math.floor(Math.random() * 60),
-      Math.floor(Math.random() * 60),
-      0
-    );
-    const scheduleDate = start.toISOString();
-
-    const draft = await createDraft({
-      content: tweet,
-      options: { scheduleDate },
-    });
-    console.log("Scheduled tweet", draft.id);
-  }
-
-  saveState({ lastHistoryThreadRunAt: new Date().toISOString() });
+  const draft = await createDraft({
+    content: tweets,
+    options: { scheduleDate: "next-free-slot" },
+  });
+  console.log("Scheduled tweet", draft.id);
 })()
   .then(() => process.exit(0))
   .catch((error) => {
