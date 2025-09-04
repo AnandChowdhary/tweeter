@@ -1,0 +1,48 @@
+name: History
+
+on:
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: "Context for tweet generation"
+        required: true
+        type: string
+
+jobs:
+  tweet-generation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install tsx globally
+        run: npm install -g tsx
+
+      - name: Run tweet generation
+        env:
+          COMMENT: ${{ inputs.comment }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
+          PUSHOVER_API_KEY: ${{ secrets.PUSHOVER_API_KEY }}
+          PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
+        run: npx tsx tasks/history.ts
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add state.json
+          git commit -m ":loud_sound: Update state after history run" || echo "No changes to commit"
+          git push

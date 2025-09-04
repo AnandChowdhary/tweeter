@@ -39,6 +39,10 @@ const prompts = {
     "./prompts/starred-repo-tweet-generator.md",
     "utf-8"
   ),
+  browserTopIdeasGenerator: readFileSync(
+    "./prompts/browser-top-ideas.md",
+    "utf-8"
+  ),
   ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
   lifeLogIdeasGenerator: readFileSync("./prompts/life-log-ideas.md", "utf-8"),
@@ -103,6 +107,12 @@ export const starredRepoTweetGenerator = new Agent({
 export const voiceGenerator = new Agent({
   name: "Rewrite in voice",
   instructions: prompts.voice,
+  model: "gpt-5",
+});
+
+export const browserTopIdeasGenerator = new Agent({
+  name: "Browser Top Ideas Generator",
+  instructions: prompts.browserTopIdeasGenerator,
   model: "gpt-5",
 });
 
