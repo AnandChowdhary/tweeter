@@ -1,4 +1,4 @@
-name: Alternate weekly
+name: "Alternate weekly: Featured open source projects"
 
 on:
   schedule:
@@ -28,7 +28,7 @@ jobs:
         run: npm install -g tsx
 
       - name: Run tweet generation
-        run: npx tsx tasks/alternate-weekly.ts
+        run: npx tsx tasks/featured-open-source-projects.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}

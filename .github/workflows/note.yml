@@ -1,4 +1,4 @@
-name: Note
+name: "Dispatch: Note"
 
 on:
   workflow_dispatch:
@@ -30,13 +30,10 @@ jobs:
       - name: Install tsx globally
         run: npm install -g tsx
 
-      - name: Create note file
-        run: |
-          printf '%s\n' "${{ inputs.note }}" > note.txt
-
       - name: Run tweet generation
         run: npx tsx tasks/note.ts
         env:
+          NOTE: ${{ inputs.note }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
           PUSHOVER_API_KEY: ${{ secrets.PUSHOVER_API_KEY }}
@@ -50,5 +47,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add state.json
-          git commit -m ":loud_sound: Update state after note tweet generation" || echo "No changes to commit"
+          git commit -m ":loud_sound: Update state after note" || echo "No changes to commit"
           git push

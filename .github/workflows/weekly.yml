@@ -1,4 +1,4 @@
-name: Weekly
+name: "Weekly: Changelog and quotes"
 
 on:
   schedule:
@@ -28,7 +28,7 @@ jobs:
         run: npm install -g tsx
 
       - name: Run tweet generation
-        run: npx tsx tasks/weekly.ts && npx tsx tasks/weekly-quotes.ts
+        run: npx tsx tasks/changelog.ts && npx tsx tasks/quotes.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}

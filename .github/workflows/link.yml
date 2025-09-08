@@ -1,4 +1,4 @@
-name: Link
+name: "Dispatch: Link"
 
 on:
   workflow_dispatch:
@@ -48,5 +48,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add state.json
-          git commit -m ":loud_sound: Update state after daily run" || echo "No changes to commit"
+          git commit -m ":loud_sound: Update state after link run" || echo "No changes to commit"
           git push

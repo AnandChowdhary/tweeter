@@ -10,7 +10,7 @@ const comment = process.env.COMMENT || "";
 
 (async () => {
   if (!comment) {
-    console.error("Please provide a comment as an argument");
+    console.error("Please provide a comment as an environment variable");
     process.exit(1);
   }
 

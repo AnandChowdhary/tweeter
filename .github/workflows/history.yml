@@ -1,4 +1,4 @@
-name: History
+name: "Dispatch: Browser history"
 
 on:
   workflow_dispatch:

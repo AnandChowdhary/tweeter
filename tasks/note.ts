@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { run } from "@openai/agents";
-import { readFileSync } from "fs";
 import {
   currentNoteThreadGenerator,
   voiceGenerator,
@@ -9,30 +8,11 @@ import {
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 
-const noteArgument = process.argv[2];
+const noteContent = process.env.NOTE || "";
 
 (async () => {
-  let noteContent = "";
-
-  if (noteArgument) {
-    noteContent = noteArgument;
-  } else {
-    try {
-      noteContent = readFileSync("note.txt", "utf8").trim();
-    } catch (error) {
-      console.error(
-        "Please provide a note as an argument or create a note.txt file"
-      );
-      console.error('Usage: ./tasks/note.ts "Your note content here"');
-      console.error(
-        'Or: echo "Your note content" > note.txt && ./tasks/note.ts'
-      );
-      process.exit(1);
-    }
-  }
-
   if (!noteContent) {
-    console.error("Note content cannot be empty");
+    console.error("Please provide a note as an environment variable");
     process.exit(1);
   }
 
