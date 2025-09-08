@@ -1,4 +1,4 @@
-name: "Daily: AI news and starred repos"
+name: "Daily: AI news, starred repos, tech news"
 
 on:
   schedule:
