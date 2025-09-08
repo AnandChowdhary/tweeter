@@ -172,6 +172,8 @@ interface RedditCommentsResponse {
 
 (async () => {
   const response = await fetch("https://www.reddit.com/r/technews.json");
+  if (!response.ok)
+    throw new Error(`Failed to fetch Reddit tech news: ${response.statusText}`);
   const redditData = (await response.json()) as RedditResponse;
 
   // Check if we have posts
