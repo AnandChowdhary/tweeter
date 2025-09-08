@@ -15,6 +15,10 @@ const prompts = {
     "./prompts/company-changelog-tweet-generator.md",
     "utf-8"
   ),
+  newsThreadGenerator: readFileSync(
+    "./prompts/news-tweet-generator.md",
+    "utf-8"
+  ),
   newsTweetGenerator: readFileSync(
     "./prompts/news-tweet-generator.md",
     "utf-8"
@@ -72,6 +76,13 @@ export const companyChangelogThreadGenerator = new Agent({
 
 export const newsThreadGenerator = new Agent({
   name: "News to Twitter Thread Generator",
+  instructions: prompts.newsThreadGenerator,
+  tools: [webSearchTool()],
+  model: "gpt-5",
+});
+
+export const newsTweetGenerator = new Agent({
+  name: "News to Tweet Generator",
   instructions: prompts.newsTweetGenerator,
   tools: [webSearchTool()],
   model: "gpt-5",

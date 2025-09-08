@@ -115,7 +115,10 @@ interface RSSFeed {
       voiceResult.finalOutput
     );
 
-    if (technicalScore >= 8) {
+    if (technicalScore >= 7) {
+      console.log(
+        `Technical score is ${technicalScore} >= 7, rewriting to a single tweet`
+      );
       const voiceResult2 = await run(
         voiceGenerator,
         `I wrote this technical thread to post on Twitter. The idea is to do thought leadership on Twitter like Naval Ravikant or Paul Graham and sometimes randomly post a life lesson, learning, or a powerful quote that is original to me as a short tweet with no other context. So I wrote this piece about the latest AI news. But I think it's too long and too technical. I actually want to write it for technical founders, not researchers, so it should be more approachable. Please rewrite this as a single <tweet>...</tweet> tag with a single tweet. It should be a short tweet in sentence case with 1-2 sentences with the core idea of the thread.\n\nHere are the previous tweets for inspiration:\n - De‑risk before you leap. Side projects plus a stable salary buy the resource founders need most: mental space. If you raise, raise enough to pay yourself a baseline. You'll make better calls when rent isn't in the prompt.\n - Hire fewer, higher‑leverage builders. Four "cheap" devs rarely equal one elite engineer. As AI handles the average work, the premium is judgment, communication, and taste. A tiny team of killers + agents beats a platoon of passengers.\n - AI UX isn't a chat box. The lazy way to "add AI" is a text field, but the best way is invisible: models doing the work under the hood so users don't have to.\n\nPlease generate the single tweet from this thread:\n\n${voiceResult.finalOutput}`
@@ -151,6 +154,9 @@ interface RSSFeed {
         console.log("Scheduled tweet", draft.id);
       }
     } else if (Math.random() > 0.5) {
+      console.log(
+        `Technical score is ${technicalScore} < 7, randomly choosing to rewrite to a single tweet`
+      );
       const voiceResult2 = await run(
         threadToTweetGenerator,
         voiceResult.finalOutput
@@ -168,6 +174,9 @@ interface RSSFeed {
       });
       console.log("Scheduled tweet", draft.id);
     } else {
+      console.log(
+        `Technical score is ${technicalScore} < 7, randomly choosing to post as thread`
+      );
       const tweets = parseTweetsFromContent(voiceResult.finalOutput);
       console.log("Tweets", tweets);
 
