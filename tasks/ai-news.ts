@@ -8,6 +8,7 @@ import {
   threadToTweetGenerator,
   voiceGenerator,
 } from "../functions/agents";
+import { scrapingBeeFetch } from "../functions/fetch";
 import {
   parseTweetsFromContent,
   parseTweetsFromContentAsArray,
@@ -41,8 +42,8 @@ interface RSSFeed {
 }
 
 (async () => {
-  const rss = await fetch("https://news.smol.ai/rss.xml").then((res) =>
-    res.text()
+  const rss = await scrapingBeeFetch("https://news.smol.ai/rss.xml").then(
+    (res) => res.text()
   );
 
   // Use fast-xml-parser instead of DOMParser

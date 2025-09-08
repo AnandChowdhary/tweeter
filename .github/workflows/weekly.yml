@@ -31,6 +31,7 @@ jobs:
         run: npx tsx tasks/changelog.ts && npx tsx tasks/quotes.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
           PUSHOVER_API_KEY: ${{ secrets.PUSHOVER_API_KEY }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}

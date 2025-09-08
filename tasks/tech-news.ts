@@ -1,6 +1,7 @@
 import { run } from "@openai/agents";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import { newsTweetGenerator, voiceGenerator } from "../functions/agents";
+import { scrapingBeeFetch } from "../functions/fetch";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
@@ -171,7 +172,9 @@ interface RedditCommentsResponse {
 }
 
 (async () => {
-  const response = await fetch("https://www.reddit.com/r/technews.json");
+  const response = await scrapingBeeFetch(
+    "https://www.reddit.com/r/technews.json"
+  );
   if (!response.ok)
     throw new Error(`Failed to fetch Reddit tech news: ${response.statusText}`);
   const redditData = (await response.json()) as RedditResponse;
@@ -220,7 +223,7 @@ interface RedditCommentsResponse {
   let comments = "";
   try {
     const commentsUrl = `https://www.reddit.com${latestPost.permalink}.json`;
-    const commentsResponse = await fetch(commentsUrl);
+    const commentsResponse = await scrapingBeeFetch(commentsUrl);
     const commentsData = (await commentsResponse.json()) as [
       RedditResponse,
       RedditCommentsResponse
@@ -252,7 +255,9 @@ interface RedditCommentsResponse {
   content += comments;
 
   console.log("Fetching content", latestPost.url);
-  const contentOriginal = await fetch(latestPost.url).then((res) => res.text());
+  const contentOriginal = await scrapingBeeFetch(latestPost.url).then((res) =>
+    res.text()
+  );
 
   let articleContent = contentOriginal;
   try {

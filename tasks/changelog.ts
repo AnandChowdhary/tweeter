@@ -3,14 +3,15 @@ import {
   companyChangelogThreadGenerator,
   voiceGenerator,
 } from "../functions/agents";
+import { scrapingBeeFetch } from "../functions/fetch";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
 
 (async () => {
-  const changelogPage = await fetch("https://firstquadrant.ai/changelog").then(
-    (res) => res.text()
-  );
+  const changelogPage = await scrapingBeeFetch(
+    "https://firstquadrant.ai/changelog"
+  ).then((res) => res.text());
 
   // Find all the links starting with https://docs.firstquadrant.ai/changelog/
   const changelogLinks =
