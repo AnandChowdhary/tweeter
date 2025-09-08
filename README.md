@@ -1,6 +1,6 @@
 # 🐦 Tweeter
 
-An automated Twitter content generation system that creates suggested tweet threads from various sources. The system generates content drafts in Typefully for manual review and approval before posting.
+An automated Twitter content generation system that creates suggested tweet threads from various sources built for @AnandChowdhary's profile. The system generates content drafts in Typefully for manual review and approval before posting.
 
 ## ⚙️ Setup
 
@@ -29,36 +29,10 @@ export TYPEFULLY_API_KEY="your-typefully-api-key"
 
 ### Manual execution
 
+For example, running the starred repositories workflow from the CLI:
+
 ```bash
-# AI news from smol.ai RSS feed
-npx tsx tasks/ai-news.ts
-
-# Tech news from Reddit r/technews
-npx tsx tasks/tech-news.ts
-
-# Blog posts from personal API
-npx tsx tasks/blog-posts.ts
-
-# Changelog posts from FirstQuadrant
-npx tsx tasks/changelog.ts
-
-# Personal notes from API
-npx tsx tasks/notes.ts
-
-# Featured open source projects
-npx tsx tasks/featured-open-source-projects.ts
-
-# Starred repositories
 npx tsx tasks/starred-repos.ts
-
-# Quotes and wisdom
-npx tsx tasks/quotes.ts
-
-# Generate from any article URL
-npx tsx tasks/link.ts
-
-# Generate from personal note
-npx tsx tasks/note.ts
 ```
 
 ### Automated scheduling
@@ -75,16 +49,16 @@ The system includes GitHub Actions workflows that run automatically:
 
 | Task                               | Source             | Description                          |
 | ---------------------------------- | ------------------ | ------------------------------------ |
-| `ai-news.ts`                       | smol.ai RSS feed   | Latest AI news and announcements     |
-| `tech-news.ts`                     | Reddit r/technews  | Tech news with community discussions |
-| `blog-posts.ts`                    | Personal blog API  | Personal blog posts and articles     |
-| `changelog.ts`                     | FirstQuadrant API  | Company changelog and updates        |
 | `notes.ts`                         | Personal notes API | Personal notes and thoughts          |
-| `featured-open-source-projects.ts` | GitHub API         | Curated open source projects         |
-| `starred-repos.ts`                 | GitHub API         | Recently starred repositories        |
-| `quotes.ts`                        | Personal API       | Wisdom and quotes collection         |
+| `blog-posts.ts`                    | Personal blog API  | Personal blog posts and articles     |
+| `quotes.ts`                        | Personal API       | Quotes from Limitless life logs      |
 | `link.ts`                          | Any URL            | Generate from any article link       |
 | `note.ts`                          | Manual input       | Generate from personal note text     |
+| `changelog.ts`                     | FirstQuadrant API  | Company changelog and updates        |
+| `featured-open-source-projects.ts` | GitHub API         | Curated open source projects         |
+| `starred-repos.ts`                 | GitHub API         | Recently starred repositories        |
+| `ai-news.ts`                       | smol.ai RSS feed   | Latest AI news and announcements     |
+| `tech-news.ts`                     | Reddit r/technews  | Tech news with community discussions |
 
 ## 🤖 AI agents
 
@@ -105,7 +79,7 @@ The system uses specialized AI agents for different content types:
 5. Draft creation: Creates drafts in Typefully for review
 6. Manual approval: You edit and approve before posting
 
-## 📱 Apple shortcuts integration
+## 📱 Apple Shortcuts
 
 Set up a custom shortcut to generate threads from any article:
 
