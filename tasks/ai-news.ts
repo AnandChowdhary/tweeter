@@ -2,11 +2,16 @@ import { run } from "@openai/agents";
 import { XMLParser } from "fast-xml-parser";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import {
-  generateIdeas,
+  generateAiNewsIdeas,
+  generateTechnicalTweetScore,
   newsThreadGenerator,
+  threadToTweetGenerator,
   voiceGenerator,
 } from "../functions/agents";
-import { parseTweetsFromContent } from "../functions/response-parsers";
+import {
+  parseTweetsFromContent,
+  parseTweetsFromContentAsArray,
+} from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
 
@@ -85,7 +90,7 @@ interface RSSFeed {
     console.warn("Could not convert content to markdown:", error);
   }
   console.log("Content", content.length);
-  const ideas = await generateIdeas(content);
+  const ideas = await generateAiNewsIdeas(content);
   console.log("Ideas", ideas.tweet_topics.map((t) => t.title).join(", "));
 
   for (const idea of ideas.tweet_topics) {
@@ -106,14 +111,72 @@ interface RSSFeed {
       throw new Error("No output from voiceGenerator");
     console.log("Voice result", voiceResult.finalOutput.length);
 
-    const tweets = parseTweetsFromContent(voiceResult.finalOutput);
-    console.log("Tweets", tweets);
+    const { technicalScore } = await generateTechnicalTweetScore(
+      voiceResult.finalOutput
+    );
 
-    const draft = await createDraft({
-      content: tweets,
-      options: { scheduleDate: "next-free-slot" },
-    });
-    console.log("Scheduled tweet", draft.id);
+    if (technicalScore >= 8) {
+      const voiceResult2 = await run(
+        voiceGenerator,
+        `I wrote this technical thread to post on Twitter. The idea is to do thought leadership on Twitter like Naval Ravikant or Paul Graham and sometimes randomly post a life lesson, learning, or a powerful quote that is original to me as a short tweet with no other context. So I wrote this piece about the latest AI news. But I think it's too long and too technical. I actually want to write it for technical founders, not researchers, so it should be more approachable. Please rewrite this as a single <tweet>...</tweet> tag with a single tweet. It should be a short tweet in sentence case with 1-2 sentences with the core idea of the thread.\n\nHere are the previous tweets for inspiration:\n - De‑risk before you leap. Side projects plus a stable salary buy the resource founders need most: mental space. If you raise, raise enough to pay yourself a baseline. You'll make better calls when rent isn't in the prompt.\n - Hire fewer, higher‑leverage builders. Four "cheap" devs rarely equal one elite engineer. As AI handles the average work, the premium is judgment, communication, and taste. A tiny team of killers + agents beats a platoon of passengers.\n - AI UX isn't a chat box. The lazy way to "add AI" is a text field, but the best way is invisible: models doing the work under the hood so users don't have to.\n\nPlease generate the single tweet from this thread:\n\n${voiceResult.finalOutput}`
+      );
+
+      if (!voiceResult2.finalOutput) {
+        console.error(
+          `No output from voiceGenerator for ${voiceResult.finalOutput.length}`
+        );
+        return;
+      }
+
+      console.log("Voice result length:", voiceResult2.finalOutput.length);
+
+      const tweets = parseTweetsFromContentAsArray(voiceResult2.finalOutput);
+      console.log("Tweets", tweets);
+
+      let start = new Date();
+      for (const tweet of tweets) {
+        start.setDate(start.getDate() + 1);
+        start.setHours(
+          1,
+          Math.floor(Math.random() * 60),
+          Math.floor(Math.random() * 60),
+          0
+        );
+        const scheduleDate = start.toISOString();
+
+        const draft = await createDraft({
+          content: tweet,
+          options: { scheduleDate },
+        });
+        console.log("Scheduled tweet", draft.id);
+      }
+    } else if (Math.random() > 0.5) {
+      const voiceResult2 = await run(
+        threadToTweetGenerator,
+        voiceResult.finalOutput
+      );
+      if (!voiceResult2.finalOutput)
+        throw new Error("No output from threadToTweetGenerator");
+      console.log("Voice result length:", voiceResult2.finalOutput.length);
+
+      const tweets = parseTweetsFromContent(voiceResult2.finalOutput);
+      console.log("Tweets", tweets);
+
+      const draft = await createDraft({
+        content: tweets,
+        options: { scheduleDate: "next-free-slot" },
+      });
+      console.log("Scheduled tweet", draft.id);
+    } else {
+      const tweets = parseTweetsFromContent(voiceResult.finalOutput);
+      console.log("Tweets", tweets);
+
+      const draft = await createDraft({
+        content: tweets,
+        options: { scheduleDate: "next-free-slot" },
+      });
+      console.log("Scheduled tweet", draft.id);
+    }
   }
 
   saveState({

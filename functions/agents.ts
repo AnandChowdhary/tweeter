@@ -43,9 +43,17 @@ const prompts = {
     "./prompts/browser-top-ideas.md",
     "utf-8"
   ),
-  ideasGenerator: readFileSync("./prompts/ideas-generator.md", "utf-8"),
+  aiNewsIdeasGenerator: readFileSync(
+    "./prompts/ai-news-ideas-generator.md",
+    "utf-8"
+  ),
+  technicalTweetScoreGenerator: readFileSync(
+    "./prompts/technical-tweet-score.md",
+    "utf-8"
+  ),
   voice: readFileSync("./prompts/voice.md", "utf-8"),
   lifeLogIdeasGenerator: readFileSync("./prompts/life-log-ideas.md", "utf-8"),
+  threadToTweetGenerator: readFileSync("./prompts/thread-to-tweet.md", "utf-8"),
 };
 
 export const blogThreadGenerator = new Agent({
@@ -116,22 +124,28 @@ export const browserTopIdeasGenerator = new Agent({
   model: "gpt-5",
 });
 
+export const threadToTweetGenerator = new Agent({
+  name: "Thread to Tweet Generator",
+  instructions: prompts.threadToTweetGenerator,
+  model: "gpt-5",
+});
+
 const TweetTopicSchema = z.object({ title: z.string(), excerpt: z.string() });
 
 const IdeasResponseSchema = z.object({
   tweet_topics: z.array(TweetTopicSchema),
 });
 
-export const generateIdeas = async (
+export const generateAiNewsIdeas = async (
   content: string
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
   const response = await openai.responses.parse({
     model: "gpt-5",
     input: [
-      { role: "system", content: prompts.ideasGenerator },
+      { role: "system", content: prompts.aiNewsIdeasGenerator },
       { role: "user", content: content },
     ],
-    text: { format: zodTextFormat(IdeasResponseSchema, "ideas") },
+    text: { format: zodTextFormat(IdeasResponseSchema, "ai-news-ideas") },
   });
   if (!response.output_parsed) throw new Error("No response parsed");
   return response.output_parsed;
@@ -147,6 +161,30 @@ export const generateLifeLogIdeas = async (
       { role: "user", content: content },
     ],
     text: { format: zodTextFormat(IdeasResponseSchema, "life-log-ideas") },
+  });
+  if (!response.output_parsed) throw new Error("No response parsed");
+  return response.output_parsed;
+};
+
+const TechnicalTweetScoreResponseSchema = z.object({
+  technicalScore: z.number(),
+});
+
+export const generateTechnicalTweetScore = async (
+  content: string
+): Promise<z.infer<typeof TechnicalTweetScoreResponseSchema>> => {
+  const response = await openai.responses.parse({
+    model: "gpt-5",
+    input: [
+      { role: "system", content: prompts.technicalTweetScoreGenerator },
+      { role: "user", content: content },
+    ],
+    text: {
+      format: zodTextFormat(
+        TechnicalTweetScoreResponseSchema,
+        "technical-tweet-score"
+      ),
+    },
   });
   if (!response.output_parsed) throw new Error("No response parsed");
   return response.output_parsed;
