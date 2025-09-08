@@ -77,7 +77,7 @@ interface RSSFeed {
   }
 
   const isLatestAlreadyTweeted =
-    state.previousSmolAiNewsThread === latestItem.guid["#text"] + "test";
+    state.previousSmolAiNewsThread === latestItem.guid["#text"];
   if (isLatestAlreadyTweeted) {
     console.log("Latest news already tweeted, skipping");
     return;

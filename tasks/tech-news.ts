@@ -204,7 +204,7 @@ interface RedditCommentsResponse {
   }
 
   const isLatestAlreadyTweeted =
-    state.previousRedditNewsThread === latestPost.id + "test";
+    state.previousRedditNewsThread === latestPost.id;
   if (isLatestAlreadyTweeted) {
     console.log("Latest news already tweeted, skipping");
     return;
