@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-09-15-gpt5-codex/",
-  "lastDailyRunAt": "2025-09-18T08:14:54.361Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-09-18-nvidia-intc/",
+  "lastDailyRunAt": "2025-09-19T08:35:18.753Z",
   "previousBlogPostThread": "blog/2014/surface-pro-3.md",
   "lastBiWeeklyRunAt": "2025-09-15T10:05:48.796Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-09-07-hub-spot-deal-sync",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/555-lazy-load",
   "lastAlternateWeeklyRunAt": "2025-09-15T12:09:56.001Z",
   "previousStarredRepos": [
+    "759893102",
     "1053758043",
     "1020008528",
     "693187866",
@@ -38,11 +39,10 @@
     "288125218",
     "296825947",
     "231908612",
-    "248293446",
-    "123892483"
+    "248293446"
   ],
-  "lastStarredReposRunAt": "2025-09-18T08:12:30.776Z",
+  "lastStarredReposRunAt": "2025-09-19T08:32:35.474Z",
   "lastWeeklyQuotesRunAt": "2025-09-18T09:08:19.431Z",
   "lastHistoryThreadRunAt": "2025-09-12T16:44:16.981Z",
-  "previousRedditNewsThread": "1njyv9e"
+  "previousRedditNewsThread": "1nkbycv"
 }
