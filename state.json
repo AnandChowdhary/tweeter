@@ -1,6 +1,6 @@
 {
   "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-09-19-grok-4-fast/",
-  "lastDailyRunAt": "2025-09-20T08:26:21.277Z",
+  "lastDailyRunAt": "2025-09-22T08:15:22.484Z",
   "previousBlogPostThread": "blog/2014/surface-pro-3.md",
   "lastBiWeeklyRunAt": "2025-09-15T10:05:48.796Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-09-14-hub-spot-contact-import",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/555-lazy-load",
   "lastAlternateWeeklyRunAt": "2025-09-15T12:09:56.001Z",
   "previousStarredRepos": [
+    "933874837",
     "759893102",
     "1053758043",
     "1020008528",
@@ -38,11 +39,10 @@
     "305962321",
     "288125218",
     "296825947",
-    "231908612",
-    "248293446"
+    "231908612"
   ],
-  "lastStarredReposRunAt": "2025-09-20T08:24:29.188Z",
+  "lastStarredReposRunAt": "2025-09-22T08:13:34.325Z",
   "lastWeeklyQuotesRunAt": "2025-09-21T09:55:30.361Z",
   "lastHistoryThreadRunAt": "2025-09-12T16:44:16.981Z",
-  "previousRedditNewsThread": "1nl4sd1"
+  "previousRedditNewsThread": "1nnacwr"
 }
