@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-09-19-grok-4-fast/",
-  "lastDailyRunAt": "2025-09-22T08:15:22.484Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-09-23-alibaba-yunqi/",
+  "lastDailyRunAt": "2025-09-24T08:29:53.014Z",
   "previousBlogPostThread": "blog/2014/on-operating-systems.md",
   "lastBiWeeklyRunAt": "2025-09-22T10:06:31.558Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-09-14-hub-spot-contact-import",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/555-lazy-load",
   "lastAlternateWeeklyRunAt": "2025-09-15T12:09:56.001Z",
   "previousStarredRepos": [
+    "965974441",
     "933874837",
     "759893102",
     "1053758043",
@@ -38,11 +39,10 @@
     "331989570",
     "305962321",
     "288125218",
-    "296825947",
-    "231908612"
+    "296825947"
   ],
-  "lastStarredReposRunAt": "2025-09-22T08:13:34.325Z",
+  "lastStarredReposRunAt": "2025-09-24T08:28:33.922Z",
   "lastWeeklyQuotesRunAt": "2025-09-21T09:55:30.361Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
-  "previousRedditNewsThread": "1nnacwr"
+  "previousRedditNewsThread": "1nochmd"
 }
