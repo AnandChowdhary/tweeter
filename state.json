@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-10-01-thinky/",
-  "lastDailyRunAt": "2025-10-04T08:11:23.579Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-10-06-devday/",
+  "lastDailyRunAt": "2025-10-07T08:31:56.893Z",
   "previousBlogPostThread": "blog/2015/one-space-after-a-period.md",
   "lastBiWeeklyRunAt": "2025-10-06T10:03:43.803Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-09-28-cleaner-suggestions",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/access",
   "lastAlternateWeeklyRunAt": "2025-10-01T12:10:08.383Z",
   "previousStarredRepos": [
+    "1036835943",
     "965415649",
     "1062234789",
     "965974441",
@@ -38,11 +39,10 @@
     "103955069",
     "243101926",
     "283746820",
-    "331989570",
-    "305962321"
+    "331989570"
   ],
-  "lastStarredReposRunAt": "2025-10-04T08:09:18.906Z",
+  "lastStarredReposRunAt": "2025-10-07T08:29:44.473Z",
   "lastWeeklyQuotesRunAt": "2025-10-05T08:18:37.431Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
-  "previousRedditNewsThread": "1nx828r"
+  "previousRedditNewsThread": "1o0755o"
 }
