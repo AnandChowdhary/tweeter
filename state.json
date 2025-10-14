@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-10-09-state-of-ai/",
-  "lastDailyRunAt": "2025-10-13T08:37:28.202Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-10-13-oai-broadcom/",
+  "lastDailyRunAt": "2025-10-14T08:53:02.961Z",
   "previousBlogPostThread": "blog/2015/naming-brands.md",
   "lastBiWeeklyRunAt": "2025-10-13T10:04:21.976Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/access",
   "lastAlternateWeeklyRunAt": "2025-10-01T12:10:08.383Z",
   "previousStarredRepos": [
+    "870911441",
     "1036835943",
     "965415649",
     "1062234789",
@@ -38,11 +39,10 @@
     "86988074",
     "103955069",
     "243101926",
-    "283746820",
-    "331989570"
+    "283746820"
   ],
-  "lastStarredReposRunAt": "2025-10-11T08:09:11.876Z",
+  "lastStarredReposRunAt": "2025-10-14T08:50:28.478Z",
   "lastWeeklyQuotesRunAt": "2025-10-09T09:12:06.639Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
-  "previousRedditNewsThread": "1o4mfqv"
+  "previousRedditNewsThread": "1o62f8b"
 }
