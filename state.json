@@ -1,6 +1,6 @@
 {
   "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-10-21-chatgpt-atlas/",
-  "lastDailyRunAt": "2025-10-22T08:34:27.695Z",
+  "lastDailyRunAt": "2025-10-23T08:13:28.319Z",
   "previousBlogPostThread": "blog/2015/too-simple-design.md",
   "lastBiWeeklyRunAt": "2025-10-20T10:22:14.212Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/wikibility",
   "lastAlternateWeeklyRunAt": "2025-10-15T12:11:22.893Z",
   "previousStarredRepos": [
+    "1080575105",
     "1062565899",
     "870911441",
     "1036835943",
@@ -38,11 +39,10 @@
     "50046154",
     "53718456",
     "86988074",
-    "103955069",
-    "243101926"
+    "103955069"
   ],
-  "lastStarredReposRunAt": "2025-10-22T08:32:19.505Z",
+  "lastStarredReposRunAt": "2025-10-23T08:10:51.725Z",
   "lastWeeklyQuotesRunAt": "2025-10-16T09:10:43.817Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
-  "previousRedditNewsThread": "1ocbbn2"
+  "previousRedditNewsThread": "1odk1rk"
 }
