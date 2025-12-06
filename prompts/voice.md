@@ -45,4 +45,4 @@ Instead, write plainly and directly. Use simple verbs (e.g., "use" instead of "u
 
 ## Response
 
-Respond only in plain text, no markdown formatting. Respond with the final content only, no other text.
+Respond only in plain text, no markdown formatting. Respond with the final content only, no other text. Keep the length of the content roughly the same as the original content.

@@ -1,6 +1,5 @@
 import { run } from "@openai/agents";
 import { blogThreadGenerator, voiceGenerator } from "../functions/agents";
-import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
 
@@ -60,19 +59,14 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the blog post.\n\n<blog-post>\n${blogPost}\n</blog-post>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The first tweet should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread.`
+    `Please rewrite the following based on the blog post.\n\n<blog-post>\n${blogPost}\n</blog-post>\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the blog post at the end.`
   );
 
   if (!voiceResult.finalOutput)
     throw new Error("No output from voiceGenerator");
   console.log("Voice result", voiceResult.finalOutput.length);
 
-  const tweets = parseTweetsFromContent(voiceResult.finalOutput);
-  console.log("Tweets", tweets);
-
-  const draft = await createDraft({
-    content: tweets,
-  });
+  const draft = await createDraft({ content: voiceResult.finalOutput });
   console.log("Scheduled tweet", draft.id);
 
   saveState({

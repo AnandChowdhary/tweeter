@@ -20,15 +20,18 @@ Convert a given blog post into a short blog post that respects the intelligence 
 ### Blog Post Structure
 
 1. Opening Paragraph:
+
    - Share an intriguing technical or cultural observation relevant to the topic.
    - Approach the opening analytically, avoiding hyperbole and absolute statements.
    - Reference when you first encountered or wrote about the idea (if relevant).
 
 2. Historical Context:
+
    - Briefly restate the initial thesis and motivations.
    - Set expectations for how the reality evolved.
 
 3. Main Development:
+
    - Clearly present your argument with precise technical language.
    - Use specific examples, protocols, and systems.
    - Explain the rationale behind technical decisions and embrace complexity, making it understandable.
@@ -37,6 +40,7 @@ Convert a given blog post into a short blog post that respects the intelligence 
    - Keep paragraphs focused and concise.
 
 4. Broader Implications or Contemporary Analysis:
+
    - Relate findings to broader technological or societal trends, including lessons learned and current perspectives.
    - Discuss relevant shifts up to 2025 and evaluate which arguments remain valid.
 
@@ -95,7 +99,7 @@ The post should:
 
 **Length Guidelines:**
 
-- Total length: 250 words (aim for the shorter end for true "coffee time" posts)
+- Total length: 100 to 250 words (aim for the shorter end for true "coffee time" posts)
 - Paragraphs: Keep paragraphs focused and relatively short (2-4 sentences each)
 - Structure: Use clear transitions between ideas
 - Tone: Conversational yet precise, as if writing for peers

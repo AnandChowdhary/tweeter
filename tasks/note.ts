@@ -31,7 +31,7 @@ const noteContent = process.env.NOTE || "";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the note.\n\n<note>\n${notesPost}\n</note>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. If this is a thread with multiple tweets, the first tweet should end two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread.`
+    `Please rewrite the following tweets based on the note.\n\n<note>\n${notesPost}\n</note>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. If this is a thread with multiple tweets, the first tweet should end two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the note at the end.`
   );
 
   if (!voiceResult.finalOutput)

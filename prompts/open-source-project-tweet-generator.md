@@ -154,7 +154,7 @@ The post should:
 
 Length Guidelines:
 
-- Total length: 250 words (aim for the shorter end for true "coffee time" posts)
+- Total length: 100 to 250 words (aim for the shorter end for true "coffee time" posts)
 - Paragraphs: Keep paragraphs focused and relatively short (2-4 sentences each)
 - Structure: Use clear transitions between ideas
 - Tone: Conversational yet precise, as if writing for peers
