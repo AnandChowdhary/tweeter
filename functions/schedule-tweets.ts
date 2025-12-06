@@ -9,13 +9,46 @@ interface CreateDraftOptions {
   autoPlugEnabled?: boolean;
 }
 
+interface PlatformPost {
+  text: string;
+  media_ids?: string[];
+}
+
+interface PlatformSettings {
+  reply_to_url?: string;
+}
+
+interface PlatformConfig {
+  enabled: boolean;
+  posts: PlatformPost[];
+  settings?: PlatformSettings;
+}
+
 interface DraftResponse {
-  id: string;
-  content: string;
-  share_url?: string;
-  scheduled_at?: string;
-  published_at?: string;
+  id: number;
+  social_set_id: number;
   status: string;
+  created_at: string;
+  updated_at: string;
+  scheduled_date?: string;
+  published_at?: string;
+  draft_title?: string;
+  tags?: string[];
+  preview?: string;
+  share_url?: string;
+  platforms: {
+    x?: PlatformConfig;
+    linkedin?: PlatformConfig;
+    mastodon?: PlatformConfig;
+    threads?: PlatformConfig;
+    bluesky?: PlatformConfig;
+  };
+  x_published_url?: string;
+  linkedin_published_url?: string;
+  mastodon_published_url?: string;
+  threads_published_url?: string;
+  bluesky_published_url?: string;
+  x_post_published_at?: string;
 }
 
 /**
@@ -32,6 +65,7 @@ export async function createDraft({
   if (!apiKey) {
     throw new Error("TYPEFULLY_API_KEY environment variable is not set");
   }
+  const socialSetId = "31080";
 
   const pushoverApiKey = process.env.PUSHOVER_API_KEY;
   if (!pushoverApiKey) {
@@ -43,32 +77,33 @@ export async function createDraft({
     throw new Error("PUSHOVER_USER_KEY environment variable is not set");
   }
 
-  const baseUrl = "https://api.typefully.com/v1";
-  const url = `${baseUrl}/drafts/`;
+  const baseUrl = "https://api.typefully.com/v2";
+  const url = `${baseUrl}/social-sets/${socialSetId}/drafts`;
 
+  // Build the payload in the new v2 format
   const payload: any = {
-    content: options.content || content,
+    platforms: {
+      x: {
+        enabled: true,
+        posts: [
+          {
+            text: options.content || content,
+          },
+        ],
+      },
+    },
   };
 
-  if (options.threadify !== undefined) {
-    payload.threadify = options.threadify;
-  }
-  if (options.share !== undefined) {
-    payload.share = options.share;
-  }
-  if (options.scheduleDate !== undefined) {
-    payload["schedule-date"] = options.scheduleDate;
-  }
-  if (options.autoRetweetEnabled !== undefined) {
-    payload.auto_retweet_enabled = options.autoRetweetEnabled;
-  }
-  if (options.autoPlugEnabled !== undefined) {
-    payload.auto_plug_enabled = options.autoPlugEnabled;
+  // Add settings if needed (e.g., reply_to_url)
+  if (options.share !== undefined || options.scheduleDate !== undefined) {
+    payload.platforms.x.settings = {};
+    // Note: Some old options may not have direct equivalents in v2 API
+    // scheduleDate might need to be handled differently in v2
   }
 
   const headers = {
     "Content-Type": "application/json",
-    "X-API-KEY": `Bearer ${apiKey}`,
+    Authorization: `Bearer ${apiKey}`,
   };
 
   const response = await fetch(url, {
@@ -77,17 +112,18 @@ export async function createDraft({
     body: JSON.stringify(payload),
   });
 
-  if (!response.ok)
-    throw new Error(
-      `Typefully API error: ${response.status} ${response.statusText}`
-    );
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Typefully API error: ${response.status} ${text}`);
+  }
   const result = await response.json();
 
   try {
+    const tweetText = payload.platforms.x.posts[0].text;
     await sendPushoverMessage({
       token: pushoverApiKey,
       user: pushoverUserKey,
-      message: `Please edit and approve the scheduled tweet: ${payload.content.slice(
+      message: `Please edit and approve the scheduled tweet: ${tweetText.slice(
         0,
         100
       )}...`,

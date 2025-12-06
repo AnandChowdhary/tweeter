@@ -51,33 +51,51 @@ interface RSSFeed {
   const channel = parsedRSS.rss.channel;
 
   // Check if items exist and handle the case where they might be in a different format
-  if (!channel.item || !Array.isArray(channel.item)) {
-    console.log("No items found or items not in expected format");
-    console.log("Channel structure:", JSON.stringify(channel, null, 2));
-    return;
-  }
-
-  const latestItem = channel.item[0];
-  if (!latestItem) {
-    console.log("No news found, skipping");
-    return;
-  }
-
   if (
-    latestItem.title.trim().toLowerCase().includes("not much happened today")
+    !channel.item ||
+    !Array.isArray(channel.item) ||
+    channel.item.length === 0
   ) {
-    console.log("Skipping 'not much happened today' item");
+    console.log("No items found or items not in expected format");
+    if (channel.item) {
+      console.log("Channel structure:", JSON.stringify(channel, null, 2));
+    }
     return;
   }
 
-  const isLatestAlreadyTweeted =
-    state.previousSmolAiNewsThread === latestItem.guid["#text"];
-  if (isLatestAlreadyTweeted) {
-    console.log("Latest news already tweeted, skipping");
+  // Find the first suitable item (not already tweeted, not "not much happened today")
+  let selectedItem: RSSItem | null = null;
+  for (const item of channel.item) {
+    const isAlreadyTweeted =
+      state.previousSmolAiNewsThread === item.guid["#text"];
+    if (isAlreadyTweeted) {
+      console.log(
+        `Item "${item.title}" already tweeted (GUID: ${item.guid["#text"]}), checking next...`
+      );
+      continue;
+    }
+
+    if (item.title.trim().toLowerCase().includes("not much happened today")) {
+      console.log(
+        `Skipping "not much happened today" item: "${item.title}", checking next...`
+      );
+      continue;
+    }
+
+    // Found a suitable item
+    selectedItem = item;
+    console.log(`Selected item: "${item.title}"`);
+    break;
+  }
+
+  if (!selectedItem) {
+    console.log(
+      "No suitable news item found (all already tweeted or 'not much happened today'), skipping"
+    );
     return;
   }
 
-  let content = latestItem["content:encoded"].split("AI Reddit Recap")[0];
+  let content = selectedItem["content:encoded"].split("AI Reddit Recap")[0];
   try {
     content = NodeHtmlMarkdown.translate(content);
   } catch (error) {
@@ -98,7 +116,7 @@ interface RSSFeed {
 
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following tweets based on the news for an audience of technical founders with a bit of humor if needed\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links or emojis.\n\nFirst tweet: Keep it punchy and under 250 characters. Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically. Final tweet: Wrap with genuine questions (if any, optional, no more than 3) and a thoughtful conclusion.`
+      `Please rewrite the following tweets based on the news for an audience of technical founders with a bit of humor if needed\n\n${initialResult.finalOutput}`
     );
 
     if (!voiceResult.finalOutput)
@@ -110,12 +128,12 @@ interface RSSFeed {
       options: { scheduleDate: "next-free-slot" },
     });
     console.log("Scheduled tweet", draft.id);
-
-    saveState({
-      previousSmolAiNewsThread: latestItem.guid["#text"],
-      lastDailyRunAt: new Date().toISOString(),
-    });
   }
+
+  saveState({
+    previousSmolAiNewsThread: selectedItem.guid["#text"],
+    lastDailyRunAt: new Date().toISOString(),
+  });
 })()
   .then(() => process.exit(0))
   .catch((error) => {
