@@ -1,10 +1,12 @@
 import { run } from "@openai/agents";
+import { config } from "dotenv";
 import { NodeHtmlMarkdown } from "node-html-markdown";
-import { newsTweetGenerator, voiceGenerator } from "../functions/agents";
+import { newsThreadGenerator, voiceGenerator } from "../functions/agents";
 import { fireCrawlFetch } from "../functions/fetch";
-import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
+
+config();
 
 interface RedditPost {
   approved_at_utc: number | null;
@@ -172,9 +174,7 @@ interface RedditCommentsResponse {
 }
 
 (async () => {
-  const response = await fireCrawlFetch(
-    "https://www.reddit.com/r/technews.json"
-  );
+  const response = await fetch("https://www.reddit.com/r/technews.json");
   if (!response.ok)
     throw new Error(`Failed to fetch Reddit tech news: ${response.statusText}`);
   const redditData = (await response.json()) as RedditResponse;
@@ -268,9 +268,9 @@ interface RedditCommentsResponse {
 
   content += `\n\n---\n\nArticle content: ${articleContent}`;
 
-  const initialResult = await run(newsTweetGenerator, content);
+  const initialResult = await run(newsThreadGenerator, content);
   if (!initialResult.finalOutput)
-    throw new Error("No output from newsTweetGenerator");
+    throw new Error("No output from newsThreadGenerator");
   console.log("Initial result", initialResult.finalOutput.length);
 
   const voiceResult = await run(
@@ -282,12 +282,7 @@ interface RedditCommentsResponse {
     throw new Error("No output from voiceGenerator");
   console.log("Voice result", voiceResult.finalOutput.length);
 
-  const tweets = parseTweetsFromContent(voiceResult.finalOutput);
-  console.log("Tweets", tweets);
-
-  const draft = await createDraft({
-    content: tweets,
-  });
+  const draft = await createDraft({ content: voiceResult.finalOutput });
   console.log("Scheduled tweet", draft.id);
 
   saveState({
