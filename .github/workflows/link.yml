@@ -45,6 +45,7 @@ jobs:
         run: npx tsx tasks/link.ts "${{ inputs.link }}"
 
       - name: Commit and push changes
+        if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
