@@ -1,7 +1,7 @@
 import { run } from "@openai/agents";
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import { newsTweetGenerator, voiceGenerator } from "../functions/agents";
-import { scrapingBeeFetch } from "../functions/fetch";
+import { fireCrawlFetch } from "../functions/fetch";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
@@ -172,7 +172,7 @@ interface RedditCommentsResponse {
 }
 
 (async () => {
-  const response = await scrapingBeeFetch(
+  const response = await fireCrawlFetch(
     "https://www.reddit.com/r/technews.json"
   );
   if (!response.ok)
@@ -223,7 +223,7 @@ interface RedditCommentsResponse {
   let comments = "";
   try {
     const commentsUrl = `https://www.reddit.com${latestPost.permalink}.json`;
-    const commentsResponse = await scrapingBeeFetch(commentsUrl);
+    const commentsResponse = await fireCrawlFetch(commentsUrl);
     const commentsData = (await commentsResponse.json()) as [
       RedditResponse,
       RedditCommentsResponse
@@ -255,7 +255,7 @@ interface RedditCommentsResponse {
   content += comments;
 
   console.log("Fetching content", latestPost.url);
-  const contentOriginal = await scrapingBeeFetch(latestPost.url).then((res) =>
+  const contentOriginal = await fireCrawlFetch(latestPost.url).then((res) =>
     res.text()
   );
 

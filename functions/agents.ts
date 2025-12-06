@@ -6,13 +6,11 @@ import { z } from "zod";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+const model = "gpt-5.1" as const;
+
 const prompts = {
   personalBlogTweetGenerator: readFileSync(
     "./prompts/personal-blog-tweet-generator.md",
-    "utf-8"
-  ),
-  companyChangelogTweetGenerator: readFileSync(
-    "./prompts/company-changelog-tweet-generator.md",
     "utf-8"
   ),
   newsThreadGenerator: readFileSync(
@@ -43,10 +41,6 @@ const prompts = {
     "./prompts/starred-repo-tweet-generator.md",
     "utf-8"
   ),
-  browserTopIdeasGenerator: readFileSync(
-    "./prompts/browser-top-ideas.md",
-    "utf-8"
-  ),
   aiNewsIdeasGenerator: readFileSync(
     "./prompts/ai-news-ideas-generator.md",
     "utf-8"
@@ -64,81 +58,68 @@ export const blogThreadGenerator = new Agent({
   name: "Blog Post to Twitter Thread Generator",
   instructions: prompts.personalBlogTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
-});
-
-export const companyChangelogThreadGenerator = new Agent({
-  name: "Company Changelog to Twitter Thread Generator",
-  instructions: prompts.companyChangelogTweetGenerator,
-  tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const newsThreadGenerator = new Agent({
   name: "News to Twitter Thread Generator",
   instructions: prompts.newsThreadGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const newsTweetGenerator = new Agent({
   name: "News to Tweet Generator",
   instructions: prompts.newsTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const linkThreadGenerator = new Agent({
   name: "Link to Twitter Thread Generator",
   instructions: prompts.linkTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const notesThreadGenerator = new Agent({
   name: "Notes to Twitter Thread Generator",
   instructions: prompts.notesTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const currentNoteThreadGenerator = new Agent({
   name: "Current Note to Twitter Thread Generator",
   instructions: prompts.currentNoteTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const openSourceProjectTweetGenerator = new Agent({
   name: "Open Source Project to Twitter Thread Generator",
   instructions: prompts.openSourceProjectTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const starredRepoTweetGenerator = new Agent({
   name: "Starred Repository to Twitter Thread Generator",
   instructions: prompts.starredRepoTweetGenerator,
   tools: [webSearchTool()],
-  model: "gpt-5",
+  model,
 });
 
 export const voiceGenerator = new Agent({
   name: "Rewrite in voice",
   instructions: prompts.voice,
-  model: "gpt-5",
-});
-
-export const browserTopIdeasGenerator = new Agent({
-  name: "Browser Top Ideas Generator",
-  instructions: prompts.browserTopIdeasGenerator,
-  model: "gpt-5",
+  model,
 });
 
 export const threadToTweetGenerator = new Agent({
   name: "Thread to Tweet Generator",
   instructions: prompts.threadToTweetGenerator,
-  model: "gpt-5",
+  model,
 });
 
 const TweetTopicSchema = z.object({ title: z.string(), excerpt: z.string() });
@@ -151,7 +132,7 @@ export const generateAiNewsIdeas = async (
   content: string
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
   const response = await openai.responses.parse({
-    model: "gpt-5",
+    model,
     input: [
       { role: "system", content: prompts.aiNewsIdeasGenerator },
       { role: "user", content: content },
@@ -166,7 +147,7 @@ export const generateLifeLogIdeas = async (
   content: string
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
   const response = await openai.responses.parse({
-    model: "gpt-5",
+    model,
     input: [
       { role: "system", content: prompts.lifeLogIdeasGenerator },
       { role: "user", content: content },
@@ -185,7 +166,7 @@ export const generateTechnicalTweetScore = async (
   content: string
 ): Promise<z.infer<typeof TechnicalTweetScoreResponseSchema>> => {
   const response = await openai.responses.parse({
-    model: "gpt-5",
+    model,
     input: [
       { role: "system", content: prompts.technicalTweetScoreGenerator },
       { role: "user", content: content },

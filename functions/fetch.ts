@@ -1,31 +1,11 @@
-/**
- * ScrapingBee fetch function that uses ScrapingBee API to scrape web pages
- * @param url - The URL to scrape
- * @param options - Optional fetch options (currently only supports headers)
- * @returns A fetch Response object with .text() and .json() methods
- *
- * @example
- * // Basic usage - drop-in replacement for native fetch
- * const response = await scrapingBeeFetch("https://example.com");
- * const html = await response.text();
- *
- * // For JSON responses
- * const response = await scrapingBeeFetch("https://api.example.com/data");
- * const data = await response.json();
- *
- * // With custom headers
- * const response = await scrapingBeeFetch("https://example.com", {
- *   headers: { "Custom-Header": "value" }
- * });
- */
-export async function scrapingBeeFetch(
+export async function fireCrawlFetch(
   url: string,
   options: { headers?: Record<string, string> } = {}
 ) {
-  const apiKey = process.env.SCRAPINGBEE_API_KEY;
+  const apiKey = process.env.FIRECRAWL_API_KEY;
 
   if (!apiKey) {
-    throw new Error("SCRAPINGBEE_API_KEY environment variable is required");
+    throw new Error("FIRECRAWL_API_KEY environment variable is required");
   }
 
   // Encode the URL for ScrapingBee

@@ -18,6 +18,7 @@ export const state = JSON.parse(
   lastWeeklyQuotesRunAt?: string;
   lastHistoryThreadRunAt?: string;
   previousRedditNewsThread?: string;
+  recentTweets?: string[];
 };
 
 export function saveState(newState: Partial<typeof state>) {

@@ -32,7 +32,7 @@ jobs:
           npx tsx tasks/ai-news.ts && npx tsx tasks/starred-repos.ts && npx tsx tasks/tech-news.ts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           TYPEFULLY_API_KEY: ${{ secrets.TYPEFULLY_API_KEY }}
           PUSHOVER_API_KEY: ${{ secrets.PUSHOVER_API_KEY }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}

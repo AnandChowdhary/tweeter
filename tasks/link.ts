@@ -4,7 +4,7 @@ import { run } from "@openai/agents";
 
 import { NodeHtmlMarkdown } from "node-html-markdown";
 import { linkThreadGenerator, voiceGenerator } from "../functions/agents";
-import { scrapingBeeFetch } from "../functions/fetch";
+import { fireCrawlFetch } from "../functions/fetch";
 import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 
@@ -18,9 +18,7 @@ const comment = process.env.COMMENT || "";
   }
 
   console.log("Fetching content", link);
-  const contentOriginal = await scrapingBeeFetch(link).then((res) =>
-    res.text()
-  );
+  const contentOriginal = await fireCrawlFetch(link).then((res) => res.text());
 
   let content = contentOriginal;
   try {
