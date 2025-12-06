@@ -42,7 +42,7 @@ const comment = process.env.COMMENT || "";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweets based on the article\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread and don't include any links apart from the original article link or any emojis.\n\nFirst tweet: Keep it punchy and under 250 characters. Middle tweets: Use paragraph breaks for technical depth, there is no strict character limit anymore in Twitter, so you can go as long as you want; it's suggested to have 1-3 short paragraphs in each tweet and break them thematically. Final tweet: Wrap with genuine questions (if any, optional, no more than 3, but usually you don't need questions unless you have something specific to add to the conversation) but always have a thoughtful conclusion.`
+    `Please rewrite the following based on the article in 100-200 words.\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the article at the end.`
   );
 
   if (!voiceResult.finalOutput)

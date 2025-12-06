@@ -55,7 +55,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following based on the notes post.\n\n<note>\n${notesPost}\n</note>\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. The last tweet should end with "Here's the original note from [year]: [link to markdown file]"`
+    `Please rewrite the following based on the notes post in 100-200 words.\n\n<note>\n${notesPost}\n</note>\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. The last tweet should end with "Here's the original note from [year]: [link to markdown file]"`
   );
 
   if (!voiceResult.finalOutput)

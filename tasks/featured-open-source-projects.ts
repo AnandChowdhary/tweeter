@@ -61,7 +61,7 @@ import { saveState, state } from "../functions/state";
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following based on the open source project.\n\n<open-source-project>\n${openSourceProject}\n</open-source-project>\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the open source project at the end.`
+    `Please rewrite the following based on the open source project in 100-200 words.\n\n<open-source-project>\n${openSourceProject}\n</open-source-project>\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the open source project at the end.`
   );
 
   if (!voiceResult.finalOutput)

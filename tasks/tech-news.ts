@@ -275,7 +275,7 @@ interface RedditCommentsResponse {
 
   const voiceResult = await run(
     voiceGenerator,
-    `Please rewrite the following tweet based on the news for an audience of technical founders with a bit of humor if needed\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for a single tweet and don't include any links or emojis.`
+    `Please rewrite the following based on the news for an audience of technical founders with a bit of humor if needed in 100-200 words.\n\n${initialResult.finalOutput}\n\nThe first paragraph should end with two emoji, one relevant to the thread + 👇 so people can click to read the rest of the thread. Include the link to the news article at the end.`
   );
 
   if (!voiceResult.finalOutput)

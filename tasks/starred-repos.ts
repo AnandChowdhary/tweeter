@@ -120,7 +120,7 @@ ${readmeContent.substring(0, 5000)}`;
 
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following about a GitHub repository I just starred (don't explicitly mention that I just starred it, more like I'm sharing a cool project). Make it sound personal and authentic.\n\n<repository-info>\n${repoInfo}\n</repository-info>\n\n${initialResult.finalOutput}`
+      `Please rewrite the following about a GitHub repository I just starred (don't explicitly mention that I just starred it, more like I'm sharing a cool project). Make it sound personal and authentic in 100-200 words.\n\n<repository-info>\n${repoInfo}\n</repository-info>\n\n${initialResult.finalOutput}`
     );
 
     if (!voiceResult.finalOutput) {
