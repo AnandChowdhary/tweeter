@@ -125,7 +125,6 @@ interface RSSFeed {
 
     const draft = await createDraft({
       content: voiceResult.finalOutput,
-      options: { scheduleDate: "next-free-slot" },
     });
     console.log("Scheduled tweet", draft.id);
   }

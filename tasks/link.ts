@@ -54,7 +54,6 @@ const comment = process.env.COMMENT || "";
 
   const draft = await createDraft({
     content: tweets,
-    options: { scheduleDate: "next-free-slot" },
   });
   console.log("Scheduled tweet", draft.id);
 })()

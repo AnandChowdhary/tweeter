@@ -1,6 +1,5 @@
 import { run } from "@openai/agents";
 import { starredRepoTweetGenerator, voiceGenerator } from "../functions/agents";
-import { parseTweetsFromContent } from "../functions/response-parsers";
 import { createDraft } from "../functions/schedule-tweets";
 import { saveState, state } from "../functions/state";
 
@@ -121,7 +120,7 @@ ${readmeContent.substring(0, 5000)}`;
 
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following tweets about a GitHub repository I just starred (don't explicitly mention that I just starred it, more like I'm sharing a cool project). Make it sound personal and authentic.\n\n<repository-info>\n${repoInfo}\n</repository-info>\n\n${initialResult.finalOutput}\n\nRespond only with <tweet>...</tweet> tags for the tweets in the thread. The last tweet should include the repository link.`
+      `Please rewrite the following about a GitHub repository I just starred (don't explicitly mention that I just starred it, more like I'm sharing a cool project). Make it sound personal and authentic.\n\n<repository-info>\n${repoInfo}\n</repository-info>\n\n${initialResult.finalOutput}`
     );
 
     if (!voiceResult.finalOutput) {
@@ -130,14 +129,7 @@ ${readmeContent.substring(0, 5000)}`;
     }
 
     console.log("Voice result length:", voiceResult.finalOutput.length);
-
-    const tweets = parseTweetsFromContent(voiceResult.finalOutput);
-    console.log(`Generated ${tweets.length} tweets for ${repo.full_name}`);
-
-    const draft = await createDraft({
-      content: tweets,
-      options: { scheduleDate: "next-free-slot" },
-    });
+    const draft = await createDraft({ content: voiceResult.finalOutput });
 
     console.log(`Scheduled tweet ${draft.id} for ${repo.full_name}`);
   }
