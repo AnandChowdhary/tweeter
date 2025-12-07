@@ -116,7 +116,7 @@ interface RSSFeed {
 
     const voiceResult = await run(
       voiceGenerator,
-      `Please rewrite the following based on the news for an audience of technical founders with a bit of humor if needed in around 100 words\n\n${initialResult.finalOutput}.`
+      `Please rewrite the following based on the news for an audience of technical founders with a bit of humor if needed in around 150-250 words\n\n${initialResult.finalOutput}.`
     );
 
     if (!voiceResult.finalOutput)
