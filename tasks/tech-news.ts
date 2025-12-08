@@ -268,7 +268,17 @@ interface RedditCommentsResponse {
 
   content += `\n\n---\n\nArticle content: ${articleContent}`;
 
-  const initialResult = await run(newsThreadGenerator, content);
+  // Get recent tweets from state to avoid repetition
+  const recentTweets = state.recentTweets || [];
+  console.log(`Using ${recentTweets.length} recent tweets as context`);
+  
+  // Add context about recent tweets to help avoid repetition
+  let contextualContent = content;
+  if (recentTweets.length > 0) {
+    contextualContent = `Context: Recent tweet topics to avoid repeating:\n${recentTweets.slice(0, 30).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\n${content}`;
+  }
+
+  const initialResult = await run(newsThreadGenerator, contextualContent);
   if (!initialResult.finalOutput)
     throw new Error("No output from newsThreadGenerator");
   console.log("Initial result", initialResult.finalOutput.length);
@@ -285,9 +295,17 @@ interface RedditCommentsResponse {
   const draft = await createDraft({ content: voiceResult.finalOutput });
   console.log("Scheduled tweet", draft.id);
 
+  // Extract the main topic/title from the tweet for tracking
+  // We'll use the news title as the topic
+  const tweetTopic = latestPost.title;
+  
+  // Update state with new topic, keeping most recent 50
+  const updatedRecentTweets = [tweetTopic, ...recentTweets].slice(0, 50);
+
   saveState({
     previousRedditNewsThread: latestPost.id,
     lastDailyRunAt: new Date().toISOString(),
+    recentTweets: updatedRecentTweets,
   });
 })()
   .then(() => process.exit(0))

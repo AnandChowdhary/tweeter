@@ -129,13 +129,18 @@ const IdeasResponseSchema = z.object({
 });
 
 export const generateAiNewsIdeas = async (
-  content: string
+  content: string,
+  recentTweets?: string[]
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
+  let userContent = content;
+  if (recentTweets && recentTweets.length > 0) {
+    userContent = `Recent tweets (avoid similar topics):\n${recentTweets.slice(0, 50).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\nToday's AI news:\n${content}`;
+  }
   const response = await openai.responses.parse({
     model,
     input: [
       { role: "system", content: prompts.aiNewsIdeasGenerator },
-      { role: "user", content: content },
+      { role: "user", content: userContent },
     ],
     text: { format: zodTextFormat(IdeasResponseSchema, "ai-news-ideas") },
   });
