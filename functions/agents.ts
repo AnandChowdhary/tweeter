@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
 import { z } from "zod";
+import { MAX_RECENT_TWEETS } from "./state";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -134,7 +135,7 @@ export const generateAiNewsIdeas = async (
 ): Promise<z.infer<typeof IdeasResponseSchema>> => {
   let userContent = content;
   if (recentTweets && recentTweets.length > 0) {
-    userContent = `Recent tweets (avoid similar topics):\n${recentTweets.slice(0, 50).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\nToday's AI news:\n${content}`;
+    userContent = `Recent tweets (avoid similar topics):\n${recentTweets.slice(0, MAX_RECENT_TWEETS).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\nToday's AI news:\n${content}`;
   }
   const response = await openai.responses.parse({
     model,

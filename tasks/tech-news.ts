@@ -4,7 +4,7 @@ import { NodeHtmlMarkdown } from "node-html-markdown";
 import { newsThreadGenerator, voiceGenerator } from "../functions/agents";
 import { fireCrawlFetch } from "../functions/fetch";
 import { createDraft } from "../functions/schedule-tweets";
-import { saveState, state } from "../functions/state";
+import { saveState, state, MAX_RECENT_TWEETS } from "../functions/state";
 
 config();
 
@@ -275,7 +275,7 @@ interface RedditCommentsResponse {
   // Add context about recent tweets to help avoid repetition
   let contextualContent = content;
   if (recentTweets.length > 0) {
-    contextualContent = `Context: Recent tweet topics to avoid repeating:\n${recentTweets.slice(0, 30).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\n${content}`;
+    contextualContent = `Context: Recent tweet topics to avoid repeating:\n${recentTweets.slice(0, MAX_RECENT_TWEETS).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\n${content}`;
   }
 
   const initialResult = await run(newsThreadGenerator, contextualContent);
@@ -299,8 +299,8 @@ interface RedditCommentsResponse {
   // We'll use the news title as the topic
   const tweetTopic = latestPost.title;
   
-  // Update state with new topic, keeping most recent 50
-  const updatedRecentTweets = [tweetTopic, ...recentTweets].slice(0, 50);
+  // Update state with new topic, keeping most recent MAX_RECENT_TWEETS
+  const updatedRecentTweets = [tweetTopic, ...recentTweets].slice(0, MAX_RECENT_TWEETS);
 
   saveState({
     previousRedditNewsThread: latestPost.id,

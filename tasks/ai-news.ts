@@ -7,7 +7,7 @@ import {
   voiceGenerator,
 } from "../functions/agents";
 import { createDraft } from "../functions/schedule-tweets";
-import { saveState, state } from "../functions/state";
+import { saveState, state, MAX_RECENT_TWEETS } from "../functions/state";
 
 interface RSSItem {
   title: string;
@@ -140,8 +140,8 @@ interface RSSFeed {
     newTweetTopics.push(idea.title);
   }
 
-  // Update state with new topics, keeping most recent 50
-  const updatedRecentTweets = [...newTweetTopics, ...recentTweets].slice(0, 50);
+  // Update state with new topics, keeping most recent MAX_RECENT_TWEETS
+  const updatedRecentTweets = [...newTweetTopics, ...recentTweets].slice(0, MAX_RECENT_TWEETS);
   
   saveState({
     previousSmolAiNewsThread: selectedItem.guid["#text"],
