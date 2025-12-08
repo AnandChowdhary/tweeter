@@ -1,5 +1,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
+// Maximum number of recent tweets to store
+export const MAX_RECENT_TWEETS = 50;
+
 export const state = JSON.parse(
   readFileSync("./state.json", "utf-8") || "{}"
 ) as {

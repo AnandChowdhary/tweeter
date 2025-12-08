@@ -7,7 +7,7 @@ import {
   voiceGenerator,
 } from "../functions/agents";
 import { createDraft } from "../functions/schedule-tweets";
-import { saveState, state } from "../functions/state";
+import { saveState, state, MAX_RECENT_TWEETS } from "../functions/state";
 
 interface RSSItem {
   title: string;
@@ -102,8 +102,16 @@ interface RSSFeed {
     console.warn("Could not convert content to markdown:", error);
   }
   console.log("Content", content.length);
-  const ideas = await generateAiNewsIdeas(content);
+  
+  // Get recent tweets from state to avoid repetition
+  const recentTweets = state.recentTweets || [];
+  console.log(`Using ${recentTweets.length} recent tweets as context`);
+  
+  const ideas = await generateAiNewsIdeas(content, recentTweets);
   console.log("Ideas", ideas.tweet_topics.map((t) => t.title).join(", "));
+
+  // Collect new tweet topics to save
+  const newTweetTopics: string[] = [];
 
   for (const idea of ideas.tweet_topics) {
     const initialResult = await run(
@@ -127,11 +135,18 @@ interface RSSFeed {
       content: voiceResult.finalOutput,
     });
     console.log("Scheduled tweet", draft.id);
+    
+    // Save the idea title to track what we've covered
+    newTweetTopics.push(idea.title);
   }
 
+  // Update state with new topics, keeping most recent MAX_RECENT_TWEETS
+  const updatedRecentTweets = [...newTweetTopics, ...recentTweets].slice(0, MAX_RECENT_TWEETS);
+  
   saveState({
     previousSmolAiNewsThread: selectedItem.guid["#text"],
     lastDailyRunAt: new Date().toISOString(),
+    recentTweets: updatedRecentTweets,
   });
 })()
   .then(() => process.exit(0))

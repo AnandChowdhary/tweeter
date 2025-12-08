@@ -91,6 +91,17 @@ Set up a custom shortcut to generate threads from any article:
 
 The system tracks processed content in `state.json` to avoid duplicates and maintain execution history.
 
+### Recent tweets tracking
+
+The system stores recent tweet topics (ideas) in `state.json` to prevent repetition:
+
+- **AI news**: When generating tweet ideas, recent topics are passed as context to help the AI avoid similar themes
+- **Tech news**: Recent topics are provided to avoid repeating similar news stories
+- **Storage**: Up to 50 most recent tweet topics are kept in the `recentTweets` array
+- **Format**: Topics are stored as concise titles/descriptions (not full tweets)
+
+This ensures that the content generation system produces fresh, diverse content and doesn't repeat the same ideas or news angles.
+
 ## 📄 License
 
 MIT (c) 2025 [Anand Chowdhary](https://anandchowdhary.com)
