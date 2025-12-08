@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-02-mistral-3/",
-  "lastDailyRunAt": "2025-12-07T08:10:33.593Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-04-openrouter/",
+  "lastDailyRunAt": "2025-12-08T12:42:36.451Z",
   "previousBlogPostThread": "blog/2017/md5.md",
   "lastBiWeeklyRunAt": "2025-12-08T10:02:49.728Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/words",
   "lastAlternateWeeklyRunAt": "2025-11-01T12:08:35.952Z",
   "previousStarredRepos": [
+    "1097033175",
     "803014189",
     "313641207",
     "900550981",
@@ -38,11 +39,17 @@
     "498766488",
     "522924531",
     "1041472829",
-    "1036291673",
-    "1036412176"
+    "1036291673"
   ],
-  "lastStarredReposRunAt": "2025-12-07T08:10:34.922Z",
+  "lastStarredReposRunAt": "2025-12-08T12:42:51.777Z",
   "lastWeeklyQuotesRunAt": "2025-12-08T10:02:50.685Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
-  "previousRedditNewsThread": "1pfqbup"
+  "previousRedditNewsThread": "1pfqbup",
+  "recentTweets": [
+    "OpenRouter’s 7T-token dataset rewrites AI usage map",
+    "Programming now drives most LLM spend and context",
+    "Anthropic quietly dominates tool-calling & coding",
+    "Grok Code Fast tops usage charts—even after promos",
+    "Reasoning-optimized models overtake general chat"
+  ]
 }
