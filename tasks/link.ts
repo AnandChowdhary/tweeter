@@ -18,7 +18,7 @@ const comment = process.env.COMMENT || "";
   }
 
   console.log("Fetching content", link);
-  const contentOriginal = await fireCrawlFetch(link).then((res) => res.text());
+  const contentOriginal = await fireCrawlFetch(link);
 
   let content = contentOriginal;
   try {

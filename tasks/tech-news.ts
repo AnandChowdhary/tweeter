@@ -4,7 +4,7 @@ import { NodeHtmlMarkdown } from "node-html-markdown";
 import { newsThreadGenerator, voiceGenerator } from "../functions/agents";
 import { fireCrawlFetch } from "../functions/fetch";
 import { createDraft } from "../functions/schedule-tweets";
-import { saveState, state, MAX_RECENT_TWEETS } from "../functions/state";
+import { MAX_RECENT_TWEETS, saveState, state } from "../functions/state";
 
 config();
 
@@ -223,7 +223,7 @@ interface RedditCommentsResponse {
   let comments = "";
   try {
     const commentsUrl = `https://www.reddit.com${latestPost.permalink}.json`;
-    const commentsResponse = await fireCrawlFetch(commentsUrl);
+    const commentsResponse = await fetch(commentsUrl);
     const commentsData = (await commentsResponse.json()) as [
       RedditResponse,
       RedditCommentsResponse
@@ -255,10 +255,7 @@ interface RedditCommentsResponse {
   content += comments;
 
   console.log("Fetching content", latestPost.url);
-  const contentOriginal = await fireCrawlFetch(latestPost.url).then((res) =>
-    res.text()
-  );
-
+  const contentOriginal = await fireCrawlFetch(latestPost.url);
   let articleContent = contentOriginal;
   try {
     articleContent = NodeHtmlMarkdown.translate(contentOriginal);
@@ -271,11 +268,14 @@ interface RedditCommentsResponse {
   // Get recent tweets from state to avoid repetition
   const recentTweets = state.recentTweets || [];
   console.log(`Using ${recentTweets.length} recent tweets as context`);
-  
+
   // Add context about recent tweets to help avoid repetition
   let contextualContent = content;
   if (recentTweets.length > 0) {
-    contextualContent = `Context: Recent tweet topics to avoid repeating:\n${recentTweets.slice(0, MAX_RECENT_TWEETS).map((t, i) => `${i + 1}. ${t}`).join("\n")}\n\n---\n\n${content}`;
+    contextualContent = `Context: Recent tweet topics to avoid repeating:\n${recentTweets
+      .slice(0, MAX_RECENT_TWEETS)
+      .map((t, i) => `${i + 1}. ${t}`)
+      .join("\n")}\n\n---\n\n${content}`;
   }
 
   const initialResult = await run(newsThreadGenerator, contextualContent);
@@ -298,9 +298,12 @@ interface RedditCommentsResponse {
   // Extract the main topic/title from the tweet for tracking
   // We'll use the news title as the topic
   const tweetTopic = latestPost.title;
-  
+
   // Update state with new topic, keeping most recent MAX_RECENT_TWEETS
-  const updatedRecentTweets = [tweetTopic, ...recentTweets].slice(0, MAX_RECENT_TWEETS);
+  const updatedRecentTweets = [tweetTopic, ...recentTweets].slice(
+    0,
+    MAX_RECENT_TWEETS
+  );
 
   saveState({
     previousRedditNewsThread: latestPost.id,

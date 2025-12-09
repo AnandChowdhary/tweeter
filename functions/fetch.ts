@@ -1,22 +1,14 @@
-export async function fireCrawlFetch(
-  url: string,
-  options: { headers?: Record<string, string> } = {}
-) {
-  const apiKey = process.env.FIRECRAWL_API_KEY;
+import Firecrawl from "@mendable/firecrawl-js";
 
-  if (!apiKey) {
-    throw new Error("FIRECRAWL_API_KEY environment variable is required");
-  }
+const apiKey = process.env.FIRECRAWL_API_KEY;
+if (!apiKey)
+  throw new Error("FIRECRAWL_API_KEY environment variable is required");
 
-  // Encode the URL for ScrapingBee
-  const encodedUrl = encodeURIComponent(url);
-  const scrapingBeeUrl = `https://app.scrapingbee.com/api/v1?api_key=${apiKey}&url=${encodedUrl}`;
+export const firecrawl = new Firecrawl({ apiKey });
 
-  return fetch(scrapingBeeUrl, {
-    method: "GET",
-    headers: {
-      "User-Agent": "Mozilla/5.0 (compatible; ScrapingBee/1.0)",
-      ...options.headers,
-    },
-  });
+export async function fireCrawlFetch(url: string): Promise<string> {
+  const doc = await firecrawl.scrapeUrl(url, { formats: ["markdown"] });
+  if (!doc.success) throw new Error(doc.error);
+  if (!doc.markdown) throw new Error("No markdown content returned");
+  return doc.markdown;
 }
