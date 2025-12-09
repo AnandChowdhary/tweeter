@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-04-openrouter/",
-  "lastDailyRunAt": "2025-12-08T12:42:36.451Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-01-deepseek-32/",
+  "lastDailyRunAt": "2025-12-09T08:12:55.289Z",
   "previousBlogPostThread": "blog/2017/md5.md",
   "lastBiWeeklyRunAt": "2025-12-08T10:02:49.728Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1041472829",
     "1036291673"
   ],
-  "lastStarredReposRunAt": "2025-12-08T12:42:51.777Z",
+  "lastStarredReposRunAt": "2025-12-09T08:12:56.976Z",
   "lastWeeklyQuotesRunAt": "2025-12-08T10:02:50.685Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "DeepSeek V3.2’s agentic task factory, explained",
+    "Arcee’s Trinity: US bets big on open MoE",
+    "Runway Gen‑4.5 vs Kling O1: new video battle",
+    "Transformers v5 RC: HF goes all‑in on serving",
+    "AI2’s Openness Index exposes a tradeoff",
     "OpenRouter’s 7T-token dataset rewrites AI usage map",
     "Programming now drives most LLM spend and context",
     "Anthropic quietly dominates tool-calling & coding",
