@@ -61,6 +61,13 @@ export async function createDraft({
   content: string;
   options?: Partial<CreateDraftOptions>;
 }): Promise<DraftResponse> {
+  content = content
+    .replaceAll("“", '"')
+    .replaceAll("”", '"')
+    .replaceAll("‘", "'")
+    .replaceAll("’", "'")
+    .replaceAll("—", " - ");
+
   const apiKey = process.env.TYPEFULLY_API_KEY;
   if (!apiKey) {
     throw new Error("TYPEFULLY_API_KEY environment variable is not set");
@@ -83,14 +90,7 @@ export async function createDraft({
   // Build the payload in the new v2 format
   const payload: any = {
     platforms: {
-      x: {
-        enabled: true,
-        posts: [
-          {
-            text: options.content || content,
-          },
-        ],
-      },
+      x: { enabled: true, posts: [{ text: options.content || content }] },
     },
   };
 
