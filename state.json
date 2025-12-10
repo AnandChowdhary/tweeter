@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-01-deepseek-32/",
-  "lastDailyRunAt": "2025-12-09T08:12:55.289Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-09-devstral2/",
+  "lastDailyRunAt": "2025-12-10T08:12:21.638Z",
   "previousBlogPostThread": "blog/2017/md5.md",
   "lastBiWeeklyRunAt": "2025-12-08T10:02:49.728Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1041472829",
     "1036291673"
   ],
-  "lastStarredReposRunAt": "2025-12-09T08:12:56.976Z",
+  "lastStarredReposRunAt": "2025-12-10T08:12:22.967Z",
   "lastWeeklyQuotesRunAt": "2025-12-08T10:02:50.685Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "New Agentic AI Foundation under Linux",
+    "Databricks’ OfficeQA shatters hype on agents",
+    "CoreWeave’s Mission Control gets AI ops agent",
+    "Zhipu’s GLM‑4.6V pushes open multimodal",
+    "ServiceNow’s 15B open thinker for enterprises",
     "DeepSeek V3.2’s agentic task factory, explained",
     "Arcee’s Trinity: US bets big on open MoE",
     "Runway Gen‑4.5 vs Kling O1: new video battle",
