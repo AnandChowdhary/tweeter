@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-09-devstral2/",
-  "lastDailyRunAt": "2025-12-10T08:12:21.638Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-11-gpt-52/",
+  "lastDailyRunAt": "2025-12-15T08:01:44.785Z",
   "previousBlogPostThread": "blog/2017/md5.md",
   "lastBiWeeklyRunAt": "2025-12-08T10:02:49.728Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,8 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/words",
   "lastAlternateWeeklyRunAt": "2025-11-01T12:08:35.952Z",
   "previousStarredRepos": [
+    "907754163",
+    "1072429861",
     "1097033175",
     "803014189",
     "313641207",
@@ -37,15 +39,18 @@
     "1037413102",
     "1038057277",
     "498766488",
-    "522924531",
-    "1041472829",
-    "1036291673"
+    "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-10T08:12:22.967Z",
+  "lastStarredReposRunAt": "2025-12-15T08:02:09.911Z",
   "lastWeeklyQuotesRunAt": "2025-12-08T10:02:50.685Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "OpenAI–Disney sign multi‑year Sora content deal",
+    "Google’s Interactions API bets on stateful agents",
+    "Cohere Rerank 4 targets real‑world RAG quality",
+    "Agent scaling laws: more agents often hurt",
+    "Qdrant’s ACORN fixes “zero‑result” vector queries",
     "New Agentic AI Foundation under Linux",
     "Databricks’ OfficeQA shatters hype on agents",
     "CoreWeave’s Mission Control gets AI ops agent",
