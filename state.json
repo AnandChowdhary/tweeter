@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-11-gpt-52/",
-  "lastDailyRunAt": "2025-12-15T08:01:44.785Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-09-devstral2/",
+  "lastDailyRunAt": "2025-12-15T08:41:40.199Z",
   "previousBlogPostThread": "blog/2017/md5.md",
   "lastBiWeeklyRunAt": "2025-12-08T10:02:49.728Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-15T08:02:09.911Z",
+  "lastStarredReposRunAt": "2025-12-15T08:41:41.806Z",
   "lastWeeklyQuotesRunAt": "2025-12-08T10:02:50.685Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Qwen’s SAPO rewrites RL playbook for LLMs",
+    "RL ‘random reward’ gains vanish after decontamination",
+    "ARC-AGI leak exposes eval hygiene crisis",
+    "PaCoRe: parallel reasoning beats deeper chains?",
+    "Meta’s Saber: zero-shot reference-to-video breakthrough",
     "OpenAI–Disney sign multi‑year Sora content deal",
     "Google’s Interactions API bets on stateful agents",
     "Cohere Rerank 4 targets real‑world RAG quality",
