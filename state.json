@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-09-devstral2/",
-  "lastDailyRunAt": "2025-12-15T08:41:40.199Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-15-nemotron-3/",
+  "lastDailyRunAt": "2025-12-16T08:12:52.070Z",
   "previousBlogPostThread": "blog/2017/college.md",
   "lastBiWeeklyRunAt": "2025-12-15T10:03:17.567Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-15T08:41:41.806Z",
+  "lastStarredReposRunAt": "2025-12-16T08:12:53.612Z",
   "lastWeeklyQuotesRunAt": "2025-12-15T10:03:19.844Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Nemotron 3: fully open US-made hybrid MoE stack",
+    "NV’s LatentMoE & NVFP4 hint at next-gen scaling",
+    "NVIDIA buys SLURM: AI chips move up the stack",
+    "Allen AI’s Bolmo bets on byte-level LMs",
+    "SpAItial Echo: in-browser 3D worlds from text",
     "Qwen’s SAPO rewrites RL playbook for LLMs",
     "RL ‘random reward’ gains vanish after decontamination",
     "ARC-AGI leak exposes eval hygiene crisis",
