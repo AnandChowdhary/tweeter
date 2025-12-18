@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-16-gpt-image-15/",
-  "lastDailyRunAt": "2025-12-17T08:13:15.920Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-17-gemini-3-flash/",
+  "lastDailyRunAt": "2025-12-18T08:12:53.085Z",
   "previousBlogPostThread": "blog/2017/college.md",
   "lastBiWeeklyRunAt": "2025-12-15T10:03:17.567Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-17T08:13:17.365Z",
+  "lastStarredReposRunAt": "2025-12-18T08:12:54.576Z",
   "lastWeeklyQuotesRunAt": "2025-12-15T10:03:19.844Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Gemini 3 Flash: cost–performance shake‑up",
+    "xAI’s Grok Voice: speech‑to‑speech agents",
+    "Tencent’s HY World 1.5: live AI game worlds",
+    "NVFP4 MoE stack: ultra‑sparse training playbook",
+    "LangSmith shows agents need observability",
     "OpenAI’s GPT‑Image‑1.5 vs Nano Banana: benchmark gap",
     "Xiaomi’s MiMo‑V2‑Flash: 309B MoE tuned for agents",
     "FACTS: Google’s new 4‑axis factuality stress test",
