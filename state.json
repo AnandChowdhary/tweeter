@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-17-gemini-3-flash/",
-  "lastDailyRunAt": "2025-12-18T08:12:53.085Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-18-claude-skills-grows/",
+  "lastDailyRunAt": "2025-12-19T08:12:46.930Z",
   "previousBlogPostThread": "blog/2017/college.md",
   "lastBiWeeklyRunAt": "2025-12-15T10:03:17.567Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-18T08:12:54.576Z",
+  "lastStarredReposRunAt": "2025-12-19T08:12:48.652Z",
   "lastWeeklyQuotesRunAt": "2025-12-15T10:03:19.844Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Agent Skills: from “folder of MD” to open standard",
+    "OpenAI’s GPT‑5.2‑Codex targets real‑world codebases",
+    "MLX gets distributed training over Thunderbolt 5",
+    "Diffusion LMs: draft-with-diffusion, verify-with-AR",
+    "Mistral OCR 3 targets the doc-intel bottleneck",
     "Gemini 3 Flash: cost–performance shake‑up",
     "xAI’s Grok Voice: speech‑to‑speech agents",
     "Tencent’s HY World 1.5: live AI game worlds",
