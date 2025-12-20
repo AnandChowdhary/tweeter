@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-18-claude-skills-grows/",
-  "lastDailyRunAt": "2025-12-19T08:12:46.930Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-17-gemini-3-flash/",
+  "lastDailyRunAt": "2025-12-20T08:10:47.787Z",
   "previousBlogPostThread": "blog/2017/college.md",
   "lastBiWeeklyRunAt": "2025-12-15T10:03:17.567Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-19T08:12:48.652Z",
+  "lastStarredReposRunAt": "2025-12-20T08:10:49.243Z",
   "lastWeeklyQuotesRunAt": "2025-12-15T10:03:19.844Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Grok Voice goes full speech‑to‑speech agent",
+    "Argmax SDK 2.0: sub‑3W real‑time speech stack",
+    "Unsloth brings fine‑tuned LLMs fully on‑device",
+    "TurboDiffusion & TRELLIS.2 speed 3D/video assets",
+    "mini‑SGLang: a 5K‑LOC window into LLM serving",
     "Agent Skills: from “folder of MD” to open standard",
     "OpenAI’s GPT‑5.2‑Codex targets real‑world codebases",
     "MLX gets distributed training over Thunderbolt 5",
