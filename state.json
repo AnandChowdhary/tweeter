@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-18-claude-skills-grows/",
-  "lastDailyRunAt": "2025-12-21T08:10:37.054Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-17-gemini-3-flash/",
+  "lastDailyRunAt": "2025-12-22T08:13:54.752Z",
   "previousBlogPostThread": "blog/2017/college.md",
   "lastBiWeeklyRunAt": "2025-12-15T10:03:17.567Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-21T08:10:38.509Z",
+  "lastStarredReposRunAt": "2025-12-22T08:13:56.367Z",
   "lastWeeklyQuotesRunAt": "2025-12-15T10:03:19.844Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Gemini 3 Flash’s 100‑tool calling demo, unpacked",
+    "Gemini 3 vs GPT‑5.2: who really owns the Pareto front?",
+    "Thinking levels in LLMs: Flash‑Low vs Flash‑High",
+    "Gemini 3 Flash everywhere: IDEs, clouds, and RAG stacks",
+    "ARC‑AGI‑2: Gemini 3 Flash’s efficiency puzzle",
     "Agent Skills: from Claude feature to open standard",
     "Harness UX: the real battleground for agents",
     "Serverless is breaking long‑running agents",
@@ -90,11 +95,6 @@
     "Databricks’ OfficeQA shatters hype on agents",
     "CoreWeave’s Mission Control gets AI ops agent",
     "Zhipu’s GLM‑4.6V pushes open multimodal",
-    "ServiceNow’s 15B open thinker for enterprises",
-    "DeepSeek V3.2’s agentic task factory, explained",
-    "Arcee’s Trinity: US bets big on open MoE",
-    "Runway Gen‑4.5 vs Kling O1: new video battle",
-    "Transformers v5 RC: HF goes all‑in on serving",
-    "AI2’s Openness Index exposes a tradeoff"
+    "ServiceNow’s 15B open thinker for enterprises"
   ]
 }
