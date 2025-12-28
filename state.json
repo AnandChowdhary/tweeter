@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-18-claude-skills-grows/",
-  "lastDailyRunAt": "2025-12-27T08:12:12.650Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
+  "lastDailyRunAt": "2025-12-28T08:11:31.826Z",
   "previousBlogPostThread": "blog/2017/zomato.md",
   "lastBiWeeklyRunAt": "2025-12-22T10:02:42.016Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-27T08:12:14.196Z",
+  "lastStarredReposRunAt": "2025-12-28T08:11:33.283Z",
   "lastWeeklyQuotesRunAt": "2025-12-22T10:02:43.021Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Exec shakeup: Nvidia “licenses” Groq’s leadership",
+    "Benchmarking revolt: your evals are lying to you",
+    "MiniMax M2.1’s quiet takeover of coding UIs",
+    "Character.AI’s “Squinch” shows training isn’t solved",
+    "Robotics’ next leap: NVIDIA GR00T stack goes open",
     "Agent Skills: org-wide standard, not just “markdown”",
     "FunctionGemma + T5Gemma 2: tiny LMs get serious",
     "Diffusion LMs go mainstream via “AR retrofit”",
@@ -90,11 +95,6 @@
     "OpenAI’s GPT‑Image‑1.5 vs Nano Banana: benchmark gap",
     "Xiaomi’s MiMo‑V2‑Flash: 309B MoE tuned for agents",
     "FACTS: Google’s new 4‑axis factuality stress test",
-    "FrontierScience + wet labs: GPT‑5 in real biology loops",
-    "Meta SAM Audio: open‑weight “segment anything” for sound",
-    "Nemotron 3: fully open US-made hybrid MoE stack",
-    "NV’s LatentMoE & NVFP4 hint at next-gen scaling",
-    "NVIDIA buys SLURM: AI chips move up the stack",
-    "Allen AI’s Bolmo bets on byte-level LMs"
+    "FrontierScience + wet labs: GPT‑5 in real biology loops"
   ]
 }
