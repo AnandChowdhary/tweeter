@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-18-claude-skills-grows/",
-  "lastDailyRunAt": "2025-12-29T08:14:02.553Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
+  "lastDailyRunAt": "2025-12-30T08:12:49.427Z",
   "previousBlogPostThread": "blog/2017/utwente-peoplepages.md",
   "lastBiWeeklyRunAt": "2025-12-29T10:02:56.340Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-29T08:14:12.835Z",
+  "lastStarredReposRunAt": "2025-12-30T08:12:50.927Z",
   "lastWeeklyQuotesRunAt": "2025-12-29T10:02:58.889Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Meta buys Manus for $4B to own agent scaffolding",
+    "OpenEnv: Meta & HF push a standard for AI agents",
+    "TTT‑E2E: test‑time training to stretch context to 128K",
+    "PHYSMASTER: an autonomous theoretical physics agent",
+    "AgentReuse: caching plans to slash agent latency 93%",
     "Agent Skills go vendor‑neutral & org‑wide",
     "GPT‑5.2‑Codex targets real‑world codebases",
     "Gemini 3 Flash: speed as a product weapon",
@@ -90,11 +95,6 @@
     "Agent Skills: from “folder of MD” to open standard",
     "OpenAI’s GPT‑5.2‑Codex targets real‑world codebases",
     "MLX gets distributed training over Thunderbolt 5",
-    "Diffusion LMs: draft-with-diffusion, verify-with-AR",
-    "Mistral OCR 3 targets the doc-intel bottleneck",
-    "Gemini 3 Flash: cost–performance shake‑up",
-    "xAI’s Grok Voice: speech‑to‑speech agents",
-    "Tencent’s HY World 1.5: live AI game worlds",
-    "NVFP4 MoE stack: ultra‑sparse training playbook"
+    "Diffusion LMs: draft-with-diffusion, verify-with-AR"
   ]
 }
