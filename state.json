@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
-  "lastDailyRunAt": "2025-12-31T08:12:26.243Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
+  "lastDailyRunAt": "2026-01-01T08:13:03.286Z",
   "previousBlogPostThread": "blog/2017/utwente-peoplepages.md",
   "lastBiWeeklyRunAt": "2025-12-29T10:02:56.340Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2025-12-31T08:12:27.685Z",
+  "lastStarredReposRunAt": "2026-01-01T08:13:04.749Z",
   "lastWeeklyQuotesRunAt": "2025-12-29T10:02:58.889Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "AMD FP8 on MI300X underperforms bf16 in the wild",
+    "Weaviate’s new features target real‑world AI ops",
+    "API sprawl sparks calls for a unified AI SDK layer",
+    "Docs for humans *and* agents become a new standard",
+    "Jina: Small vision encoders can beat giant VLMs",
     "SEMI: Multimodal AI without massive paired data",
     "PoPE vs RoPE: Fixing position-content entanglement",
     "Recurrent ViTs: Compressing vision transformers",
@@ -90,11 +95,6 @@
     "Agent Skills: from Claude feature to open standard",
     "Harness UX: the real battleground for agents",
     "Serverless is breaking long‑running agents",
-    "Fixing METR eval bugs reshapes model rankings",
-    "OpenAI tests how “visible” model thoughts really are",
-    "Grok Voice goes full speech‑to‑speech agent",
-    "Argmax SDK 2.0: sub‑3W real‑time speech stack",
-    "Unsloth brings fine‑tuned LLMs fully on‑device",
-    "TurboDiffusion & TRELLIS.2 speed 3D/video assets"
+    "Fixing METR eval bugs reshapes model rankings"
   ]
 }
