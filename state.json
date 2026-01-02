@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-01T08:13:03.286Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
+  "lastDailyRunAt": "2026-01-02T08:12:17.172Z",
   "previousBlogPostThread": "blog/2017/utwente-peoplepages.md",
   "lastBiWeeklyRunAt": "2025-12-29T10:02:56.340Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2026-01-01T08:13:04.749Z",
+  "lastStarredReposRunAt": "2026-01-02T08:12:18.823Z",
   "lastWeeklyQuotesRunAt": "2025-12-29T10:02:58.889Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "AI exec poaching becomes a $20B “soft acquisition”",
+    "GroqCloud’s future as an independent NVIDIA-aligned player",
+    "NVIDIA’s AI factory expands to real-time inference",
+    "Regulatory workaround: licensing teams, not buying firms",
+    "Valuations reset: Groq’s 3x jump in three months",
     "AMD FP8 on MI300X underperforms bf16 in the wild",
     "Weaviate’s new features target real‑world AI ops",
     "API sprawl sparks calls for a unified AI SDK layer",
@@ -90,11 +95,6 @@
     "Gemini 3 Flash’s 100‑tool calling demo, unpacked",
     "Gemini 3 vs GPT‑5.2: who really owns the Pareto front?",
     "Thinking levels in LLMs: Flash‑Low vs Flash‑High",
-    "Gemini 3 Flash everywhere: IDEs, clouds, and RAG stacks",
-    "ARC‑AGI‑2: Gemini 3 Flash’s efficiency puzzle",
-    "Agent Skills: from Claude feature to open standard",
-    "Harness UX: the real battleground for agents",
-    "Serverless is breaking long‑running agents",
-    "Fixing METR eval bugs reshapes model rankings"
+    "Gemini 3 Flash everywhere: IDEs, clouds, and RAG stacks"
   ]
 }
