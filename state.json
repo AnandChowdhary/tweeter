@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-03T08:11:08.030Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
+  "lastDailyRunAt": "2026-01-04T08:12:15.507Z",
   "previousBlogPostThread": "blog/2017/utwente-peoplepages.md",
   "lastBiWeeklyRunAt": "2025-12-29T10:02:56.340Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "498766488",
     "522924531"
   ],
-  "lastStarredReposRunAt": "2026-01-03T08:11:09.682Z",
+  "lastStarredReposRunAt": "2026-01-04T08:12:17.064Z",
   "lastWeeklyQuotesRunAt": "2025-12-29T10:02:58.889Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Smol.ai launches searchable AI news archive",
+    "Benchmarking uproar: errors, providers, and fake scores",
+    "Agent packaging: from loose patterns to portable bundles",
+    "MiniMax M2.1’s quiet rise as a coding workhorse",
+    "GLM‑4.7 & MCP-style tools push local-first inference",
     "Transformers store global structure, not just facts",
     "Universal Recurrent Models beat depth on ARC-AGI",
     "TTT‑E2E: training your model at inference time",
@@ -90,11 +95,6 @@
     "Noumena’s FP4 MoE stack targets B200 scaling",
     "vLLM squeezes 33% more throughput from Blackwell",
     "Unsloth + PyTorch bring fine‑tuned LLMs on‑device",
-    "HY World 1.5: live, promptable 3D AI game worlds",
-    "Qdrant’s “Snappy” brings ColPali RAG to PDFs",
-    "WebGPU ‘jax-js’: ML compiler fully in the browser",
-    "Kling 2.6 Motion Control: mocap from a single video",
-    "Runway Gen‑4.5 pushes pro-grade video AI",
-    "Karpathy’s “food for thought” as RL for LLMs"
+    "HY World 1.5: live, promptable 3D AI game worlds"
   ]
 }
