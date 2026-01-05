@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
-  "lastDailyRunAt": "2026-01-04T08:12:15.507Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
+  "lastDailyRunAt": "2026-01-05T08:14:12.508Z",
   "previousBlogPostThread": "blog/2017/utwente-peoplepages.md",
   "lastBiWeeklyRunAt": "2025-12-29T10:02:56.340Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,8 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/hello-bar",
   "lastAlternateWeeklyRunAt": "2026-01-01T12:07:41.167Z",
   "previousStarredRepos": [
+    "1127637581",
+    "1100077600",
     "907754163",
     "1072429861",
     "1097033175",
@@ -37,15 +39,18 @@
     "945363614",
     "762289766",
     "1037413102",
-    "1038057277",
-    "498766488",
-    "522924531"
+    "1038057277"
   ],
-  "lastStarredReposRunAt": "2026-01-04T08:12:17.064Z",
+  "lastStarredReposRunAt": "2026-01-05T08:14:37.492Z",
   "lastWeeklyQuotesRunAt": "2025-12-29T10:02:58.889Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "FLUX.2 Turbo: open image model hits sub‑second gen",
+    "Korea’s new 32B VLM skips scale, tweaks training",
+    "Context Arena adds ByteDance Seed 1.6 models",
+    "Spotify’s large‑scale code migration agents",
+    "“Harnesses” become the new AI product moat",
     "Smol.ai launches searchable AI news archive",
     "Benchmarking uproar: errors, providers, and fake scores",
     "Agent packaging: from loose patterns to portable bundles",
@@ -90,11 +95,6 @@
     "FunctionGemma + T5Gemma 2: tiny LMs get serious",
     "Diffusion LMs go mainstream via “AR retrofit”",
     "METR’s eval bugfix quietly rewrites model rankings",
-    "Serverless is failing long-running AI agents",
-    "NVIDIA’s $20B Groq deal reshapes AI chip wars",
-    "Noumena’s FP4 MoE stack targets B200 scaling",
-    "vLLM squeezes 33% more throughput from Blackwell",
-    "Unsloth + PyTorch bring fine‑tuned LLMs on‑device",
-    "HY World 1.5: live, promptable 3D AI game worlds"
+    "Serverless is failing long-running AI agents"
   ]
 }
