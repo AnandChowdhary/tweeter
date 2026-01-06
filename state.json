@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-05T08:14:12.508Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-24-nvidia-groq/",
+  "lastDailyRunAt": "2026-01-06T08:12:24.485Z",
   "previousBlogPostThread": "blog/2018/state-of-the-podcasts-2018.md",
   "lastBiWeeklyRunAt": "2026-01-05T10:03:17.730Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -46,6 +46,7 @@
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Groq’s $20B “non-acquisition” by NVIDIA",
     "FLUX.2 Turbo: open image model hits sub‑second gen",
     "Korea’s new 32B VLM skips scale, tweaks training",
     "Context Arena adds ByteDance Seed 1.6 models",
@@ -94,7 +95,6 @@
     "Agent Skills: org-wide standard, not just “markdown”",
     "FunctionGemma + T5Gemma 2: tiny LMs get serious",
     "Diffusion LMs go mainstream via “AR retrofit”",
-    "METR’s eval bugfix quietly rewrites model rankings",
-    "Serverless is failing long-running AI agents"
+    "METR’s eval bugfix quietly rewrites model rankings"
   ]
 }
