@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-08T08:13:04.265Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-06-xai-series-e/",
+  "lastDailyRunAt": "2026-01-09T08:13:00.299Z",
   "previousBlogPostThread": "blog/2018/state-of-the-podcasts-2018.md",
   "lastBiWeeklyRunAt": "2026-01-05T10:03:17.730Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "945363614",
     "762289766"
   ],
-  "lastStarredReposRunAt": "2026-01-08T08:13:29.298Z",
+  "lastStarredReposRunAt": "2026-01-09T08:13:01.816Z",
   "lastWeeklyQuotesRunAt": "2026-01-05T10:03:19.883Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "NVIDIA–Hugging Face tie-up powers “physical AI”",
+    "Reachy Mini aims to be the ‘Raspberry Pi’ of robots",
+    "DatBench: cleaning eval data to cut VLM costs 10×",
+    "LMArena’s $150M bet that evals are a business",
+    "Mi:dm K 2.5 Pro: strong tools, 92% hallucination rate",
     "xAI quietly spins up a safety-focused lab",
     "xAI’s RL post‑training push and why it matters",
     "AI eats Excel: agentic tools hit finance work",
@@ -90,11 +95,6 @@
     "Meta buys Manus for $4B to own agent scaffolding",
     "OpenEnv: Meta & HF push a standard for AI agents",
     "TTT‑E2E: test‑time training to stretch context to 128K",
-    "PHYSMASTER: an autonomous theoretical physics agent",
-    "AgentReuse: caching plans to slash agent latency 93%",
-    "Agent Skills go vendor‑neutral & org‑wide",
-    "GPT‑5.2‑Codex targets real‑world codebases",
-    "Gemini 3 Flash: speed as a product weapon",
-    "FunctionGemma & T5Gemma 2 bet on tiny multimodal"
+    "PHYSMASTER: an autonomous theoretical physics agent"
   ]
 }
