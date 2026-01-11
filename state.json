@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-10T08:11:27.182Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-06-xai-series-e/",
+  "lastDailyRunAt": "2026-01-11T08:11:28.508Z",
   "previousBlogPostThread": "blog/2018/state-of-the-podcasts-2018.md",
   "lastBiWeeklyRunAt": "2026-01-05T10:03:17.730Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "945363614",
     "762289766"
   ],
-  "lastStarredReposRunAt": "2026-01-10T08:11:28.512Z",
+  "lastStarredReposRunAt": "2026-01-11T08:11:29.856Z",
   "lastWeeklyQuotesRunAt": "2026-01-05T10:03:19.883Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Grok image abuses spotlight eval & safety gaps",
+    "“Scaling is dead?” debate gets serious nuance",
+    "Grok’s 600M MAUs and the metrics shell game",
+    "AA Omniscience: accuracy vs hallucination split",
+    "AA Index v4.0 resets model rankings below 50",
     "vLLM launches dedicated community hub",
     "AgentReuse: caching plans to slash agent latency",
     "Transformers encode global structure in weights",
@@ -90,11 +95,6 @@
     "AMD FP8 on MI300X underperforms bf16 in the wild",
     "Weaviate’s new features target real‑world AI ops",
     "API sprawl sparks calls for a unified AI SDK layer",
-    "Docs for humans *and* agents become a new standard",
-    "Jina: Small vision encoders can beat giant VLMs",
-    "SEMI: Multimodal AI without massive paired data",
-    "PoPE vs RoPE: Fixing position-content entanglement",
-    "Recurrent ViTs: Compressing vision transformers",
-    "Waymo critique: The remote-ops bottleneck"
+    "Docs for humans *and* agents become a new standard"
   ]
 }
