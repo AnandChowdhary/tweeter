@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/25-12-29-meta-manus/",
-  "lastDailyRunAt": "2026-01-12T08:14:16.607Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-06-xai-series-e/",
+  "lastDailyRunAt": "2026-01-13T08:13:37.689Z",
   "previousBlogPostThread": "blog/2018/new-agastya.md",
   "lastBiWeeklyRunAt": "2026-01-12T10:03:23.818Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/hello-bar",
   "lastAlternateWeeklyRunAt": "2026-01-01T12:07:41.167Z",
   "previousStarredRepos": [
+    "1012781500",
     "1121859126",
     "1128648949",
     "1127637581",
@@ -38,14 +39,18 @@
     "1053758043",
     "1020008528",
     "693187866",
-    "945363614",
-    "762289766"
+    "945363614"
   ],
-  "lastStarredReposRunAt": "2026-01-12T08:14:18.337Z",
+  "lastStarredReposRunAt": "2026-01-13T08:13:55.877Z",
   "lastWeeklyQuotesRunAt": "2026-01-12T10:03:26.084Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Smol.ai launches full AI news search portal",
+    "Context engineering becomes a core AI skill",
+    "Project architecture is changing for AI-native dev",
+    "AI bureaucracy becomes a competitive risk",
+    "AI-driven robotics hits a consumer “kit” moment",
     "Meta buys Manus to own consumer AI agents",
     "PHYSMASTER: an ‘autonomous physicist’ AI agent",
     "OpenEnv: a shared spec for training & running agents",
@@ -90,11 +95,6 @@
     "Transformers store global structure, not just facts",
     "Universal Recurrent Models beat depth on ARC-AGI",
     "TTT‑E2E: training your model at inference time",
-    "Small batch sizes may be quietly wasting GPU time",
-    "Computer-use agents eyed as 2026’s big labor shift",
-    "AI exec poaching becomes a $20B “soft acquisition”",
-    "GroqCloud’s future as an independent NVIDIA-aligned player",
-    "NVIDIA’s AI factory expands to real-time inference",
-    "Regulatory workaround: licensing teams, not buying firms"
+    "Small batch sizes may be quietly wasting GPU time"
   ]
 }
