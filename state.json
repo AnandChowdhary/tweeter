@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-12-gemini-apple/",
-  "lastDailyRunAt": "2026-01-14T08:13:33.352Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-13-not-much/",
+  "lastDailyRunAt": "2026-01-15T08:13:45.458Z",
   "previousBlogPostThread": "blog/2018/new-agastya.md",
   "lastBiWeeklyRunAt": "2026-01-12T10:03:23.818Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "693187866",
     "945363614"
   ],
-  "lastStarredReposRunAt": "2026-01-14T08:13:34.904Z",
+  "lastStarredReposRunAt": "2026-01-15T08:13:46.942Z",
   "lastWeeklyQuotesRunAt": "2026-01-12T10:03:26.084Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "MedGemma 1.5: offline multimodal AI for hospitals",
+    "BabyVision shows MLLMs still “see” poorly",
+    "OctoCodingBench: coding agents must obey rules",
+    "Unified Attention lands in Diffusers",
+    "Low‑bit training’s hidden traps and fixes",
     "Apple’s AI pivot: Siri to run on Google Gemini",
     "Anthropic’s Cowork and the race for the ‘LLM OS’",
     "OpenAI goes deep into medicine with ChatGPT Health",
@@ -90,11 +95,6 @@
     "FLUX.2 Turbo: open image model hits sub‑second gen",
     "Korea’s new 32B VLM skips scale, tweaks training",
     "Context Arena adds ByteDance Seed 1.6 models",
-    "Spotify’s large‑scale code migration agents",
-    "“Harnesses” become the new AI product moat",
-    "Smol.ai launches searchable AI news archive",
-    "Benchmarking uproar: errors, providers, and fake scores",
-    "Agent packaging: from loose patterns to portable bundles",
-    "MiniMax M2.1’s quiet rise as a coding workhorse"
+    "Spotify’s large‑scale code migration agents"
   ]
 }
