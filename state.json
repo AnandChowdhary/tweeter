@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-13-not-much/",
-  "lastDailyRunAt": "2026-01-15T08:13:45.458Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-15-openresponses/",
+  "lastDailyRunAt": "2026-01-16T08:12:51.906Z",
   "previousBlogPostThread": "blog/2018/new-agastya.md",
   "lastBiWeeklyRunAt": "2026-01-12T10:03:23.818Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/calendar-link",
   "lastAlternateWeeklyRunAt": "2026-01-15T12:08:39.337Z",
   "previousStarredRepos": [
+    "1112540808",
     "1012781500",
     "1121859126",
     "1128648949",
@@ -38,14 +39,18 @@
     "759893102",
     "1053758043",
     "1020008528",
-    "693187866",
-    "945363614"
+    "693187866"
   ],
-  "lastStarredReposRunAt": "2026-01-15T08:13:46.942Z",
+  "lastStarredReposRunAt": "2026-01-16T08:13:07.302Z",
   "lastWeeklyQuotesRunAt": "2026-01-12T10:03:26.084Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Open Responses: a neutral LLM API standard",
+    "Filesystem-as-memory: agents pick files over vectors",
+    "Tiny Falcon-H1-Tiny models aim at edge & IoT",
+    "Agent memory pruning: Focus cuts tokens 22.7%",
+    "VS Code’s in-browser AI doc search engine",
     "MedGemma 1.5: offline multimodal AI for hospitals",
     "BabyVision shows MLLMs still “see” poorly",
     "OctoCodingBench: coding agents must obey rules",
@@ -90,11 +95,6 @@
     "CES 2026: AI-first hardware & home robots",
     "Claude Code vs org bureaucracy bottlenecks",
     "DFlash: diffusion + AR for 6.2× faster decoding",
-    "LTX-2: open video + audio generation arrives",
-    "Groq’s $20B “non-acquisition” by NVIDIA",
-    "FLUX.2 Turbo: open image model hits sub‑second gen",
-    "Korea’s new 32B VLM skips scale, tweaks training",
-    "Context Arena adds ByteDance Seed 1.6 models",
-    "Spotify’s large‑scale code migration agents"
+    "LTX-2: open video + audio generation arrives"
   ]
 }
