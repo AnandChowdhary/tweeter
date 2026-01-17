@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-15-openresponses/",
-  "lastDailyRunAt": "2026-01-16T08:12:51.906Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
+  "lastDailyRunAt": "2026-01-17T08:11:19.105Z",
   "previousBlogPostThread": "blog/2018/new-agastya.md",
   "lastBiWeeklyRunAt": "2026-01-12T10:03:23.818Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1020008528",
     "693187866"
   ],
-  "lastStarredReposRunAt": "2026-01-16T08:13:07.302Z",
+  "lastStarredReposRunAt": "2026-01-17T08:11:20.575Z",
   "lastWeeklyQuotesRunAt": "2026-01-12T10:03:26.084Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "OpenAI’s ChatGPT ads: the YouTube moment for LLMs",
+    "ChatGPT Go: low-cost tier bets on speed and volume",
+    "“Very fast Codex” and the speed vs IQ trade-off",
+    "VoxCPM: open, tokenization-free real-time voice cloning",
+    "AI data centers now rival a US state’s power draw",
     "Open Responses: a neutral LLM API standard",
     "Filesystem-as-memory: agents pick files over vectors",
     "Tiny Falcon-H1-Tiny models aim at edge & IoT",
@@ -90,11 +95,6 @@
     "xAI’s RL post‑training push and why it matters",
     "AI eats Excel: agentic tools hit finance work",
     "Spreadsheet agents need new data structures",
-    "Meta–Manus shows agents are a product, not a demo",
-    "xAI raises $20B at $230B valuation",
-    "CES 2026: AI-first hardware & home robots",
-    "Claude Code vs org bureaucracy bottlenecks",
-    "DFlash: diffusion + AR for 6.2× faster decoding",
-    "LTX-2: open video + audio generation arrives"
+    "Meta–Manus shows agents are a product, not a demo"
   ]
 }
