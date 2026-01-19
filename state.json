@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-15-openresponses/",
-  "lastDailyRunAt": "2026-01-18T08:11:54.521Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
+  "lastDailyRunAt": "2026-01-19T08:15:13.329Z",
   "previousBlogPostThread": "blog/2018/new-agastya.md",
   "lastBiWeeklyRunAt": "2026-01-12T10:03:23.818Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1020008528",
     "693187866"
   ],
-  "lastStarredReposRunAt": "2026-01-18T08:11:55.790Z",
+  "lastStarredReposRunAt": "2026-01-19T08:15:15.130Z",
   "lastWeeklyQuotesRunAt": "2026-01-12T10:03:26.084Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "AI ‘Neural OS’: diffusion as a full computer",
+    "Multi‑vector retrieval lets tiny models punch up",
+    "Human supervisors quietly 10× agent reliability",
+    "Inference is the new bottleneck, not training",
+    "CUDA tiling made saner with CuTe and cuTile",
     "FLUX.2 [klein]: tiny image models, big leap",
     "TranslateGemma: 55‑language open translation stack",
     "Unsloth + vLLM: RL for 7× longer contexts",
@@ -90,11 +95,6 @@
     "AgentReuse: caching plans to slash agent latency",
     "Transformers encode global structure in weights",
     "URM: recurrent transformers beat depth on ARC-AGI",
-    "TTT‑E2E: training your model at inference time",
-    "NVIDIA–Hugging Face tie-up powers “physical AI”",
-    "Reachy Mini aims to be the ‘Raspberry Pi’ of robots",
-    "DatBench: cleaning eval data to cut VLM costs 10×",
-    "LMArena’s $150M bet that evals are a business",
-    "Mi:dm K 2.5 Pro: strong tools, 92% hallucination rate"
+    "TTT‑E2E: training your model at inference time"
   ]
 }
