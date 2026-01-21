@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-15-openresponses/",
-  "lastDailyRunAt": "2026-01-20T08:14:24.419Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
+  "lastDailyRunAt": "2026-01-21T08:14:23.283Z",
   "previousBlogPostThread": "blog/2018/agastya-screen-reader.md",
   "lastBiWeeklyRunAt": "2026-01-19T10:03:59.980Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/calendar-link",
   "lastAlternateWeeklyRunAt": "2026-01-15T12:08:39.337Z",
   "previousStarredRepos": [
+    "1133924528",
     "1112540808",
     "1012781500",
     "1121859126",
@@ -38,14 +39,18 @@
     "933874837",
     "759893102",
     "1053758043",
-    "1020008528",
-    "693187866"
+    "1020008528"
   ],
-  "lastStarredReposRunAt": "2026-01-20T08:14:25.868Z",
+  "lastStarredReposRunAt": "2026-01-21T08:14:38.476Z",
   "lastWeeklyQuotesRunAt": "2026-01-19T10:04:01.657Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "YOLO26: 30 tiny vision models for real-time AI",
+    "LTX-2 tops open video model rankings",
+    "AIR: a blueprint for better preference data",
+    "Kling motion control turns video into AI mocap",
+    "SN40L vs NVIDIA: DeepSeek R1 on alternative chips",
     "Responses API vs Chat Completions: what really changes",
     "OpenRouter backs Open Responses, reshaping API norms",
     "Anthropic & DeepMind skip day-one Open Responses",
@@ -90,11 +95,6 @@
     "PHYSMASTER: an ‘autonomous physicist’ AI agent",
     "OpenEnv: a shared spec for training & running agents",
     "Tiny vision encoders can beat 6B‑parameter giants",
-    "Bernie’s AI jobs worry hits mainstream politics",
-    "Grok image abuses spotlight eval & safety gaps",
-    "“Scaling is dead?” debate gets serious nuance",
-    "Grok’s 600M MAUs and the metrics shell game",
-    "AA Omniscience: accuracy vs hallucination split",
-    "AA Index v4.0 resets model rankings below 50"
+    "Bernie’s AI jobs worry hits mainstream politics"
   ]
 }
