@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-21-openevidence/",
-  "lastDailyRunAt": "2026-01-22T08:13:41.093Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
+  "lastDailyRunAt": "2026-01-23T08:13:21.818Z",
   "previousBlogPostThread": "blog/2018/agastya-screen-reader.md",
   "lastBiWeeklyRunAt": "2026-01-19T10:03:59.980Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "933874837",
     "759893102"
   ],
-  "lastStarredReposRunAt": "2026-01-22T08:14:03.043Z",
+  "lastStarredReposRunAt": "2026-01-23T08:13:23.351Z",
   "lastWeeklyQuotesRunAt": "2026-01-19T10:04:01.657Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "AI e‑commerce: LLMs handle checkout end‑to‑end",
+    "AI bureaucracy: compliance as a competitive drag",
+    "AI-native dev: project architecture gets rewritten",
+    "AI robotics hits the consumer ‘kit’ moment",
+    "AI news search as an actual product category",
     "OpenEvidence hits $12B: ‘ChatGPT for doctors’ at scale",
     "Anthropic open‑sources Claude’s ‘constitution’ (CC0)",
     "Agents become real business units: Podium’s $100M ARR",
@@ -90,11 +95,6 @@
     "Anthropic’s Cowork and the race for the ‘LLM OS’",
     "OpenAI goes deep into medicine with ChatGPT Health",
     "Google’s Universal Commerce Protocol turns LLMs into checkout",
-    "China’s AI IPO gap and open model adoption metrics",
-    "Smol.ai launches full AI news search portal",
-    "Context engineering becomes a core AI skill",
-    "Project architecture is changing for AI-native dev",
-    "AI bureaucracy becomes a competitive risk",
-    "AI-driven robotics hits a consumer “kit” moment"
+    "China’s AI IPO gap and open model adoption metrics"
   ]
 }
