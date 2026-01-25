@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-21-openevidence/",
-  "lastDailyRunAt": "2026-01-24T08:11:23.348Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
+  "lastDailyRunAt": "2026-01-25T08:12:00.397Z",
   "previousBlogPostThread": "blog/2018/agastya-screen-reader.md",
   "lastBiWeeklyRunAt": "2026-01-19T10:03:59.980Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "933874837",
     "759893102"
   ],
-  "lastStarredReposRunAt": "2026-01-24T08:11:24.898Z",
+  "lastStarredReposRunAt": "2026-01-25T08:12:01.919Z",
   "lastWeeklyQuotesRunAt": "2026-01-19T10:04:01.657Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "AI ad models: OpenAI’s ‘answers won’t change’ bet",
+    "ChatGPT Go: low-cost tier rewires usage patterns",
+    "Codex gets ‘very fast’ and more interactive",
+    "File-centric RAG: ‘chunking is dead’ moment",
+    "Inference explosion: prefill, caching, and power",
     "Gemini now does full SATs with top education partners",
     "Devin Review targets the code review bottleneck",
     "Video Arena puts frontier video models head-to-head",
@@ -90,11 +95,6 @@
     "Filesystem-as-memory: agents pick files over vectors",
     "Tiny Falcon-H1-Tiny models aim at edge & IoT",
     "Agent memory pruning: Focus cuts tokens 22.7%",
-    "VS Code’s in-browser AI doc search engine",
-    "MedGemma 1.5: offline multimodal AI for hospitals",
-    "BabyVision shows MLLMs still “see” poorly",
-    "OctoCodingBench: coding agents must obey rules",
-    "Unified Attention lands in Diffusers",
-    "Low‑bit training’s hidden traps and fixes"
+    "VS Code’s in-browser AI doc search engine"
   ]
 }
