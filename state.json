@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-16-chatgpt-ads/",
-  "lastDailyRunAt": "2026-01-25T08:12:00.397Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-21-openevidence/",
+  "lastDailyRunAt": "2026-01-26T08:14:08.323Z",
   "previousBlogPostThread": "blog/2018/agastya-screen-reader.md",
   "lastBiWeeklyRunAt": "2026-01-19T10:03:59.980Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "933874837",
     "759893102"
   ],
-  "lastStarredReposRunAt": "2026-01-25T08:12:01.919Z",
+  "lastStarredReposRunAt": "2026-01-26T08:14:09.770Z",
   "lastWeeklyQuotesRunAt": "2026-01-19T10:04:01.657Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "MCP vs Skills: What ‘good’ agent tools look like",
+    "APEX-Agents shows ‘autonomous agents’ are still brittle",
+    "MCP-SIM: Multi-agents take on science workflows",
+    "LangChain Deep Agents: ‘agents are just folders’",
+    "Prefect Horizon aims to be the enterprise agent ‘control tower’",
     "AI ad models: OpenAI’s ‘answers won’t change’ bet",
     "ChatGPT Go: low-cost tier rewires usage patterns",
     "Codex gets ‘very fast’ and more interactive",
@@ -90,11 +95,6 @@
     "ChatGPT Go: low-cost tier bets on speed and volume",
     "“Very fast Codex” and the speed vs IQ trade-off",
     "VoxCPM: open, tokenization-free real-time voice cloning",
-    "AI data centers now rival a US state’s power draw",
-    "Open Responses: a neutral LLM API standard",
-    "Filesystem-as-memory: agents pick files over vectors",
-    "Tiny Falcon-H1-Tiny models aim at edge & IoT",
-    "Agent memory pruning: Focus cuts tokens 22.7%",
-    "VS Code’s in-browser AI doc search engine"
+    "AI data centers now rival a US state’s power draw"
   ]
 }
