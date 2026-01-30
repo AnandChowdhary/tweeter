@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-26-mcp-apps/",
-  "lastDailyRunAt": "2026-01-29T08:18:45.952Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-29-xai-grok-imagine-api/",
+  "lastDailyRunAt": "2026-01-30T08:18:13.627Z",
   "previousBlogPostThread": "blog/2018/state-of-the-dock-2018.md",
   "lastBiWeeklyRunAt": "2026-01-26T10:03:40.107Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1062234789",
     "965974441"
   ],
-  "lastStarredReposRunAt": "2026-01-29T08:18:47.443Z",
+  "lastStarredReposRunAt": "2026-01-30T08:18:15.055Z",
   "lastWeeklyQuotesRunAt": "2026-01-26T10:03:42.583Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "xAI’s $1.1T valuation race reshapes AI IPO stakes",
+    "Grok Imagine: xAI’s state-of-the-art video+audio API",
+    "DeepMind’s Project Genie brings live ‘world models’",
+    "LingBot-World: open-source real-time world simulator",
+    "Runway Gen-4.5 turns video models into ‘animation engines’",
     "MCP Apps makes AI tools feel like real apps",
     "NVIDIA’s ToolOrchestra: 8B ‘conductor’ beats big models",
     "Qwen3-Max-Thinking pushes tool-using reasoning models",
@@ -90,11 +95,6 @@
     "LTX-2 tops open video model rankings",
     "AIR: a blueprint for better preference data",
     "Kling motion control turns video into AI mocap",
-    "SN40L vs NVIDIA: DeepSeek R1 on alternative chips",
-    "Responses API vs Chat Completions: what really changes",
-    "OpenRouter backs Open Responses, reshaping API norms",
-    "Anthropic & DeepMind skip day-one Open Responses",
-    "Tooling builders say ‘this is the API we wanted’",
-    "Standards work finally gets its AI moment"
+    "SN40L vs NVIDIA: DeepSeek R1 on alternative chips"
   ]
 }
