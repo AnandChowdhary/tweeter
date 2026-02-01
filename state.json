@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-30-moltbook/",
-  "lastDailyRunAt": "2026-01-31T08:12:33.556Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-29-xai-grok-imagine-api/",
+  "lastDailyRunAt": "2026-02-01T08:13:58.425Z",
   "previousBlogPostThread": "blog/2018/state-of-the-dock-2018.md",
   "lastBiWeeklyRunAt": "2026-01-26T10:03:40.107Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1062234789",
     "965974441"
   ],
-  "lastStarredReposRunAt": "2026-01-31T08:12:34.902Z",
+  "lastStarredReposRunAt": "2026-02-01T08:13:59.922Z",
   "lastWeeklyQuotesRunAt": "2026-01-26T10:03:42.583Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "DeepMind’s AlphaGenome targets rare disease genes",
+    "Anthropic study: AI coders boost learning, not just speed",
+    "OpenAI’s 600+ PB “data agent” hints at future RAG",
+    "Qwen3-ASR makes multilingual speech fully open-stack",
+    "Local AI gets friendlier with LlamaBarn on macOS",
     "Self-Improving Pretraining: RL as the pretrain loop",
     "Agent Trace: a shared ‘source map’ for AI coders",
     "Moltbook’s AI-native social web turns messy fast",
@@ -90,11 +95,6 @@
     "AI bureaucracy: compliance as a competitive drag",
     "AI-native dev: project architecture gets rewritten",
     "AI robotics hits the consumer ‘kit’ moment",
-    "AI news search as an actual product category",
-    "OpenEvidence hits $12B: ‘ChatGPT for doctors’ at scale",
-    "Anthropic open‑sources Claude’s ‘constitution’ (CC0)",
-    "Agents become real business units: Podium’s $100M ARR",
-    "LangChain, Prefect race to be the agent ‘context layer’",
-    "AirLLM’s wild claim: 405B models on 8GB VRAM"
+    "AI news search as an actual product category"
   ]
 }
