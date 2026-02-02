@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-29-xai-grok-imagine-api/",
-  "lastDailyRunAt": "2026-02-01T08:13:58.425Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-30-moltbook/",
+  "lastDailyRunAt": "2026-02-02T08:21:45.723Z",
   "previousBlogPostThread": "blog/2018/state-of-the-dock-2018.md",
   "lastBiWeeklyRunAt": "2026-01-26T10:03:40.107Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1062234789",
     "965974441"
   ],
-  "lastStarredReposRunAt": "2026-02-01T08:13:59.922Z",
+  "lastStarredReposRunAt": "2026-02-02T08:21:47.120Z",
   "lastWeeklyQuotesRunAt": "2026-01-26T10:03:42.583Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Private AI-only channels spark governance alarms",
+    "AI-run forums hit ‘un-auditable codebase’ wall",
+    "World models vs real games: the determinism gap",
+    "In-IDE ‘Arena Mode’ turns devs into eval workers",
+    "LMCache and the next KV-caching efficiency jump",
     "DeepMind’s AlphaGenome targets rare disease genes",
     "Anthropic study: AI coders boost learning, not just speed",
     "OpenAI’s 600+ PB “data agent” hints at future RAG",
@@ -90,11 +95,6 @@
     "Devin Review targets the code review bottleneck",
     "Video Arena puts frontier video models head-to-head",
     "Chroma 1.0 debuts as an open real-time voice stack",
-    "HBM supply, not fabs, is the new AI hardware choke point",
-    "AI e‑commerce: LLMs handle checkout end‑to‑end",
-    "AI bureaucracy: compliance as a competitive drag",
-    "AI-native dev: project architecture gets rewritten",
-    "AI robotics hits the consumer ‘kit’ moment",
-    "AI news search as an actual product category"
+    "HBM supply, not fabs, is the new AI hardware choke point"
   ]
 }
