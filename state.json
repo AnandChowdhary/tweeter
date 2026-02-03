@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-01-30-moltbook/",
-  "lastDailyRunAt": "2026-02-02T08:21:45.723Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-02-02-openai-codex-app/",
+  "lastDailyRunAt": "2026-02-03T08:19:07.447Z",
   "previousBlogPostThread": "blog/2019/google-docs-github.md",
   "lastBiWeeklyRunAt": "2026-02-02T10:14:18.925Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -46,6 +46,11 @@
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Agent UIs kill the IDE? Yegge’s 2026 moment",
+    "Worktrees + multitasking: the new agent UX primitive",
+    "Automations: ‘skills on a cron’ finally go mainstream",
+    "Agent “skills” seek a standard like .github/",
+    "Self-improving coding tools, minus the AGI hype",
     "Private AI-only channels spark governance alarms",
     "AI-run forums hit ‘un-auditable codebase’ wall",
     "World models vs real games: the determinism gap",
@@ -90,11 +95,6 @@
     "ChatGPT Go: low-cost tier rewires usage patterns",
     "Codex gets ‘very fast’ and more interactive",
     "File-centric RAG: ‘chunking is dead’ moment",
-    "Inference explosion: prefill, caching, and power",
-    "Gemini now does full SATs with top education partners",
-    "Devin Review targets the code review bottleneck",
-    "Video Arena puts frontier video models head-to-head",
-    "Chroma 1.0 debuts as an open real-time voice stack",
-    "HBM supply, not fabs, is the new AI hardware choke point"
+    "Inference explosion: prefill, caching, and power"
   ]
 }
