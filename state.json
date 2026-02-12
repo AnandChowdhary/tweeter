@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/26-02-02-openai-codex-app/",
-  "lastDailyRunAt": "2026-02-03T08:19:07.447Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-10-qwenimage-seedance-2/",
+  "lastDailyRunAt": "2026-02-12T06:53:20.854Z",
   "previousBlogPostThread": "blog/2019/google-docs-github.md",
   "lastBiWeeklyRunAt": "2026-02-02T10:14:18.925Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,13 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/changebar",
   "lastAlternateWeeklyRunAt": "2026-02-01T12:08:53.533Z",
   "previousStarredRepos": [
+    "1153305727",
+    "1138336035",
+    "1036865607",
+    "1146193768",
+    "1132001614",
+    "1127110039",
+    "1146738089",
     "1110558444",
     "1103012935",
     "1131976249",
@@ -32,20 +39,18 @@
     "1096955196",
     "1090175697",
     "1053114486",
-    "1081397957",
-    "1080575105",
-    "1062565899",
-    "870911441",
-    "1036835943",
-    "965415649",
-    "1062234789",
-    "965974441"
+    "1081397957"
   ],
-  "lastStarredReposRunAt": "2026-02-02T08:21:47.120Z",
+  "lastStarredReposRunAt": "2026-02-12T06:55:09.615Z",
   "lastWeeklyQuotesRunAt": "2026-02-02T10:14:20.734Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Qwen-Image 2: 7B model rivals top image gens",
+    "Seedance 2.0: ByteDance’s Sora-style leap",
+    "China’s generative media stack quietly matures",
+    "Arena brings real documents into model evals",
+    "IsoDDE: drug discovery’s new AI benchmark",
     "Agent UIs kill the IDE? Yegge’s 2026 moment",
     "Worktrees + multitasking: the new agent UX primitive",
     "Automations: ‘skills on a cron’ finally go mainstream",
@@ -90,11 +95,6 @@
     "APEX-Agents shows ‘autonomous agents’ are still brittle",
     "MCP-SIM: Multi-agents take on science workflows",
     "LangChain Deep Agents: ‘agents are just folders’",
-    "Prefect Horizon aims to be the enterprise agent ‘control tower’",
-    "AI ad models: OpenAI’s ‘answers won’t change’ bet",
-    "ChatGPT Go: low-cost tier rewires usage patterns",
-    "Codex gets ‘very fast’ and more interactive",
-    "File-centric RAG: ‘chunking is dead’ moment",
-    "Inference explosion: prefill, caching, and power"
+    "Prefect Horizon aims to be the enterprise agent ‘control tower’"
   ]
 }
