@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-12-anthropic-gemini-deepthink/",
-  "lastDailyRunAt": "2026-02-13T08:21:50.003Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-11-glm-5/",
+  "lastDailyRunAt": "2026-02-14T08:13:50.865Z",
   "previousBlogPostThread": "blog/2019/google-docs-github.md",
   "lastBiWeeklyRunAt": "2026-02-02T10:14:18.925Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/changebar",
   "lastAlternateWeeklyRunAt": "2026-02-01T12:08:53.533Z",
   "previousStarredRepos": [
+    "750129442",
     "1153305727",
     "1138336035",
     "1036865607",
@@ -38,14 +39,18 @@
     "1088218677",
     "1096955196",
     "1090175697",
-    "1053114486",
-    "1081397957"
+    "1053114486"
   ],
-  "lastStarredReposRunAt": "2026-02-13T08:21:51.528Z",
+  "lastStarredReposRunAt": "2026-02-14T08:14:07.934Z",
   "lastWeeklyQuotesRunAt": "2026-02-02T10:14:20.734Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "MIT-Licensed Open Frontier Model Hits New Benchmark Highs",
+    "GLM‑5’s Compute Crunch Exposes Inference Capacity Limits",
+    "DeepSeek’s 1M‑Context ‘V4‑Lite’ Shows Attention Is the Moat",
+    "SGLang’s DP Attention Fix Boosts MLA Model Throughput",
+    "Open Benchmarks Get a $3M Shot in the Arm",
     "Gemini 3 Deep Think V2 hits 84.6% on ARC-AGI-2",
     "GPT‑5.3 Codex‑Spark: 1000+ tok/s coding via Cerebras",
     "Mooncake: attacking the KV‑cache “memory wall”",
@@ -90,11 +95,6 @@
     "NVIDIA’s ToolOrchestra: 8B ‘conductor’ beats big models",
     "Qwen3-Max-Thinking pushes tool-using reasoning models",
     "ARC-AGI on the cheap: recursion beats raw model size",
-    "vLLM’s ‘day-0 support’ dilemma births Inferact",
-    "Kimi K2.5: China’s open multimodal MoE moment",
-    "Kimi’s Agent Swarm: 100 parallel LLM workers",
-    "Trinity Large: 400B MoE and an ‘open comeback’",
-    "DeepSeek‑OCR 2 reinvents document reading order",
-    "OpenAI Prism: AI‑native Overleaf for scientists"
+    "vLLM’s ‘day-0 support’ dilemma births Inferact"
   ]
 }
