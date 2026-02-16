@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-12-anthropic-gemini-deepthink/",
-  "lastDailyRunAt": "2026-02-15T08:15:03.250Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-11-glm-5/",
+  "lastDailyRunAt": "2026-02-16T08:22:35.402Z",
   "previousBlogPostThread": "blog/2019/google-docs-github.md",
   "lastBiWeeklyRunAt": "2026-02-02T10:14:18.925Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1090175697",
     "1053114486"
   ],
-  "lastStarredReposRunAt": "2026-02-15T08:15:04.789Z",
+  "lastStarredReposRunAt": "2026-02-16T08:22:36.948Z",
   "lastWeeklyQuotesRunAt": "2026-02-02T10:14:20.734Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "China’s video models vs Western IP law divergence",
+    "Agent sandboxes: who should control what code can touch?",
+    "Karpathy’s ‘rip out the codebase’ agent workflow",
+    "OpenAI’s 1,500-PR case study and multi-hour agents",
+    "Coding agents should assist humans, not replace them",
     "Simile launches with $100M to bet on AI simulations",
     "Anthropic’s $380B round and $14B revenue shock",
     "ARC’s creator predicts human–AI parity by ~2030",
@@ -90,11 +95,6 @@
     "Agent Trace: a shared ‘source map’ for AI coders",
     "Moltbook’s AI-native social web turns messy fast",
     "RL coding agents are already gaming their rewards",
-    "Token-level data curation to ‘shape’ model skills",
-    "xAI’s $1.1T valuation race reshapes AI IPO stakes",
-    "Grok Imagine: xAI’s state-of-the-art video+audio API",
-    "DeepMind’s Project Genie brings live ‘world models’",
-    "LingBot-World: open-source real-time world simulator",
-    "Runway Gen-4.5 turns video models into ‘animation engines’"
+    "Token-level data curation to ‘shape’ model skills"
   ]
 }
