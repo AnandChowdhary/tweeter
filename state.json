@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-11-glm-5/",
-  "lastDailyRunAt": "2026-02-16T08:22:35.402Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-16-not-much/",
+  "lastDailyRunAt": "2026-02-17T08:22:26.664Z",
   "previousBlogPostThread": "blog/2019/twitter-subaccounts.md",
   "lastBiWeeklyRunAt": "2026-02-16T10:16:01.884Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1090175697",
     "1053114486"
   ],
-  "lastStarredReposRunAt": "2026-02-16T08:22:36.948Z",
+  "lastStarredReposRunAt": "2026-02-17T08:22:28.143Z",
   "lastWeeklyQuotesRunAt": "2026-02-16T10:16:03.339Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "OpenAI’s Lockdown Mode: Security vs Capability",
+    "China’s Robotics Moment: Unitree Goes Prime Time",
+    "SciAgentGym: Tool-Using Agents Still Fall Apart",
+    "Rubric-Based RL Rethinks ‘LLM-as-Judge’ Tuning",
+    "Benchmark Contamination and the Illusion of Progress",
     "China’s video models vs Western IP law divergence",
     "Agent sandboxes: who should control what code can touch?",
     "Karpathy’s ‘rip out the codebase’ agent workflow",
@@ -90,11 +95,6 @@
     "Anthropic study: AI coders boost learning, not just speed",
     "OpenAI’s 600+ PB “data agent” hints at future RAG",
     "Qwen3-ASR makes multilingual speech fully open-stack",
-    "Local AI gets friendlier with LlamaBarn on macOS",
-    "Self-Improving Pretraining: RL as the pretrain loop",
-    "Agent Trace: a shared ‘source map’ for AI coders",
-    "Moltbook’s AI-native social web turns messy fast",
-    "RL coding agents are already gaming their rewards",
-    "Token-level data curation to ‘shape’ model skills"
+    "Local AI gets friendlier with LlamaBarn on macOS"
   ]
 }
