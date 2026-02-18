@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-16-not-much/",
-  "lastDailyRunAt": "2026-02-17T08:22:26.664Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-17-sonnet-46/",
+  "lastDailyRunAt": "2026-02-18T08:21:57.747Z",
   "previousBlogPostThread": "blog/2019/twitter-subaccounts.md",
   "lastBiWeeklyRunAt": "2026-02-16T10:16:01.884Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1090175697",
     "1053114486"
   ],
-  "lastStarredReposRunAt": "2026-02-17T08:22:28.143Z",
+  "lastStarredReposRunAt": "2026-02-18T08:21:59.257Z",
   "lastWeeklyQuotesRunAt": "2026-02-16T10:16:03.339Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Tiny Aya: 3B open model that runs on phones",
+    "Agent World Model: 35k tools in synthetic RL worlds",
+    "Lossless context compression beats Claude on OOLONG",
+    "ThunderAgent speeds up agent workflows by 3.9×",
+    "Carmack’s plan for GPU ‘context switching’",
     "OpenAI’s Lockdown Mode: Security vs Capability",
     "China’s Robotics Moment: Unitree Goes Prime Time",
     "SciAgentGym: Tool-Using Agents Still Fall Apart",
@@ -90,11 +95,6 @@
     "AI-run forums hit ‘un-auditable codebase’ wall",
     "World models vs real games: the determinism gap",
     "In-IDE ‘Arena Mode’ turns devs into eval workers",
-    "LMCache and the next KV-caching efficiency jump",
-    "DeepMind’s AlphaGenome targets rare disease genes",
-    "Anthropic study: AI coders boost learning, not just speed",
-    "OpenAI’s 600+ PB “data agent” hints at future RAG",
-    "Qwen3-ASR makes multilingual speech fully open-stack",
-    "Local AI gets friendlier with LlamaBarn on macOS"
+    "LMCache and the next KV-caching efficiency jump"
   ]
 }
