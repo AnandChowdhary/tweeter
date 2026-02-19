@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-17-sonnet-46/",
-  "lastDailyRunAt": "2026-02-18T08:21:57.747Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-16-qwen35/",
+  "lastDailyRunAt": "2026-02-19T08:21:48.194Z",
   "previousBlogPostThread": "blog/2019/twitter-subaccounts.md",
   "lastBiWeeklyRunAt": "2026-02-16T10:16:01.884Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -10,6 +10,7 @@
   "previousOpenSourceProjectThread": "AnandChowdhary/fraud",
   "lastAlternateWeeklyRunAt": "2026-02-15T12:09:10.783Z",
   "previousStarredRepos": [
+    "1158605484",
     "750129442",
     "1153305727",
     "1138336035",
@@ -38,14 +39,18 @@
     "193215554",
     "1088218677",
     "1096955196",
-    "1090175697",
-    "1053114486"
+    "1090175697"
   ],
-  "lastStarredReposRunAt": "2026-02-18T08:21:59.257Z",
+  "lastStarredReposRunAt": "2026-02-19T08:22:03.622Z",
   "lastWeeklyQuotesRunAt": "2026-02-16T10:16:03.339Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Qwen3.5’s 400B MoE rewrites long‑context economics",
+    "OpenClaw to OpenAI: one‑dev agents as acquisition path",
+    "Agent ‘harnesses’ emerge as the new AI operating system",
+    "Chinese New Year becomes global AI model release week",
+    "NVIDIA GB300 NVL72 hints at 35× cheaper tokens",
     "Tiny Aya: 3B open model that runs on phones",
     "Agent World Model: 35k tools in synthetic RL worlds",
     "Lossless context compression beats Claude on OOLONG",
@@ -90,11 +95,6 @@
     "Worktrees + multitasking: the new agent UX primitive",
     "Automations: ‘skills on a cron’ finally go mainstream",
     "Agent “skills” seek a standard like .github/",
-    "Self-improving coding tools, minus the AGI hype",
-    "Private AI-only channels spark governance alarms",
-    "AI-run forums hit ‘un-auditable codebase’ wall",
-    "World models vs real games: the determinism gap",
-    "In-IDE ‘Arena Mode’ turns devs into eval workers",
-    "LMCache and the next KV-caching efficiency jump"
+    "Self-improving coding tools, minus the AGI hype"
   ]
 }
