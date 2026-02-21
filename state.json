@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-19-gemini31/",
-  "lastDailyRunAt": "2026-02-20T08:21:11.769Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-17-sonnet-46/",
+  "lastDailyRunAt": "2026-02-21T08:13:09.116Z",
   "previousBlogPostThread": "blog/2019/twitter-subaccounts.md",
   "lastBiWeeklyRunAt": "2026-02-16T10:16:01.884Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1096955196",
     "1090175697"
   ],
-  "lastStarredReposRunAt": "2026-02-20T08:21:13.146Z",
+  "lastStarredReposRunAt": "2026-02-21T08:13:10.492Z",
   "lastWeeklyQuotesRunAt": "2026-02-16T10:16:03.339Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Claude Cowork vs Operator: computer use gets real",
+    "Token-hungry agents: Sonnet 4.6’s 280M-token run",
+    "Compute-before-context: Anthropic’s smarter web tools",
+    "Grok 4.x enters the fray—with polarized reception",
+    "Sphere Encoder: 5-step image generation in 65K-D space",
     "Gemini 3.1’s missing piece: GDPval and ‘real’ agents",
     "Benchmark fatigue: when lab heads tweet the scores",
     "Voxtral Realtime: Mistral’s sub-500ms speech stack",
@@ -90,11 +95,6 @@
     "DeepSeek V4‑lite quietly brings real 1M context",
     "MiniMax M2.5 & StepFun‑Flash: coding at 1/5 the cost",
     "$3M open benchmark fund targets AI eval gap",
-    "Safety clash: Anthropic vs RedTeamCUA on agents",
-    "Qwen-Image 2: 7B model rivals top image gens",
-    "Seedance 2.0: ByteDance’s Sora-style leap",
-    "China’s generative media stack quietly matures",
-    "Arena brings real documents into model evals",
-    "IsoDDE: drug discovery’s new AI benchmark"
+    "Safety clash: Anthropic vs RedTeamCUA on agents"
   ]
 }
