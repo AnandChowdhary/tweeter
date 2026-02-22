@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-17-sonnet-46/",
-  "lastDailyRunAt": "2026-02-21T08:13:09.116Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-19-gemini31/",
+  "lastDailyRunAt": "2026-02-22T08:14:00.928Z",
   "previousBlogPostThread": "blog/2019/twitter-subaccounts.md",
   "lastBiWeeklyRunAt": "2026-02-16T10:16:01.884Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1096955196",
     "1090175697"
   ],
-  "lastStarredReposRunAt": "2026-02-21T08:13:10.492Z",
+  "lastStarredReposRunAt": "2026-02-22T08:14:02.303Z",
   "lastWeeklyQuotesRunAt": "2026-02-16T10:16:03.339Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "Gemini 3.1 Pro: Google’s ‘Deep Think’ goes mainstream",
+    "ARC-AGI-2 and the new ‘reasoning benchmark’ arms race",
+    "Gemini’s agent chops: great on tools, weak on GDPval",
+    "Model vs product: Google’s messy Gemini rollout",
+    "Cost–intelligence frontier: Gemini 3.1 vs open and closed",
     "Claude Cowork vs Operator: computer use gets real",
     "Token-hungry agents: Sonnet 4.6’s 280M-token run",
     "Compute-before-context: Anthropic’s smarter web tools",
@@ -90,11 +95,6 @@
     "GPT‑5.3 Codex‑Spark: 1000+ tok/s coding via Cerebras",
     "Mooncake: attacking the KV‑cache “memory wall”",
     "QED‑Nano: 4B theorem prover with 1M‑token proofs",
-    "LeJEPA: LeCun’s simpler self‑supervised vision recipe",
-    "GLM‑5: MIT‑licensed ‘Opus‑class’ open frontier",
-    "DeepSeek V4‑lite quietly brings real 1M context",
-    "MiniMax M2.5 & StepFun‑Flash: coding at 1/5 the cost",
-    "$3M open benchmark fund targets AI eval gap",
-    "Safety clash: Anthropic vs RedTeamCUA on agents"
+    "LeJEPA: LeCun’s simpler self‑supervised vision recipe"
   ]
 }
