@@ -1,6 +1,6 @@
 {
-  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-23-not-much/",
-  "lastDailyRunAt": "2026-02-24T08:23:33.869Z",
+  "previousSmolAiNewsThread": "https://news.smol.ai/issues/2026-02-23-anthropic-distillation/",
+  "lastDailyRunAt": "2026-02-25T08:23:33.459Z",
   "previousBlogPostThread": "blog/2019/package-managers.md",
   "lastBiWeeklyRunAt": "2026-02-23T10:16:26.880Z",
   "previousChangelogThread": "https://docs.firstquadrant.ai/changelog/2025-10-05-smarter-sequence-generation-and-email-labeling",
@@ -41,11 +41,16 @@
     "1096955196",
     "1090175697"
   ],
-  "lastStarredReposRunAt": "2026-02-24T08:23:35.485Z",
+  "lastStarredReposRunAt": "2026-02-25T08:23:34.818Z",
   "lastWeeklyQuotesRunAt": "2026-02-23T10:16:29.508Z",
   "lastHistoryThreadRunAt": "2025-09-22T17:44:55.486Z",
   "previousRedditNewsThread": "1pfqbup",
   "recentTweets": [
+    "CoT ‘molecules’ and compressed reasoning pipelines",
+    "Information-theoretic take on monitoring CoT models",
+    "18K tok/sec via compute-in-memory for Llama 3.1",
+    "Interactive and multi-shot video generation heats up",
+    "OpenAI’s ‘Frontier Alliances’ with big consultancies",
     "Export controls vs model distillation: new fault line",
     "API abuse resistance becomes a core model feature",
     "Eval crisis: SWE‑Bench Verified’s quiet retirement",
@@ -90,11 +95,6 @@
     "Agent sandboxes: who should control what code can touch?",
     "Karpathy’s ‘rip out the codebase’ agent workflow",
     "OpenAI’s 1,500-PR case study and multi-hour agents",
-    "Coding agents should assist humans, not replace them",
-    "Simile launches with $100M to bet on AI simulations",
-    "Anthropic’s $380B round and $14B revenue shock",
-    "ARC’s creator predicts human–AI parity by ~2030",
-    "Andrew Ng’s A2A: a protocol for AI agent interop",
-    "Cursor’s long-running agents hint at new dev workflows"
+    "Coding agents should assist humans, not replace them"
   ]
 }
